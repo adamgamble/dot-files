@@ -1,0 +1,790 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+<purple version='1.0'>
+	<blist>
+		<group name='Insight'>
+			<setting name='collapsed' type='bool'>0</setting>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>cjarrett@insightcards.com</name>
+					<alias>Charles Jarrett</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>mwinther@insightcards.com</name>
+					<alias>Matthew Winther</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>ccolegrove@insightcards.com</name>
+					<alias>Courtney Colegrove</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>randringa@insightcards.com</name>
+					<alias>Rene Andringa</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>tmarshall@insightcards.com</name>
+					<alias>Tonya Marshall</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>f42af74c1a54552cdb019a1b6c00870065bf39b7.png</setting>
+					<setting name='icon_checksum' type='string'>f42af74c1a54552cdb019a1b6c00870065bf39b7</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jshepherd@insightcards.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>95d9d381832009f58621b655682972f7c4462f33.png</setting>
+					<setting name='icon_checksum' type='string'>95d9d381832009f58621b655682972f7c4462f33</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>ahyde@insightcards.com</name>
+					<alias>Ashley Hyde</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>57a14c85baf4dc29d18161a2aa58472b57ba78c4.jpg</setting>
+					<setting name='icon_checksum' type='string'>57a14c85baf4dc29d18161a2aa58472b57ba78c4</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jbertschinger@insightcards.com</name>
+					<alias>Joseph Bertschinger</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>115d057852f7ac9340812fecfee5356c66ce381a.jpg</setting>
+					<setting name='icon_checksum' type='string'>115d057852f7ac9340812fecfee5356c66ce381a</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>askelton@insightcards.com</name>
+					<alias>Andrew Skelton</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>rwiggins@insightcards.com</name>
+					<alias>Ron Wiggins</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>tjones@insightcards.com</name>
+					<alias>Trevor Jones</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>agamble@insightcards.com</name>
+					<alias>Adam Gamble</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>djenkins@insightcards.com</name>
+					<alias>David Jenkins</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>f751fb10c743372c5f7cf3483b36868a0c28df4b.jpg</setting>
+					<setting name='icon_checksum' type='string'>f751fb10c743372c5f7cf3483b36868a0c28df4b</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dwebster@insightcards.com</name>
+					<alias>Donald Webster</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>bjordan@insightcards.com</name>
+					<alias>Brian Jordan</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jadams@insightcards.com</name>
+					<alias>Josh Adams</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>sminter@insightcards.com</name>
+					<alias>Samuel Minter</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>be918a7d58b7e7212ab972f7fda0752161603636.jpg</setting>
+					<setting name='icon_checksum' type='string'>be918a7d58b7e7212ab972f7fda0752161603636</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>tray@insightcards.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>zpatten@insightcards.com</name>
+					<alias>Zachary Patten</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>cbryant@insightcards.com</name>
+					<alias>Crystal Bryant</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dpiccolo@insightcards.com</name>
+					<alias>Diane Piccolo</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>1b25794e6eff0e6776cec0d70b5b74d5588fbbab.jpg</setting>
+					<setting name='icon_checksum' type='string'>1b25794e6eff0e6776cec0d70b5b74d5588fbbab</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>emathis@insightcards.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jmaton@insightcards.com</name>
+					<alias>Jay Maton</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>7ee621892f3cd25c7c442ae2c6caf56af80e120e.jpg</setting>
+					<setting name='icon_checksum' type='string'>7ee621892f3cd25c7c442ae2c6caf56af80e120e</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jpowell@insightcards.com</name>
+					<alias>Joseph Powell</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>kjackson@insightcards.com</name>
+					<alias>Kristen Jackson</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>lhammond@insightcards.com</name>
+					<alias>Luke Hammond</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>achapman@insightcards.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>682ad290777a2bdb107156f6e045fe855d01f6ac.jpg</setting>
+					<setting name='icon_checksum' type='string'>682ad290777a2bdb107156f6e045fe855d01f6ac</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>amichaels@insightcards.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>aneely@insightcards.com</name>
+					<alias>Angela Neely</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>arathje@insightcards.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>b4d9a7c8e8a34e4980986e84585ba06907349755.jpg</setting>
+					<setting name='icon_checksum' type='string'>b4d9a7c8e8a34e4980986e84585ba06907349755</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>areynolds@insightcards.com</name>
+					<alias>Angie Reynolds</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>691e1c50903401d2dc59f24a987680f8db9c5017.jpg</setting>
+					<setting name='icon_checksum' type='string'>691e1c50903401d2dc59f24a987680f8db9c5017</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>bhall@insightcards.com</name>
+					<alias>Brad Hall</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>2336b789b66e0f7fc40a787503d481ea139e3d29.jpg</setting>
+					<setting name='icon_checksum' type='string'>2336b789b66e0f7fc40a787503d481ea139e3d29</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>bswenson@insightcards.com</name>
+					<alias>Bram Swenson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dray@insightcards.com</name>
+					<alias>Deandra Ray</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>hhenshaw@insightcards.com</name>
+					<alias>Heather Henshaw</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>supriyam@insightcards.com</name>
+					<alias>Supriya Mahajan</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>shepjour@gmail.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>95d9d381832009f58621b655682972f7c4462f33.png</setting>
+					<setting name='icon_checksum' type='string'>95d9d381832009f58621b655682972f7c4462f33</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>sippy.uab@gmail.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>abeverly@insightcards.com</name>
+					<alias>April Beverly</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>adorais@insightcards.com</name>
+					<alias>Andrea Dorais</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>avelez@insightcards.com</name>
+					<alias>Alina Velez</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>awalton@insightcards.com</name>
+					<alias>Azikiwee Walton</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>bfitts@insightcards.com</name>
+					<alias>Brooke Fitts</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>88cc881fdbfb6ca4d5def66924bb1cdbbb792987.jpg</setting>
+					<setting name='icon_checksum' type='string'>88cc881fdbfb6ca4d5def66924bb1cdbbb792987</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>bhayes@insightcards.com</name>
+					<alias>Brian Hayes</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>bjackson@insightcards.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>brickard@insightcards.com</name>
+					<alias>Bryon Rickard</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>bsmith@insightcards.com</name>
+					<alias>Bill Smith</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>csmith@insightcards.com</name>
+					<alias>Cole Smith</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>cvarallo@insightcards.com</name>
+					<alias>Cathy Varallo</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dbutler@insightcards.com</name>
+					<alias>David Butler</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dfowler@insightcards.com</name>
+					<alias>Dot Fowler</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dsyx@insightcards.com</name>
+					<alias>Dori Syx</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>epatterson@insightcards.com</name>
+					<alias>Eva Patterson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jboyd@insightcards.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jnunn@insightcards.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jospina@insightcards.com</name>
+					<alias>Jair Ospina</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>jshepherd@talk.google.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>lschley@insightcards.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>66d563e9a30acec481973840aeeb023d38e3109d.jpg</setting>
+					<setting name='icon_checksum' type='string'>66d563e9a30acec481973840aeeb023d38e3109d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>mboomsma@insightcards.com</name>
+					<alias>Mary Boomsma</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>mrivera@insightcards.com</name>
+					<alias>Monique Rivera</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>72b73c64281b640da4914d81f6164f1ace3add4d.jpg</setting>
+					<setting name='icon_checksum' type='string'>72b73c64281b640da4914d81f6164f1ace3add4d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>njackson@insightcards.com</name>
+					<alias>Naila Jackson</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>oallen@insightcards.com</name>
+					<alias>Olasunkami Allen</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>pcoates@insightcards.com</name>
+					<alias>Peggy Coates</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>qhamilton@insightcards.com</name>
+					<alias>Quentin Hamilton</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>rhiggins@insightcards.com</name>
+					<alias>Rob Higgins</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>scoates@insightcards.com</name>
+					<alias>Sean Coates</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>sdelaney@insightcards.com</name>
+					<alias>Stephanie Delaney</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>staylor@insightcards.com</name>
+					<alias>Shenia Taylor</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>tmcclain@insightcards.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>troscoe@insightcards.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>tsorbe@insightcards.com</name>
+					<alias>Trent Sorbe</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>d9722920b3cb5918a8e1f5f831e525b681d44e23.jpg</setting>
+					<setting name='icon_checksum' type='string'>d9722920b3cb5918a8e1f5f831e525b681d44e23</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>twarren@insightcards.com</name>
+					<alias>Talitha Warren</alias>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Isotope'>
+			<setting name='collapsed' type='bool'>0</setting>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>jamecook@gmail.com</name>
+					<alias>James T Cook</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>josh@isotope11.com</name>
+					<alias>Josh Adams</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>altrux@gmail.com</name>
+					<alias>Adam Dill</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>nicholas.fine@gmail.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>4d104c6b8bc0549a3f3bf6e0c9b9f8fe5580bc6d.jpg</setting>
+					<setting name='icon_checksum' type='string'>4d104c6b8bc0549a3f3bf6e0c9b9f8fe5580bc6d</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>adam@isotope.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>bprice@insightcards.com</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Family'>
+			<setting name='collapsed' type='bool'>0</setting>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>silkpanties6921</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>DeekLarsen</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>stellabella474</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>emlkenny</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>srnjw</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>gleaangel</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>glea.larsen@gmail.com</name>
+					<alias>glea.larsen@gmail.com</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>derek.larsen@gmail.com</name>
+					<alias>Derek Larsen</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>emlkenny@gmail.com</name>
+					<alias>Edwin Larsen</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>hellopenny@gmail.com</name>
+					<alias>Penny Larsen</alias>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Buddies'>
+			<setting name='collapsed' type='bool'>0</setting>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>Ikonoklast444</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>wilsonua</name>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>ClanMaelgrom02</name>
+					<alias>Ben Bowman</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>Nick Hates AIM</name>
+					<alias>Nick Hates AIM</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>ClanNeijin</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>adamgamble16</name>
+					<alias>Adam Gamble</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>superscum99</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>thegodlikeneox</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>dupdike42</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>djafaricom</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>mcdopey777</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>nelifus</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>RIPVortex</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>ssmokedya</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>will.cross@gmail.com</name>
+					<alias>Will Cross</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>grolloc@gmail.com</name>
+					<alias>Mike Seales</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>jasonodom23@gmail.com</name>
+					<alias>Jason Odom</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>ohgeetee@gmail.com</name>
+					<alias>Nick King</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>2cc2ab63fdc8a752f72d02a8a5e51949f875cf66.png</setting>
+					<setting name='icon_checksum' type='string'>2cc2ab63fdc8a752f72d02a8a5e51949f875cf66</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>phreakre@gmail.com</name>
+					<alias>Ryan Moon</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>wilsonmbarker@gmail.com</name>
+					<alias>Wilson Barker</alias>
+					<setting name='last_seen' type='int'>1319128439</setting>
+					<setting name='buddy_icon' type='string'>52abf51803a9243e99134b1d05273c5b638fb8a0.jpg</setting>
+					<setting name='icon_checksum' type='string'>52abf51803a9243e99134b1d05273c5b638fb8a0</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='errinlarsen@gmail.com/' proto='prpl-jabber'>
+					<name>vo0do0chile@gmail.com</name>
+					<alias>Vo0 Do0</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>04e8ba2d9582fa25a159a74d7bf3dc68677e2e36.jpg</setting>
+					<setting name='icon_checksum' type='string'>04e8ba2d9582fa25a159a74d7bf3dc68677e2e36</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>adamgamble@gmail.com</name>
+					<alias>Adam Gamble</alias>
+					<setting name='last_seen' type='int'>1319129091</setting>
+					<setting name='buddy_icon' type='string'>f50535da96aba6f6d4bc176481ccd3408b114ee1.png</setting>
+					<setting name='icon_checksum' type='string'>f50535da96aba6f6d4bc176481ccd3408b114ee1</setting>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dlawrence@insightcards.com</name>
+					<alias>Drew Lawrence</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dstern@insightcards.com</name>
+					<alias>Deborah Stern</alias>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>dthompson@insightcards.com</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='elarsen@insightcards.com/' proto='prpl-jabber'>
+					<name>npullman@insightcards.com</name>
+					<alias>Nicole Pullman</alias>
+				</buddy>
+			</contact>
+		</group>
+		<group name='Recent Buddies'>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>dupdike42work</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>lolacharysma</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>thecastoone</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>jirayamada</name>
+				</buddy>
+			</contact>
+			<contact>
+				<buddy account='irkenz' proto='prpl-aim'>
+					<name>lilyyamamotoymg</name>
+					<alias>Karine Billings</alias>
+				</buddy>
+			</contact>
+		</group>
+	</blist>
+	<privacy>
+		<account proto='prpl-aim' name='irkenz' mode='4'>
+			<block>lilyyamamotoymg</block>
+		</account>
+		<account proto='prpl-jabber' name='errinlarsen@gmail.com/' mode='1'/>
+		<account proto='prpl-jabber' name='elarsen@insightcards.com/' mode='1'/>
+	</privacy>
+</purple>

@@ -1,0 +1,87 @@
+.ruby-version
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# List of files poached from Chris Hunt
+# - https://github.com/chrishunt/dot-files
+*.swp
+.bash_history
+.bash_profile
+.bashrc
+.cache
+.CFUserTextEncoding
+.cups/
+.dropbox/
+.fontconfig
+.gem
+.gemrc
+.gitk
+.gnupg/
+.gvimrc
+.heroku
+.irb-history
+.irb_history
+.lesshst
+.mysql_history
+.pry_history
+.rnd
+.sqlite_history
+.ssh/
+.viminfo
+.vimrc
+.Xauthority
+.zcompdump
+.zcompdump
+.zsh-update
+.zsh_history
+
+# My own stuff
+.android
+.chef
+.config
+.dbshell
+.filezilla
+.gitdocs/
+.god
+.keepassx
+.mplayer
+.rbenv/
+.relish
+.sh_history
+.towns
+.Trash
+.vim-fuf-data
+.vmc_instances
+.vmc_target
+.vmc_token
+.vagrant.d
+Applications/
+Applications\ (Parallels)/
+Bitcasa/
+Code/
+Desktop/
+Documents/
+Downloads/
+Dropbox/
+Keys/
+Library/
+Movies/
+Music/
+Notes/
+Pictures/
+Public/
+Scratch/
+Seagate/
+Shared\ Drives/
+Sites/
+yankring_history_v2.txt

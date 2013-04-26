@@ -1,0 +1,18 @@
+<html><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>Conversation with lhammond@insightcards.com at Thu Oct 20 11:04:08 2011 on elarsen@insightcards.com/ (jabber)</title></head><body><h3>Conversation with lhammond@insightcards.com at Thu Oct 20 11:04:08 2011 on elarsen@insightcards.com/ (jabber)</h3>
+<font color="#16569E"><font size="2">(11:04:18)</font> <b>:</b></font> Luke?<br/>
+<font color="#A82F2F"><font size="2">(11:04:21)</font> <b>Luke Hammond:</b></font> yeah<br/>
+<font color="#16569E"><font size="2">(11:04:24)</font> <b>:</b></font> Sorry<br/>
+<font color="#16569E"><font size="2">(11:04:53)</font> <b>:</b></font> I was playing with Finch.  console app for IM chats.  It uses Pidgin library and ncurses<br/>
+<font color="#16569E"><font size="2">(11:04:55)</font> <b>:</b></font> kinda cool<br/>
+<font color="#A82F2F"><font size="2">(11:05:06)</font> <b>Luke Hammond:</b></font> I set up some cron jobs on qa so ..<br/>
+<font color="#A82F2F"><font size="2">(11:05:07)</font> <b>Luke Hammond:</b></font>    1 <span style='font-weight: bold;'>/5 </span> * * * /bin/bash -l -c 'cd /home/deployer/insightcards.net/qa-tandem-phase2/current/ &amp;&amp; /usr/local/bin/rake RAILS_ENV=production environment workers:ftp_import_processor:daily_data_dump'<br/>   2 <span style='font-weight: bold;'>/5 </span> * * * /bin/bash -l -c 'cd /home/deployer/insightcards.net/qa-tandem-phase2/current/ &amp;&amp; /usr/local/bin/rake RAILS_ENV=production environment workers:ftp_import_processor:suspended_debit_import'<br/>
+<font color="#A82F2F"><font size="2">(11:05:31)</font> <b>Luke Hammond:</b></font> They run way to often for a production environment(one every 5 miniutes)<br/>
+<font color="#A82F2F"><font size="2">(11:05:47)</font> <b>Luke Hammond:</b></font> Did Bradley have you set up something similar for phase 2 production&gt;<br/>
+<font color="#A82F2F"><font size="2">(11:06:09)</font> <b>Luke Hammond:</b></font> These jobs import suspended debits, and process data warehouse dumps, using an ftp site.<br/>
+<font color="#A82F2F"><font size="2">(11:06:30)</font> <b>Luke Hammond:</b></font> Kelly asked me to circle up with you and see if these are in place, she wants to run the suspended debit import today.<br/>
+<font color="#16569E"><font size="2">(11:07:09)</font> <b>:</b></font> I have not set up any cron jobs yet<br/>
+<font color="#16569E"><font size="2">(11:07:57)</font> <b>:</b></font> Let me chat with Bradley and Jay real quick and see where my priorities should lie<br/>
+<font color="#A82F2F"><font size="2">(11:08:09)</font> <b>Luke Hammond:</b></font> cool.<br/>
+<font color="#16569E"><font size="2">(11:08:12)</font> <b>:</b></font> I also need to set up SSL certs for production soon<br/>
+<font color="#16569E"><font size="2">(11:08:17)</font> <b>:</b></font> I'll get back to you<br/>
+</body></html>
