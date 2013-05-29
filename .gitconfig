@@ -18,3 +18,5 @@
 	enabled = 1
 [core]
 	excludesfile = /Users/elarsen/.gitignore
+[url "https://"]
+	insteadOf = git://
