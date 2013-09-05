@@ -26,9 +26,10 @@ ZSH_THEME="eastwood"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git ruby bundler brew gem rvm)
-plugins=(brew bundler cap git gitfast osx rbenv ruby gem colored-man)
+plugins=(brew bundler cap git gitfast osx rbenv ruby gem mix colored-man)
 
 source $ZSH/oh-my-zsh.sh
+source $ZSH_CUSTOM/base16-railscasts.dark.sh
 
 # Customize to your needs...
 export PATH=/usr/local/bin:$PATH

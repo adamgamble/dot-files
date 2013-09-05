@@ -50,21 +50,26 @@ Icon
 .chef
 .config
 .dbshell
+.dia-etc/
+.dia/
 .filezilla
 .gitdocs/
 .god
 .keepassx
 .mplayer
+.NERDTreeBookmarks
 .rbenv/
 .relish
 .sh_history
+.subversion/
 .towns
 .Trash
+.vagrant.d
+.vimrc.local
 .vim-fuf-data
 .vmc_instances
 .vmc_target
 .vmc_token
-.vagrant.d
 Applications/
 Applications\ (Parallels)/
 Bitcasa/
@@ -84,4 +89,5 @@ Scratch/
 Seagate/
 Shared\ Drives/
 Sites/
+VirtualBox VMs/
 yankring_history_v2.txt
