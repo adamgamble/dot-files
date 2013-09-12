@@ -42,3 +42,6 @@ alias binit="bi && bundle package"
 
 # for meld
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+# for pipe2eval
+export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
