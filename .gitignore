@@ -52,7 +52,9 @@ Icon
 .dbshell
 .dia-etc/
 .dia/
+.exercism
 .filezilla
+.gist-vim
 .gitdocs/
 .god
 .keepassx

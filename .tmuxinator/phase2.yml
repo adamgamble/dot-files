@@ -1,0 +1,32 @@
+# ~/.tmuxinator/phase2-servers.yml
+
+name: phase2
+root: ~/Code/Rails/phase2
+base_index: 1
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - editor:
+      layout: 52dd,120x39,0,0[120x29,0,0,0,120x9,0,30,7]
+      panes:
+        - vim
+        -
+  - servers:
+      layout: 642a,120x39,0,0[120x18,0,0{60x18,0,0,1,59x18,61,0,10},120x20,0,19{39x20,0,19,3,39x20,40,19,4,40x20,80,19,5}]
+      panes:
+        -
+        -
+        -
+        -
+        -

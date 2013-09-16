@@ -26,7 +26,8 @@ ZSH_THEME="eastwood"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git ruby bundler brew gem rvm)
-plugins=(brew bundler cap git gitfast osx rbenv ruby gem mix colored-man)
+plugins=(brew tmux tmuxinator bundler cap git gitfast osx rbenv ruby gem python\
+         pip mix colored-man)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/base16-railscasts.dark.sh
@@ -39,6 +40,9 @@ alias vim="mvim -v"
 alias bi="bundle install --path vendor/bundle"
 alias bil="bi --local"
 alias binit="bi && bundle package"
+
+# for python
+export PATH=/usr/local/Cellar/python/:$PATH
 
 # for meld
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
