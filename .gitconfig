@@ -18,9 +18,15 @@
 	enabled = 1
 [core]
 	excludesfile = /Users/elarsen/.gitignore
-[url "https://"]
-	insteadOf = git://
+; [url "https://"]
+; 	insteadOf = git://
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 [web]
 	browser = open
+[mergetool "gugitive"]
+	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+[merge]
+	tool = fugitive
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gdiff\" \"$MERGED\"

@@ -1,7 +1,7 @@
-# ~/.tmuxinator/insight_core_client.yml
+# ~/.tmuxinator/notes.yml
 
-name: insight_core_client
-root: ~/Code/Ruby/insight_core_client
+name: notes
+root: ~/Dropbox/Notes
 
 # Optional tmux socket
 # socket_name: foo
@@ -9,19 +9,15 @@ root: ~/Code/Ruby/insight_core_client
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 pre:
-  - export RBENV_DIR=
-  - export RBENV_VERSION=
+  -export RBENV_DIR=
+  -export RBENV_VERSION=
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
-pre_window: rbenv shell `cat .ruby-version`
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
 
 windows:
-  - editor:
-      layout: 10a3,206x53,0,0[206x37,0,0,4,206x15,0,38,7]
-      panes:
-        - vim
-        - 
+  - editor: vim
+  - terminal:

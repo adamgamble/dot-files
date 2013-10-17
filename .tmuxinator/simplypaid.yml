@@ -20,7 +20,13 @@ pre:
 
 windows:
   - editor:
-      layout: 52dd,120x39,0,0[120x29,0,0,0,120x9,0,30,7]
+      layout: 129a,206x55,0,0[206x37,0,0,0,206x17,0,38,1]
       panes:
         - vim
         -
+  - servers/log:
+      layout: 28c3,206x55,0,0{103x55,0,0[103x27,0,0,4,103x27,0,28,6],102x55,104,0,5}
+      panes:
+        - redis-server config/redis.conf
+        - be rails s
+        - tail -f log/development.log
