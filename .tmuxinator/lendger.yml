@@ -1,0 +1,35 @@
+# ~/.tmuxinator/simplypaid.yml
+
+name: lendger
+root: ~/Code/Rails/lendger
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - editor:
+      layout: 129a,206x55,0,0[206x37,0,0,0,206x17,0,38,1]
+      panes:
+        - vim
+        -
+  - servers/log:
+      layout: 28c3,206x55,0,0{103x55,0,0[103x27,0,0,4,103x27,0,28,6],102x55,104,0,5}
+      panes:
+        -
+        -
+        -
+        # - redis-server config/redis.conf
+        # - be rails s
+        # - tail -f log/development.log

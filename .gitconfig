@@ -1,6 +1,6 @@
 [user]
 	name = Errin Larsen
-	email = elarsen@insightcards.com
+	email = errinlarsen@gmail.com
 [color]
   branch = auto
   diff = auto
@@ -17,7 +17,7 @@
 [rerere]
 	enabled = 1
 [core]
-	excludesfile = /Users/elarsen/.gitignore
+	excludesfile = /Users/errinlarsen/.gitignore_global
 ; [url "https://"]
 ; 	insteadOf = git://
 [alias]

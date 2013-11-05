@@ -1,0 +1,30 @@
+# ~/.tmuxinator/simplypaid.yml
+
+name: longbox
+root: ~/Code/Rails/longbox
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+pre:
+  - export RBENV_DIR=
+  - export RBENV_VERSION=
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - editor:
+      layout: 129a,206x55,0,0[206x37,0,0,0,206x17,0,38,1]
+      panes:
+        - vim
+        -
+  - servers/log:
+      # panes:
+      #   - be rails s
+      #   - tail -f log/development.log

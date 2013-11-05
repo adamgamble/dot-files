@@ -42,7 +42,7 @@ alias bil="bi --local"
 alias binit="bi && bundle package"
 
 # for python
-export PATH=/usr/local/Cellar/python/:$PATH
+export PATH=/usr/local/Cellar/python:$PATH
 
 # for meld
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
