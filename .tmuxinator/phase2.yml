@@ -9,12 +9,11 @@ root: ~/Code/Rails/phase2
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 pre:
-  - export RBENV_DIR=
-  - export RBENV_VERSION=
+  - unset RBENV_DIR
+  - unset RBENV_VERSION
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
-pre_window: rbenv shell `cat .ruby-version`
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -34,6 +33,7 @@ windows:
         - tmux send-keys -t phase2:1.3 'ssh deployer@tom'
         - tmux send-keys -t phase2:1.4 'ssh deployer@treebeard'
   - development:
-    panes:
-      - tmux send-keys -t phase2:2.0 'ssh deployer@qa-app4'
-      - tmux send-keys -t phase2:2.1 'ssh deployer@samarium'
+      panes:
+        - tmux send-keys -t phase2:2.0 'ssh deployer@qa-app4'
+        - tmux send-keys -t phase2:2.1 'ssh deployer@samarium'
+  - other:

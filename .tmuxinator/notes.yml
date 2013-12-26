@@ -9,8 +9,8 @@ root: ~/Dropbox/Notes
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 pre:
-  -export RBENV_DIR=
-  -export RBENV_VERSION=
+  - unset RBENV_DIR
+  - unset RBENV_VERSION
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -20,4 +20,4 @@ pre:
 
 windows:
   - editor: vim
-  - terminal:
+  - other:

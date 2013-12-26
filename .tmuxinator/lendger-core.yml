@@ -1,7 +1,7 @@
-# ~/.tmuxinator/insight_core_client.yml
+# ~/.tmuxinator/simplypaid.yml
 
-name: insight_core_client
-root: ~/Code/Ruby/insight_core_client
+name: lendger-core
+root: ~/Code/Ruby/lendger-core
 
 # Optional tmux socket
 # socket_name: foo
@@ -20,7 +20,7 @@ pre:
 
 windows:
   - editor:
-      layout: 10a3,206x53,0,0[206x37,0,0,4,206x15,0,38,7]
+      layout: 129a,206x55,0,0[206x37,0,0,0,206x17,0,38,1]
       panes:
         - vim
         -

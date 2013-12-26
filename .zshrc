@@ -6,7 +6,11 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="suvash"
+# ZSH_THEME="amuse"
+# ZSH_THEME="ys"
+# ZSH_THEME="jonathan"
 ZSH_THEME="eastwood"
+# ZSH_THEME="pure"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -26,8 +30,8 @@ ZSH_THEME="eastwood"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git ruby bundler brew gem rvm)
-plugins=(brew tmux tmuxinator bundler cap git gitfast osx rbenv ruby gem python\
-         pip mix colored-man)
+plugins=(brew tmux tmuxinator capistrano git gitfast osx rbenv ruby gem bundler\
+         python pip mix colored-man)
 
 source $ZSH/oh-my-zsh.sh
 source $ZSH_CUSTOM/base16-railscasts.dark.sh

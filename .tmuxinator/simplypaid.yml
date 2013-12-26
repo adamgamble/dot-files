@@ -9,8 +9,8 @@ root: ~/Code/Rails/simplypaid
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
 pre:
-  - export RBENV_DIR=
-  - export RBENV_VERSION=
+  - unset RBENV_DIR
+  - unset RBENV_VERSION
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -27,6 +27,11 @@ windows:
   - servers/log:
       layout: 28c3,206x55,0,0{103x55,0,0[103x27,0,0,4,103x27,0,28,6],102x55,104,0,5}
       panes:
-        - redis-server config/redis.conf
-        - be rails s
-        - tail -f log/development.log
+        - tmux send-keys -t simplypaid:1.0 'redis-server config/redis.conf'
+        - tmux send-keys -t simplypaid:1.1 'be rails s'
+        - tmux send-keys -t simplypaid:1.2 'tail -f log/development.log'
+  - development:
+      panes:
+        - tmux send-keys -t simplypaid:2.0 'ssh deployer@qa-app10'
+        - tmux send-keys -t simplypaid:2.1 'ssh deployer@qa-app11'
+  - other:
