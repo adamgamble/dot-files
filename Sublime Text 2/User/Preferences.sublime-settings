@@ -1,0 +1,15 @@
+{
+	"color_scheme": "Packages/RailsCasts Colour Scheme/RailsCastsColorScheme.tmTheme",
+	"ignored_packages":
+	[
+	],
+	"rulers":
+	[
+		80
+	],
+	"theme": "Soda Dark.sublime-theme",
+	"vintage_start_in_command_mode": true,
+	"highlight_line": true,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true
+}

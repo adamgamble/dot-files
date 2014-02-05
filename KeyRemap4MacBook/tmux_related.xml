@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<root>
+  <item>
+    <name>tmux related</name>
+
+    <item>
+      <name>Session/Window/Pane navigation</name>
+
+      <item>
+        <name>Sessions</name>
+        <identifier>private.tmux_session_navigation</identifier>
+        <appendix>&lt;H-9&gt; - select prev session</appendix>
+        <appendix>&lt;H-0&gt; - select next session</appendix>
+
+        <autogen>
+          __KeyToKey__ KeyCode::KEY_9, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::KEY_9, ModifierFlag::NONE
+        </autogen>
+        <autogen>
+          __KeyToKey__ KeyCode::KEY_0, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::KEY_0, ModifierFlag::NONE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Windows</name>
+        <identifier>private.tmux_window_navigation</identifier>
+        <appendix>&lt;H-,&gt; - select prev window</appendix>
+        <appendix>&lt;H-.&gt; - select next window</appendix>
+
+        <autogen>
+          __KeyToKey__ KeyCode::COMMA, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::COMMA, ModifierFlag::NONE
+        </autogen>
+        <autogen>
+          __KeyToKey__ KeyCode::DOT, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::DOT, ModifierFlag::NONE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Panes</name>
+        <identifier>private.tmux_pane_navigation</identifier>
+        <appendix>&lt;H-h&gt; - select pane to left</appendix>
+        <appendix>&lt;H-j&gt; - select pane below</appendix>
+        <appendix>&lt;H-k&gt; - select pane above</appendix>
+        <appendix>&lt;H-l&gt; - select pane to right</appendix>
+        <appendix />
+        <appendix>&lt;H-m&gt; - toggle zoom of current pane</appendix>
+
+        <autogen>
+          __KeyToKey__ KeyCode::H, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::H, ModifierFlag::NONE
+        </autogen>
+        <autogen>
+          __KeyToKey__ KeyCode::J, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::J, ModifierFlag::NONE
+        </autogen>
+        <autogen>
+          __KeyToKey__ KeyCode::K, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::K, ModifierFlag::NONE
+        </autogen>
+        <autogen>
+          __KeyToKey__ KeyCode::L, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::L, ModifierFlag::NONE
+        </autogen>
+        <autogen>
+          __KeyToKey__ KeyCode::M, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::M, ModifierFlag::NONE
+        </autogen>
+      </item>
+    </item>
+
+    <item>
+      <name>Miscellaneous</name>
+
+      <item>
+        <name>Command prompt</name>
+        <identifier>private.tmux_command_prompt</identifier>
+        <appendix>&lt;H-:&gt; - open tmux command prompt</appendix>
+
+        <autogen>
+          __KeyToKey__ KeyCode::SEMICOLON, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::SEMICOLON, ModifierFlag::SHIFT_L | ModifierFlag::NONE
+        </autogen>
+      </item>
+
+      <item>
+        <name>Synchronize panes toggle</name>
+        <identifier>private.tmux_synchronize_panes</identifier>
+        <appendix>&lt;H-i&gt; - synchronize all visible panes (toggle)</appendix>
+
+        <autogen>
+          __KeyToKey__ KeyCode::I, MODIFIERFLAGS_CCOS_L,
+          KeyCode::A, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
+          KeyCode::I, ModifierFlag::SHIFT_L | ModifierFlag::NONE
+        </autogen>
+      </item>
+    </item>
+  </item>
+</root>

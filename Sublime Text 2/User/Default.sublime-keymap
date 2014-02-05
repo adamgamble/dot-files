@@ -1,0 +1,62 @@
+[
+  // Sidebar
+    // toggle
+	{
+		"keys": [",", "e"], "command": "toggle_side_bar",
+		"context": [{ "key": "setting.command_mode", "operand": true }]
+	},
+
+	// h/j/k/l movement
+	{
+		"keys": ["h"],
+		"command": "move", "args": {"by": "characters", "forward": false},
+		"context": [{"key": "control", "operand": "sidebar_tree"}]
+	},
+	{
+		"keys": ["j"],
+		"command": "move", "args": {"by": "lines", "forward": true},
+		"context": [{"key": "control", "operand": "sidebar_tree"}]
+	},
+	{
+		"keys": ["k"],
+		"command": "move", "args": {"by": "lines", "forward": false},
+		"context": [{"key": "control", "operand": "sidebar_tree"}]
+	},
+	{
+		"keys": ["l"],
+		"command": "move", "args": {"by": "characters", "forward": true},
+		"context": [{"key": "control", "operand": "sidebar_tree"}]
+	},	
+
+  // Vintage Package
+    // exit insert mode
+	{ 
+		"keys": ["j", "j"], "command": "exit_insert_mode",
+		"context": 
+		[
+			{ "key": "setting.command_mode", "operand": false },
+			{ "key": "setting.is_widget", "operand": false }
+		]
+	},
+
+
+  // Origami Package
+    // h/j/k/l travel_to_pane mappings	
+	{
+		"keys": ["ctrl+h"], "command": "travel_to_pane",
+		"args": {"direction": "left"}, "context": [{"key": "setting.command_mode"}]
+	},	
+	{
+		"keys": ["ctrl+j"], "command": "travel_to_pane",
+		"args": {"direction": "down"}, "context": [{"key": "setting.command_mode"}]
+	},
+	{
+		"keys": ["ctrl+k"], "command": "travel_to_pane",
+		"args": {"direction": "up"}, "context": [{"key": "setting.command_mode"}]
+	},
+	{
+
+		"keys": ["ctrl+l"], "command": "travel_to_pane",
+		"args": {"direction": "right"}, "context": [{"key": "setting.command_mode"}]
+	}
+]

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<root>
+
+  <deviceproductdef>
+    <productname>APPLE_EXTERNAL_KEYBOARD_0x024f</productname>
+    <productid>0x024f</productid>
+  </deviceproductdef>
+
+  <item>
+    <name>My custom settings</name>
+
+    <item>
+      <name>Create Hyper Key</name>
+
+      <appendix>OS X doesn't have a `Hyper` key.</appendix>
+      <appendix>This maps F19 to Command_L + Shift_L + Control_L + Option_L.</appendix>
+      <appendix>You can use this key in your own custom keyboard shortcuts.</appendix>
+
+      <identifier>private.f19_to_hyper</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::F19, KeyCode::COMMAND_L, MODIFIERFLAGS_CCOS_L, KeyCode::ESCAPE
+      </autogen>
+    </item>
+
+    <include path="force_shift.xml" />
+    <include path="tmux_related.xml" />
+
+    <item>
+      <name>Change PC Application Key</name>
+
+      <item><name>Application key to Command_R key</name>
+        <identifier>private.pc_application2commandR</identifier>
+        <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::COMMAND_R</autogen>
+      </item>
+
+      <item>
+        <name>Application key to Control_R key</name>
+
+        <identifier>private.pc_application2controlR</identifier>
+        <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::CONTROL_R</autogen>
+      </item>
+    </item>
+
+    <item>
+      <name>Device Specific Mixed Settings</name>
+
+      <item>
+        <name>For MacBook pro (vid/did: 0x05ac,0x0245)</name>
+
+        <item>
+          <name>Swap Command and Option on Apple keyboards</name>
+          <identifier>private.swap_command_and_option_apple</identifier>
+          <appendix>(Silly Apple, ISO/IEC 9995-2 is for everyone!)</appendix>
+
+          <block>
+            <device_only>
+              DeviceVendor::APPLE_COMPUTER,
+              DeviceProduct::APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0245
+            </device_only>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+            <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+          </block>
+
+          <block>
+            <device_only>
+              DeviceVendor::APPLE_COMPUTER,
+              DeviceProduct::APPLE_EXTERNAL_KEYBOARD_0x024f
+            </device_only>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+            <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+          </block>
+        </item>
+      </item>
+    </item>
+  </item>
+</root>
