@@ -5,11 +5,14 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+ZSH_THEME="jonathan-customized"
+# ZSH_THEME="agnoster"
+# ZSH_THEME="eastwood"
+# ZSH_THEME="gallois"
 # ZSH_THEME="suvash"
 # ZSH_THEME="amuse"
 # ZSH_THEME="ys"
 # ZSH_THEME="jonathan"
-ZSH_THEME="eastwood"
 # ZSH_THEME="pure"
 
 # Set to this to use case-sensitive completion
