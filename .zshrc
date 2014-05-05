@@ -30,6 +30,18 @@ ZSH_THEME="jonathan-customized"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+# for python
+export PATH=/usr/local/Cellar/python:$PATH
+
+# for meld
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+# for pipe2eval
+export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
+
+# for rbenv
+export RBENV_ROOT=$HOME/.rbenv
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(git ruby bundler brew gem rvm)
@@ -47,15 +59,3 @@ alias vim="mvim -v"
 alias bi="bundle install --path vendor/bundle"
 alias bil="bi --local"
 alias binit="bi && bundle package"
-
-# for python
-export PATH=/usr/local/Cellar/python:$PATH
-
-# for meld
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
-# for pipe2eval
-export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
-
-# for rbenv
-export RBENV_ROOT=$HOME/.rbenv
