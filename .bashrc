@@ -1,4 +1,5 @@
 export PATH=/usr/local/bin:$PATH
+
 # RVM Magic
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
