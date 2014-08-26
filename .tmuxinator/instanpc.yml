@@ -1,5 +1,5 @@
-name: core_auth
-root: ~/Code/Rails/core_auth
+name: InstaNPC
+root: ~/Code/Ruby/instanpc
 
 # Optional tmux socket
 # socket_name: foo
@@ -18,9 +18,5 @@ pre:
 # tmux_options: -f ~/.tmux.mac.conf
 
 windows:
-  - editor:
-      layout: 10a3,206x53,0,0[206x37,0,0,4,206x15,0,38,7]
-      panes:
-        - vim
-        -
+  - editor: vim
   - other:

@@ -1,5 +1,5 @@
-name: core_auth
-root: ~/Code/Rails/core_auth
+name: Greyhawk
+root: ~/Code/Jekyll/castle_greyhawk
 
 # Optional tmux socket
 # socket_name: foo

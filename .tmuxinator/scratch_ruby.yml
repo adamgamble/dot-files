@@ -1,5 +1,5 @@
-name: core_auth
-root: ~/Code/Rails/core_auth
+name: ScratchRuby
+root: ~/Code/Ruby
 
 # Optional tmux socket
 # socket_name: foo

@@ -1,4 +1,4 @@
-name: cardholder_portal
+name: CardholderPortal
 root: ~/Code/Rails/cardholder_portal
 
 # Optional tmux socket
@@ -10,7 +10,8 @@ pre:
   - unset RBENV_DIR
   - unset RBENV_VERSION
 
-# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# Runs in each window and pane before window/pane specific commands.
+# Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
