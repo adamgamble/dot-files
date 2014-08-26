@@ -22,6 +22,8 @@
 ; 	insteadOf = git://
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  ba = for-each-ref --sort=committerdate --format='%(committerdate:short) %(refname:short)' refs/heads refs/remotes
+	ig = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"
 [web]
 	browser = open
 [merge]
@@ -30,3 +32,5 @@
 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 [push]
 	default = simple
+[init]
+	templatedir = ~/.git_template

@@ -1,59 +1,7 @@
-# ------------------------------------------------------------------------------
-# First,   run /etc/zshenv,   then ~/.zshenv
-#   # Empty
+# MacVim
+export EDITOR=vim
+alias vim="mvim -v"
 
-# Second,  run /etc/zprofile, then ~/.zprofile  (only login shells)
-#   # Empty
-
-# Third,   run /etc/zshrc,    then ~/.zshrc     (only interactive shells)
-#   (This file)
-
-# Finally, run /etc/zlogin,   then ~/.zlogin    (only login shells)
-#   # Make sure /usr/local/bin is at the head of $PATH (for Brew)
-#   export PATH=/usr/local/bin:$PATH
-# ------------------------------------------------------------------------------
-
-# ------------------------------------------------------------------------------
-# OH-MY-ZSH Configuration
-# ------------------------------------------------------------------------------
-# Path to your oh-my-zsh configuration
-ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
-# # Optionally, if you set this to "random",
-# #   it'll load a random theme each time that oh-my-zsh is loaded.
-#
-# # Other themes I kinda liked:
-# # agnoster, eastwood, gallois, suvash, amuse, ys, jonathan, pure
-ZSH_THEME="jonathan-customized"
-
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
-
-# Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
-
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(git ruby bundler brew gem rvm)
-plugins=(osx brew python pip tmuxinator tmux gitfast git rbenv ruby gem bundler colored-man)
-
-source $ZSH/oh-my-zsh.sh
-source $ZSH_CUSTOM/base16-railscasts.dark.sh  # Configure Console colors
-
-
-# ------------------------------------------------------------------------------
-# Customize to your needs...
-# ------------------------------------------------------------------------------
 # for python
 export PATH=/usr/local/Cellar/python:$PATH
 
@@ -66,12 +14,117 @@ export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
 # for rbenv
 export RBENV_ROOT=$HOME/.rbenv
 
-export EDITOR=vim
-alias vim="mvim -v"
 
-alias bi="bundle install --path vendor/bundle"
-alias bil="bi --local"
-alias binit="bi && bundle package"
+# ------------------------------------------------------------------------------
+# OH-MY-ZSH Configuration
+# ------------------------------------------------------------------------------
+# Path to your oh-my-zsh configuration
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
+#   # Other themes I kinda liked:
+#   # agnoster, eastwood, gallois, suvash, amuse, ys, jonathan, pure
+ZSH_THEME="jonathan-customized"
+
+# tmux
+# export ZSH_TMUX_AUTOSTART=true
+# export ZSH_TMUX_AUTOQUIT=false
+alias mx="mux start"
+
+# Which plugins to load?
+plugins=(
+systemadmin osx brew tmux git gitfast colored-man colorize
+rbenv ruby gem rake rake-fast bundler
+rails tmuxinator
+)
+
+# start oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+
+# ------------------------------------------------------------------------------
+# actions to perform ...
+# ------------------------------------------------------------------------------
+# Base16 Shell
+BASE16_SCHEME="railscasts"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# initialize rbenv
+eval "$(rbenv init -)"
 
 # Because: pretty
 archey -c
+
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Notes on Zsh startup
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# First,   run /etc/zshenv,   then ~/.zshenv
+#   # Empty
+
+# Second,  run /etc/zprofile, then ~/.zprofile  (only login shells)
+#   # Empty
+
+# Third,   run /etc/zshrc,    then ~/.zshrc     (only interactive shells)
+#   (This file)
+
+# Finally, run /etc/zlogin,   then ~/.zlogin    (only login shells)
+#   # Make sure /usr/local/bin is at the head of $PATH (for Brew)
+#   export PATH=/usr/local/bin:$PATH
+
+
+# ------------------------------------------------------------------------------
+# OH-MY-ZSH Configuration Notes
+# ------------------------------------------------------------------------------
+# Path to your oh-my-zsh configuration
+# ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it will load a random theme each time
+# that oh-my-zsh is loaded.
+# ZSH_THEME="jonathan-customized"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to disable command auto-correction.
+# DISABLE_CORRECTION="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# plugins=(git ruby bundler brew gem rvm)
+# plugins=(
+# systemadmin osx brew tmux colored-man colorize git gitfast
+# rbenv ruby gem rake rake-fast bundler rails
+# )
+
+# source $ZSH/oh-my-zsh.sh

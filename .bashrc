@@ -1,8 +1,5 @@
 export PATH=/usr/local/bin:$PATH
 
-# RVM Magic
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
 # Bash-Completion for Git
 if [ -f `/usr/local/bin/brew --prefix`/etc/bash_completion ]; then
   . `/usr/local/bin/brew --prefix`/etc/bash_completion
@@ -30,5 +27,3 @@ alias bil="bi --local"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
