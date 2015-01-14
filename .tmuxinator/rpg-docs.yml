@@ -1,0 +1,26 @@
+name: RPG-Docs
+root: ~/Code/Meteor/RPG-Docs/rpg-docs
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+pre:
+  - unset RBENV_DIR
+  - unset RBENV_VERSION
+
+# Runs in each window and pane before window/pane specific commands.
+# Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+windows:
+  - editor:
+      layout: 10a3,206x53,0,0[206x37,0,0,4,206x15,0,38,7]
+      panes:
+        - vim
+        -
+  - other:

@@ -10,24 +10,63 @@
     <name>My custom settings</name>
 
     <item>
-      <name>Create Hyper Key</name>
+      <name>Change "International" key to `Hyper` and CapsLock</name>
+      <appendix>Tap Control_L for CapsLock, Hold Control_L for ⇧⌃⌥⌘</appendix>
 
-      <appendix>OS X doesn't have a `Hyper` key.</appendix>
-      <appendix>This maps F19 to Command_L + Shift_L + Control_L + Option_L.</appendix>
-      <appendix>You can use this key in your own custom keyboard shortcuts.</appendix>
-
-      <identifier>private.f19_to_hyper</identifier>
+      <identifier>private.international_to_capslock_hyper</identifier>
       <autogen>
         __KeyOverlaidModifier__
-        KeyCode::F19, KeyCode::COMMAND_L, MODIFIERFLAGS_CCOS_L, KeyCode::ESCAPE
+        KeyCode::DANISH_DOLLAR,
+        KeyCode::CONTROL_L, MODIFIERFLAGS_CCOS_L,
+        KeyCode::CAPSLOCK
       </autogen>
     </item>
+
+    <item>
+      <name>Change F19 to Escape and Control</name>
+      <appendix>Tap F19 for Escape, Hold F19 for Control_L</appendix>
+      <appendix>Works well with using Seil to remap CapsLock to F19(code 80).</appendix>
+
+      <identifier>private.remap.f19_escape_control</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::F19,
+        KeyCode::CONTROL_L,
+        KeyCode::ESCAPE
+      </autogen>
+    </item>
+
+    <item>
+      <name>Change Left Control to `Hyper` and CapsLock</name>
+      <appendix>Tap Control_L for CapsLock, Hold Control_L for ⇧⌃⌥⌘</appendix>
+
+      <identifier>private.control_l_to_capslock_hyper</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::CONTROL_L,
+        KeyCode::CONTROL_L, MODIFIERFLAGS_CCOS_L,
+        KeyCode::CAPSLOCK
+      </autogen>
+    </item>
+
+    <item>
+      <name>Change Right Control to CapsLock and Control</name>
+      <appendix>Tap Control_R for CapsLock, Hold Control_R for Control_R</appendix>
+
+      <identifier>private.f19_to_capslock_control</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::CONTROL_R,
+        KeyCode::CONTROL_R,
+        KeyCode::CAPSLOCK
+      </autogen>
+    </item>
+
 
     <include path="force_shift.xml" />
     <include path="tmux_related.xml" />
 
-    <item>
-      <name>Change PC Application Key</name>
+    <item> <name>Change PC Application Key</name>
 
       <item><name>Application key to Command_R key</name>
         <identifier>private.pc_application2commandR</identifier>

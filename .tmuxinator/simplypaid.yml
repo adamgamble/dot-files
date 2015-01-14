@@ -27,11 +27,15 @@ windows:
   - servers/log:
       layout: 28c3,206x55,0,0{103x55,0,0[103x27,0,0,4,103x27,0,28,6],102x55,104,0,5}
       panes:
-        - tmux send-keys -t simplypaid:1.0 'redis-server config/redis.conf'
-        - tmux send-keys -t simplypaid:1.1 'be rails s'
-        - tmux send-keys -t simplypaid:1.2 'tail -f log/development.log'
+        - tmux send-keys -t simplypaid:2.1 'redis-server config/redis.conf'
+        - tmux send-keys -t simplypaid:2.2 'be rails s'
+        - tmux send-keys -t simplypaid:2.3 'tail -f log/development.log'
+  - production:
+      panes:
+        - tmux send-keys -t simplypaid:3.1 'ssh deployer@app10'
+        - tmux send-keys -t simplypaid:3.2 'ssh deployer@app11'
   - development:
       panes:
-        - tmux send-keys -t simplypaid:2.0 'ssh deployer@qa-app10'
-        - tmux send-keys -t simplypaid:2.1 'ssh deployer@qa-app11'
+        - tmux send-keys -t simplypaid:4.1 'ssh deployer@qa-app10'
+        - tmux send-keys -t simplypaid:4.2 'ssh deployer@qa-app11'
   - other:

@@ -1,5 +1,5 @@
-name: ScratchRuby
-root: ~/Code/Ruby
+name: Discover Meteor
+root: ~/Code/Meteor/microscope
 
 # Optional tmux socket
 # socket_name: foo

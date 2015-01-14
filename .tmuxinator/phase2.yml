@@ -22,17 +22,31 @@ windows:
   - editor:
       layout: 52dd,120x39,0,0[120x29,0,0,0,120x9,0,30,7]
       panes:
-        - vim
-        -
+        - vim:
+          - vim
+        - console:
+          - clear
   - production:
       layout: cc2f,205x53,0,0[206x26,0,0{102x26,0,0,14,103x26,103,0,18},206x26,0,27{102x26,0,27,20,103x26,103,27,21}]
       panes:
-        - tmux send-keys -t phase2:2.1 'ssh deployer@aragorn'
-        - tmux send-keys -t phase2:2.2 'ssh deployer@merry'
-        - tmux send-keys -t phase2:2.3 'ssh deployer@tom'
-        - tmux send-keys -t phase2:2.4 'ssh deployer@treebeard'
+        - aragorn:
+          - clear
+          - tmux send-keys -t phase2:2.1 'ssh deployer@aragorn'
+        - merry:
+          - clear
+          - tmux send-keys -t phase2:2.2 'ssh deployer@merry'
+        - tom:
+          - clear
+        - treebeard:
+          - clear
+          - tmux send-keys -t phase2:2.4 'ssh deployer@treebeard'
   - development:
       panes:
-        - tmux send-keys -t phase2:3.1 'ssh deployer@qa-app4'
-        - tmux send-keys -t phase2:3.2 'ssh deployer@samarium'
+        - qa-app4:
+          - clear
+          - tmux send-keys -t phase2:3.1 'ssh deployer@qa-app4'
+        - samarium:
+          - clear
+          - tmux send-keys -t phase2:3.2 'ssh deployer@samarium'
   - other:
+    -
