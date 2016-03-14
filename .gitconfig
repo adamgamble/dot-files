@@ -16,14 +16,14 @@
 	browse = yes
 [rerere]
 	enabled = 1
+	autoupdate = true
 [core]
 	excludesfile = /Users/errinlarsen/.gitignore_global
-; [url "https://"]
-; 	insteadOf = git://
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   ba = for-each-ref --sort=committerdate --format='%(committerdate:short) %(refname:short)' refs/heads refs/remotes
 	ig = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"
+	ctags = !.git/hooks/ctags
 [web]
 	browser = open
 [merge]
@@ -34,3 +34,9 @@
 	default = simple
 [init]
 	templatedir = ~/.git_template
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

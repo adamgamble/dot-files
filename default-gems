@@ -2,4 +2,3 @@ gem-ctags
 bundler
 pry
 pry-doc
-tmuxinator

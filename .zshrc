@@ -1,20 +1,3 @@
-# MacVim
-export EDITOR=vim
-alias vim="mvim -v"
-
-# for python
-export PATH=/usr/local/Cellar/python:$PATH
-
-# for meld
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
-
-# for pipe2eval
-export PIP2EVAL_TMP_FILE_PATH=/tmp/shms
-
-# for rbenv
-export RBENV_ROOT=$HOME/.rbenv
-
-
 # ------------------------------------------------------------------------------
 # OH-MY-ZSH Configuration
 # ------------------------------------------------------------------------------
@@ -26,32 +9,79 @@ ZSH=$HOME/.oh-my-zsh
 #   # agnoster, eastwood, gallois, suvash, amuse, ys, jonathan, pure
 ZSH_THEME="jonathan-customized"
 
-# tmux
-# export ZSH_TMUX_AUTOSTART=true
-# export ZSH_TMUX_AUTOQUIT=false
-alias mx="mux start"
-
 # Which plugins to load?
 plugins=(
-systemadmin osx brew tmux git gitfast colored-man colorize
-rbenv ruby gem rake rake-fast bundler
-rails tmuxinator
+  systemadmin osx brew gnu-utils git gitfast colored-man colorize
+  rbenv ruby gem rake rake-fast bundler rails
 )
 
-# start oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+
+# ------------------------------------------------------------------------------
+# ENV
+# ------------------------------------------------------------------------------
+# for rbenv
+export RBENV_ROOT=$HOME/.rbenv
+
+# for nvm
+export NVM_DIR=$HOME/.nvm
+
+# Vim
+export EDITOR=vim
+
+# Base16 Shell
+BASE16_SCHEME="railscasts"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+
+
+# ------------------------------------------------------------------------------
+# PATH
+# ------------------------------------------------------------------------------
+# for erlenv
+export PATH="$HOME/.erlenv/bin:$PATH"
+
+# for exenv
+export PATH="$HOME/.exenv/bin:$PATH"
+
+# for python
+export PATH=/usr/local/Cellar/python:$PATH
+
+# local project-level bin directories -- `mkdir .git/safe` if trusted project
+export PATH=.git/safe/../../bin:$PATH
+
+
+# ------------------------------------------------------------------------------
+# Personal aliases
+# ------------------------------------------------------------------------------
+# filter out ./vendor and ./tmp with tree
+alias ti="tree -I 'vendor|tmp' --matchdirs"
+alias vim="nvim"
+# alias vim="mvim -v"
+alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
 
 
 # ------------------------------------------------------------------------------
 # actions to perform ...
 # ------------------------------------------------------------------------------
+# Vim
+bindkey -v
+
 # Base16 Shell
-BASE16_SCHEME="railscasts"
-BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # initialize rbenv
 eval "$(rbenv init -)"
+
+# initialize erlenv
+eval "$(erlenv init -)"
+
+# initialize exenv
+eval "$(exenv init -)"
+
+# for nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# start oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # Because: pretty
 archey -c

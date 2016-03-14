@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<root>
+
+  <deviceproductdef>
+    <productname>APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0245</productname>
+    <productid>0x0245</productid>
+  </deviceproductdef>
+
+  <item>
+    <name>For MacBook Pro (vid/did: 0x05ac,0x0245)</name>
+
+    <item>
+      <name>Swap Command and Option on Apple MacBook Pro (vid/pid: 0x05ac,0x0245</name>
+      <identifier>private.swap_command_and_option_macbook_pro_0x0245</identifier>
+      <appendix>(Silly Apple, ISO/IEC 9995-2 is for everyone!)</appendix>
+
+      <block>
+        <device_only>
+          DeviceVendor::APPLE_COMPUTER,
+          DeviceProduct::APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0245
+        </device_only>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+        <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+      </block>
+    </item>
+  </item>
+</root>

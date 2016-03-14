@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<root>
+
+  <devicevendordef>
+    <vendorname>VORTEXGEAR</vendorname>
+    <vendorid>0x04d9</vendorid>
+  </devicevendordef>
+
+  <deviceproductdef>
+    <productname>POK3R_KEYBOARD</productname>
+    <productid>0x0141</productid>
+  </deviceproductdef>
+
+  <item>
+    <name>For POK3R Keyboard series (vid/pid: 0x04d9, 0x0141)</name>
+
+    <item>
+      <name>Change Command+Option+arrows to Control+arrows</name>
+      <identifier>errins_remap.command_option_arrows2control_arrows</identifier>
+      <block>
+        <device_only>
+          DeviceVendor::VORTEXGEAR,
+          DeviceProduct::POK3R_KEYBOARD
+        </device_only>
+
+        <autogen>
+          __KeyToKey__
+          KeyCode::CURSOR_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+          KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::CURSOR_DOWN, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+          KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::CURSOR_UP, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+          KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L
+        </autogen>
+        <autogen>
+          __KeyToKey__
+          KeyCode::CURSOR_RIGHT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,
+          KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L
+        </autogen>
+      </block>
+    </item>
+  </item>
+</root>

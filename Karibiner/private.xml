@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<root>
+
+  <item>
+    <name>Errin's custom settings</name>
+
+    <include path="macbook_air.xml" />
+    <include path="code_keyboard.xml" />
+    <include path="pok3r_keyboard.xml" />
+    <!-- <include path="force_shift.xml" /> -->
+    <!-- <include path="tmux_related.xml" /> -->
+
+    <item>
+      <name>Doubletap Left Shift to send Capslock</name>
+      <appendix>(+ When you type Shift_L twice, Capslock)</appendix>
+      <identifier>errins_remap.doubletap_shiftl2capslock</identifier>
+      <autogen>
+        __DoublePressModifier__
+        KeyCode::SHIFT_L, KeyCode::SHIFT_L,
+        KeyCode::CAPSLOCK
+      </autogen>
+    </item>
+
+
+    <modifierdef>F19</modifierdef>
+
+    <item>
+      <name>F19 to Escape and Control v2</name>
+      <appendix>Tap F19 for Escape, Hold F19 for Control</appendix>
+      <appendix>Works well with using Seil to remap CapsLock to F19(code 80).</appendix>
+      <appendix></appendix>
+      <appendix>Send a escape key event when the caps lock key is released before another key is released.</appendix>
+      <appendix>For example:</appendix>
+      <appendix><![CDATA[  caps lock down -> T down -> T up => control+T  ]]></appendix>
+      <appendix><![CDATA[  caps lock down -> T down -> caps lock up => escape,T  ]]></appendix>
+
+      <identifier>private.f19_escape_control_v2</identifier>
+      <autogen>
+        __KeyOverlaidModifier__
+        KeyCode::F19,
+        KeyCode::CONTROL_L, ModifierFlag::F19,
+        KeyCode::ESCAPE
+      </autogen>
+      <block>
+        <modifier_only>ModifierFlag::F19</modifier_only>
+        <autogen>__BlockUntilKeyUp__ KeyCode::F19</autogen>
+      </block>
+    </item>
+
+    <!-- <item> -->
+    <!--   <name>Change Left Control to `Hyper` and CapsLock</name> -->
+    <!--   <appendix>Tap Control_L for CapsLock, Hold Control_L for ⇧⌃⌥⌘</appendix> -->
+    <!--   <identifier>private.control_l_to_capslock_hyper</identifier> -->
+    <!--   <autogen> -->
+    <!--     __KeyOverlaidModifier__ -->
+    <!--     KeyCode::CONTROL_L, -->
+    <!--     KeyCode::CONTROL_L, MODIFIERFLAGS_CCOS_L, -->
+    <!--     KeyCode::CAPSLOCK -->
+    <!--   </autogen> -->
+    <!-- </item> -->
+    <!--  -->
+    <!--  -->
+    <!-- <item> -->
+    <!--   <name>Change PC Application Key</name> -->
+    <!--  -->
+    <!--   <item> -->
+    <!--     <name>Application key to Command_R key</name> -->
+    <!--     <identifier>private.pc_application2commandR</identifier> -->
+    <!--     <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::COMMAND_R</autogen> -->
+    <!--   </item> -->
+    <!--  -->
+    <!--   <item> -->
+    <!--     <name>Application key to Control_R key</name> -->
+    <!--     <identifier>private.pc_application2controlR</identifier> -->
+    <!--     <autogen>__KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::CONTROL_R</autogen> --> <!--   </item> -->
+    <!-- </item> -->
+  </item>
+</root>
