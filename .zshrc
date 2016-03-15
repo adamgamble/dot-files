@@ -71,20 +71,20 @@ bindkey -v
 # initialize rbenv
 eval "$(rbenv init -)"
 
-# initialize erlenv
-eval "$(erlenv init -)"
+# initialize erlenv if it's there
+[[ -x $(which erlenv) ]] && eval "$(erlenv init -)"
 
-# initialize exenv
-eval "$(exenv init -)"
+# initialize exenv if it's there
+[[ -x $(which exenv) ]] && eval "$(exenv init -)"
 
-# for nvm
-source $(brew --prefix nvm)/nvm.sh
+# for nvm if it's there
+[[ -d $(brew --prefix nvm) ]] && source $(brew --prefix nvm)/nvm.sh
 
 # start oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Because: pretty
-archey -c
+# Because: pretty -- if it's there
+[[ -x $(which archey) ]] && archey -c
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

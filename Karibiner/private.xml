@@ -5,6 +5,7 @@
     <name>Errin's custom settings</name>
 
     <include path="macbook_air.xml" />
+    <include path="macbook_pro.xml" />
     <include path="code_keyboard.xml" />
     <include path="pok3r_keyboard.xml" />
     <!-- <include path="force_shift.xml" /> -->

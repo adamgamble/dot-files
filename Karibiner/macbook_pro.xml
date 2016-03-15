@@ -2,27 +2,59 @@
 <root>
 
   <deviceproductdef>
-    <productname>APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0245</productname>
-    <productid>0x0245</productid>
+    <productname>APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0273</productname>
+    <productid>0x0273</productid>
   </deviceproductdef>
 
   <item>
-    <name>For MacBook Pro (vid/did: 0x05ac,0x0245)</name>
+    <name>For MacBook Pro (vid/did: 0x05ac,0x0273)</name>
 
     <item>
-      <name>Swap Command and Option on Apple MacBook Pro (vid/pid: 0x05ac,0x0245</name>
-      <identifier>private.swap_command_and_option_macbook_pro_0x0245</identifier>
+      <name>Swap Command and Option on Apple MacBook Pro (vid/pid: 0x05ac,0x0273</name>
+      <identifier>private.swap_command_and_option_macbook_pro_0x0273</identifier>
       <appendix>(Silly Apple, ISO/IEC 9995-2 is for everyone!)</appendix>
 
       <block>
         <device_only>
           DeviceVendor::APPLE_COMPUTER,
-          DeviceProduct::APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0245
+          DeviceProduct::APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0273
         </device_only>
         <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
         <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
         <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
         <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+      </block>
+    </item>
+
+    <item>
+      <name>Doubletap Right Shift to Toggle Left-Arrow as Control_R</name>
+      <identifier>errins_macbook_pro_remap.enable_left_arrow2controlr</identifier>
+      <block>
+        <device_only>
+          DeviceVendor::APPLE_COMPUTER,
+          DeviceProduct::APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0273
+        </device_only>
+        <autogen>
+          __DoublePressModifier__
+          KeyCode::SHIFT_R, KeyCode::SHIFT_R,
+          KeyCode::VK_CONFIG_TOGGLE_notsave_errins_macbook_pro_remap_left_arrow2controlr
+        </autogen>
+      </block>
+    </item>
+
+    <item hidden="true">
+      <identifier vk_config="true">
+        notsave.errins_macbook_pro_remap.left_arrow2controlr
+      </identifier>
+      <block>
+        <device_only>
+          DeviceVendor::APPLE_COMPUTER,
+          DeviceProduct::APPLE_INTERNAL_KEYBOARD_TRACKPAD_0x0273
+        </device_only>
+        <!-- <autogen> -->
+        <!--   __ShowStatusMessage__ Left&#45;Arrow as Control_R Enabled -->
+        <!-- </autogen> -->
+        <autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::CONTROL_R</autogen>
       </block>
     </item>
   </item>
