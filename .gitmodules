@@ -10,3 +10,6 @@
 [submodule ".config/base16-shell"]
 	path = .config/base16-shell
 	url = git@github.com:chriskempson/base16-shell.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = git@github.com:errinlarsen/vimfiles.git

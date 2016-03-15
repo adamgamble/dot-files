@@ -1,0 +1,560 @@
+*keymappings.txt*	For Vim version 7.3	Last change: 2014 June 2
+
+All of my maps - all in one place - not all the accurate or repeatable.
+
+==============================================================================
+|keymappings-columns-descriptions|   Columns Descriptions
+
+Personal Mappings~
+|keymappings-vimrc|                  .vimrc
+|keymappings-keymappings|            .keymappings.vim File
+
+Plugins' Mappings~
+|keymappings-bufexplorer|            BufExplorer
+|keymappings-ctrlp|                  CtrlP
+|keymappings-dash|                   Dash
+|keymappings-fugitive|               Fugitive
+|keymappings-gitgutter|              GitGutter
+|keymappings-gundo|                  Gundo
+|keymappings-netrw|                  NetRW
+|keymappings-repeat|                 Repeat
+|keymappings-surround|               Surround
+|keymappings-tcomment|               TComment
+|keymappings-unimpaired|             Unimpaired
+|keymappings-textobj-user|           Textobj-User
+|keymappings-vroom|                  Vroom
+
+Special Mappings~
+|keymappings-autoclose|              AutoClose for filetype
+|keymappings-filetype|               Buffer-only Maps for filetype
+
+Plugins' Mappables~
+|keymappings-mappables-dash|         Dash Mappables
+|keymappings-mappables-easy-align|   EasyAlign Mappables
+|keymappings-mappables-gitgutter|    GitGutter Mappables
+|keymappings-mappables-netrw|        NetRW Mappables
+|keymappings-mappables-surround|     Surround Mappables
+|keymappings-mappables-tcomment|     TComment Mappables
+|keymappings-mappables-unimpaired|   Unimpaired Mappables
+|keymappings-mappables-textobj-user| Textobj-User
+
+
+==============================================================================
+COLUMNS DESCRIPTIONS                             *keymappings-columns-descriptions*
+
+The first two columns identify in which mode a mapping applies:
+
+      CHAR	  MODE ~
+     <Space>	Normal, Visual, Select and Operator-pending
+        n	    Normal
+        v	    Visual and Select
+        s	    Select
+        x	    Visual
+        o	    Operator-pending
+        !	    Insert and Command-line
+        i	    Insert
+        l	    ":lmap" mappings for Insert, Command-line and Lang-Arg
+        c	    Command-line
+
+The third column is the {lhs} (i.e. the mapping)
+The fourth column is the {rhs} (i.e. the command/operation mapped)
+
+A special character can appear just before the {rhs}:
+        *     indicates that it is not remappable
+        &     indicates that only script-local mappings are remappable
+        @     indicates a buffer-local mapping
+
+
+==============================================================================
+Personal Mappings~
+VIMRC                                            *keymappings-vimrc*
+
+n  N           * N:call HLNext(0.3)<CR>
+n  n           * n:call HLNext(0.3)<CR>
+
+
+KEYMAPPINGS                                      *keymappings-keymappings*
+
+   <C-G><C-G>  * :GitGutterLineHighlightsToggle<CR>
+n  <C-H>       * <C-W>h
+   <Tab>       * :bn<CR>
+n  <NL>        * <C-W>j
+n  <C-K>       * <C-W>k
+n  <C-L>       * <C-W>l
+v  <CR>          <Plug>(EasyAlign)
+   <Esc>T        :tabedit %%
+   <Esc>t        :tabnew<CR>
+   <Leader>T   * :VroomRunNearestTest<CR>
+   <Leader>t   * :VroomRunTestFile<CR>
+   <Leader>rb  * :w !ruby<CR>
+n  <Leader>mc  * /<<<<<\|=====\|>>>>><CR>
+n  <Leader>w   * :%s/\s\+$//e<CR>
+n  <Leader><Space>  * :noh<CR>
+n  <Leader>ag       * :Ag<Space>
+   <Leader>l     :TlistToggle <CR>
+n  <Leader>a     <Plug>(EasyAlign)
+   <Leader>c     :Rcontroller
+   <Leader>v     :Rview
+   <Leader>m     :Rmodel
+   <Leader>gg    :topleft 100 :split Gemfile<CR>
+   <Leader>gr    :topleft :split config/routes.rb<CR>
+   <Leader>bw  * :bw<CR>
+   <Leader>bu  * :bun<CR>
+   <Leader>bd  * :bd<CR>
+n  <Leader>,   * <C-^>
+v  //          * :TComment<CR>
+n  //          * :TComment<CR>
+v  <             <gv
+   ===           mmgg=G`m^zz
+v  >             >gv
+n  Q           * @q
+   <F6>          mmgg=G'mzz
+   <S-Tab>     * :bp<CR>
+n  <Down>      * :echoe "Use j"<CR>
+n  <Up>        * :echoe "Use k"<CR>
+n  <Right>     * :echoe "Use l"<CR>
+n  <Left>      * :echoe "Use h"<CR>
+v  <BS>          "-d
+n  j           * gj
+n  k           * gk
+n  \           * gt
+   q:          * <Nop>
+n  |           * gT
+
+
+==============================================================================
+Plugins' Mappings~
+
+BUFEXPLORER                                      *keymappings-bufexplorer*
+
+   <Leader>bv    & :BufExplorerVerticalSplit<CR>
+   <Leader>bs    & :BufExplorerHorizontalSplit<CR>
+   <Leader>be    & :BufExplorer<CR>
+
+CTRLP                                            *keymappings-ctrlp*
+
+n  <C-P>       * :<C-U>CtrlP<CR>
+
+DASH                                             *keymappings-dash*
+
+   <SNR>28_DashGlobalSearch   * :Dash!<CR>
+   <SNR>28_DashSearch         * :Dash<CR>
+
+FUGITIVE                                         *keymappings-fugitive*
+
+n  y<C-G>      *@:call setreg(v:register, <SNR>37_recall())<CR>
+
+GITGUTTER                                        *keymappings-gitgutter*
+
+n  <Leader>hp    <Plug>GitGutterPreviewHunk
+n  <Leader>hr    <Plug>GitGutterRevertHunk
+n  <Leader>hs    <Plug>GitGutterStageHunk
+n  [c            <Plug>GitGutterPrevHunk
+n  ]c            <Plug>GitGutterNextHunk
+
+GUNDO                                            *keymappings-gundo*
+
+n  <F5>        * :GundoToggle<CR>
+
+NETRW                                            *keymappings-netrw*
+
+n  gx            <Plug>NetrwBrowseX
+
+REPEAT                                           *keymappings-repeat*
+
+n  <C-R>       * :<C-U>call repeat#wrap("\<C-R>",v:count)<CR>
+n  .           * :<C-U>call repeat#run(v:count)<CR>
+n  U           * :<C-U>call repeat#wrap('U',v:count)<CR>
+n  u           * :<C-U>call repeat#wrap('u',v:count)<CR>
+
+SURROUND                                         *keymappings-surround*
+
+x  S             <Plug>VSurround
+n  ySS           <Plug>YSsurround
+n  ySs           <Plug>YSsurround
+n  yss           <Plug>Yssurround
+n  yS            <Plug>YSurround
+n  ys            <Plug>Ysurround
+n  cs            <Plug>Csurround
+n  ds            <Plug>Dsurround
+x  gS            <Plug>VgSurround
+
+TCOMMENT                                         *keymappings-tcomment*
+
+v  <C-_>9        <Plug>TComment-<C-_>9
+no <C-_>9        <Plug>TComment-<C-_>9
+v  <C-_>8        <Plug>TComment-<C-_>8
+no <C-_>8        <Plug>TComment-<C-_>8
+v  <C-_>7        <Plug>TComment-<C-_>7
+no <C-_>7        <Plug>TComment-<C-_>7
+v  <C-_>6        <Plug>TComment-<C-_>6
+no <C-_>6        <Plug>TComment-<C-_>6
+v  <C-_>5        <Plug>TComment-<C-_>5
+no <C-_>5        <Plug>TComment-<C-_>5
+v  <C-_>4        <Plug>TComment-<C-_>4
+no <C-_>4        <Plug>TComment-<C-_>4
+v  <C-_>3        <Plug>TComment-<C-_>3
+no <C-_>3        <Plug>TComment-<C-_>3
+v  <C-_>2        <Plug>TComment-<C-_>2
+no <C-_>2        <Plug>TComment-<C-_>2
+v  <C-_>1        <Plug>TComment-<C-_>1
+no <C-_>1        <Plug>TComment-<C-_>1
+   <C-_>ca       <Plug>TComment-<C-_>ca
+   <C-_>cc       <Plug>TComment-<C-_>cc
+   <C-_>s        <Plug>TComment-<C-_>s
+   <C-_>n        <Plug>TComment-<C-_>n
+   <C-_>a        <Plug>TComment-<C-_>a
+   <C-_>b        <Plug>TComment-<C-_>b
+   <C-_>i        <Plug>TComment-<C-_>i
+   <C-_>r        <Plug>TComment-<C-_>r
+   <C-_><Space>   <Plug>TComment-<C-_><Space>
+   <C-_>p        <Plug>TComment-<C-_>p
+v  <C-_><C-_>    <Plug>TComment-<C-_><C-_>
+no <C-_><C-_>    <Plug>TComment-<C-_><C-_>
+   <Leader>_s    <Plug>TComment-,_s
+   <Leader>_n    <Plug>TComment-,_n
+   <Leader>_a    <Plug>TComment-,_a
+   <Leader>_b    <Plug>TComment-,_b
+   <Leader>_r    <Plug>TComment-,_r
+x  <Leader>_i    <Plug>TComment-,_i
+   <Leader>_<Space>  <Plug>TComment-,_<Space>
+   <Leader>_p    <Plug>TComment-,_p
+x  <Leader>__    <Plug>TComment-,__
+nos<Leader>__    <Plug>TComment-,__
+x  gC            <Plug>TComment-gC
+n  gCb           <Plug>TComment-gCb
+n  gCc           <Plug>TComment-gCc
+n  gC            <Plug>TComment-gC
+x  gc            <Plug>TComment-gc
+n  gcb           <Plug>TComment-gcb
+n  gcc           <Plug>TComment-gcc
+n  gc9           <Plug>TComment-gc9
+n  gc8           <Plug>TComment-gc8
+n  gc7           <Plug>TComment-gc7
+n  gc6           <Plug>TComment-gc6
+n  gc5           <Plug>TComment-gc5
+n  gc4           <Plug>TComment-gc4
+n  gc3           <Plug>TComment-gc3
+n  gc2           <Plug>TComment-gc2
+n  gc1           <Plug>TComment-gc1
+n  gc            <Plug>TComment-gc
+o  ic            <Plug>TComment-ic
+v  ic            <Plug>TComment-ic
+
+UNIMPAIRED                                       *keymappings-unimpaired*
+
+n  <p          * :call <SNR>41_putline(']p')<CR><']
+n  <P          * :call <SNR>41_putline('[p')<CR><']
+n  =p          * :call <SNR>41_putline(']p')<CR>=']
+n  =P          * :call <SNR>41_putline('[p')<CR>=']
+n  >p          * :call <SNR>41_putline(']p')<CR>>']
+n  >P          * :call <SNR>41_putline('[p')<CR>>']
+n  [xx           <Plug>unimpaired_line_xml_encode
+x  [x            <Plug>unimpaired_xml_encode
+n  [x            <Plug>unimpaired_xml_encode
+n  [uu           <Plug>unimpaired_line_url_encode
+x  [u            <Plug>unimpaired_url_encode
+n  [u            <Plug>unimpaired_url_encode
+n  [yy           <Plug>unimpaired_line_string_encode
+x  [y            <Plug>unimpaired_string_encode
+n  [y            <Plug>unimpaired_string_encode
+n  [p            <Plug>unimpairedPutAbove
+n  [ov         * :set virtualedit+=all<CR>
+n  [ox         * :set cursorline cursorcolumn<CR>
+n  [ow         * :set wrap<CR>
+n  [os         * :set spell<CR>
+n  [or         * :set relativenumber<CR>
+n  [on         * :set number<CR>
+n  [ol         * :set list<CR>
+n  [oi         * :set ignorecase<CR>
+n  [oh         * :set hlsearch<CR>
+n  [od         * :diffthis<CR>
+n  [ou         * :set cursorcolumn<CR>
+n  [oc         * :set cursorline<CR>
+n  [ob         * :set background=light<CR>
+x  [e            <Plug>unimpairedMoveSelectionUp
+n  [e            <Plug>unimpairedMoveUp
+n  [<Space>      <Plug>unimpairedBlankUp
+o  [n            <Plug>unimpairedContextPrevious
+n  [n            <Plug>unimpairedContextPrevious
+n  [o            <Plug>unimpairedOPrevious
+n  [f            <Plug>unimpairedDirectoryPrevious
+n  [T            <Plug>unimpairedTFirst
+n  [t            <Plug>unimpairedTPrevious
+n  [<C-Q>        <Plug>unimpairedQPFile
+n  [Q            <Plug>unimpairedQFirst
+n  [q            <Plug>unimpairedQPrevious
+n  [<C-L>        <Plug>unimpairedLPFile
+n  [L            <Plug>unimpairedLFirst
+n  [l            <Plug>unimpairedLPrevious
+n  [B            <Plug>unimpairedBFirst
+n  [b            <Plug>unimpairedBPrevious
+n  [A            <Plug>unimpairedAFirst
+n  [a            <Plug>unimpairedAPrevious
+n  ]xx           <Plug>unimpaired_line_xml_decode
+x  ]x            <Plug>unimpaired_xml_decode
+n  ]x            <Plug>unimpaired_xml_decode
+n  ]uu           <Plug>unimpaired_line_url_decode
+x  ]u            <Plug>unimpaired_url_decode
+n  ]u            <Plug>unimpaired_url_decode
+n  ]yy           <Plug>unimpaired_line_string_decode
+x  ]y            <Plug>unimpaired_string_decode
+n  ]y            <Plug>unimpaired_string_decode
+n  ]p            <Plug>unimpairedPutBelow
+n  ]ov         * :set virtualedit-=all<CR>
+n  ]ox         * :set nocursorline nocursorcolumn<CR>
+n  ]ow         * :set nowrap<CR>
+n  ]os         * :set nospell<CR>
+n  ]or         * :set norelativenumber<CR>
+n  ]on         * :set nonumber<CR>
+n  ]ol         * :set nolist<CR>
+n  ]oi         * :set noignorecase<CR>
+n  ]oh         * :set nohlsearch<CR>
+n  ]od         * :diffoff<CR>
+n  ]ou         * :set nocursorcolumn<CR>
+n  ]oc         * :set nocursorline<CR>
+n  ]ob         * :set background=dark<CR>
+x  ]e            <Plug>unimpairedMoveSelectionDown
+n  ]e            <Plug>unimpairedMoveDown
+n  ]<Space>      <Plug>unimpairedBlankDown
+o  ]n            <Plug>unimpairedContextNext
+n  ]n            <Plug>unimpairedContextNext
+n  ]o            <Plug>unimpairedONext
+n  ]f            <Plug>unimpairedDirectoryNext
+n  ]T            <Plug>unimpairedTLast
+n  ]t            <Plug>unimpairedTNext
+n  ]<C-Q>        <Plug>unimpairedQNFile
+n  ]Q            <Plug>unimpairedQLast
+n  ]q            <Plug>unimpairedQNext
+n  ]<C-L>        <Plug>unimpairedLNFile
+n  ]L            <Plug>unimpairedLLast
+n  ]l            <Plug>unimpairedLNext
+n  ]B            <Plug>unimpairedBLast
+n  ]b            <Plug>unimpairedBNext
+n  ]A            <Plug>unimpairedALast
+n  ]a            <Plug>unimpairedANext
+n  cov         * :set <C-R>=(&virtualedit =~# "all") ? 'virtualedit-=all' : 'virtualedit+=all'<CR><CR>
+n  cox         * :set <C-R>=&cursorline && &cursorcolumn ? 'nocursorline nocursorcolumn' : 'cursorline cursorcolumn'<CR><CR>
+n  cow         * :set <C-R>=<SNR>41_toggle("wrap")<CR><CR>
+n  cos         * :set <C-R>=<SNR>41_toggle("spell")<CR><CR>
+n  cor         * :set <C-R>=<SNR>41_toggle("relativenumber")<CR><CR>
+n  con         * :set <C-R>=<SNR>41_toggle("number")<CR><CR>
+n  col         * :set <C-R>=<SNR>41_toggle("list")<CR><CR>
+n  coi         * :set <C-R>=<SNR>41_toggle("ignorecase")<CR><CR>
+n  coh         * :set <C-R>=<SNR>41_toggle("hlsearch")<CR><CR>
+n  cod         * :<C-R>=&diff ? 'diffoff' : 'diffthis'<CR><CR>
+n  cou         * :set <C-R>=<SNR>41_toggle("cursorcolumn")<CR><CR>
+n  coc         * :set <C-R>=<SNR>41_toggle("cursorline")<CR><CR>
+n  cob         * :set background=<C-R>=&background == 'dark' ? 'light' : 'dark'<CR><CR>
+n  yO          * :call <SNR>41_setup_paste()<CR>O
+n  yo          * :call <SNR>41_setup_paste()<CR>o
+
+TEXTOBJ-USER                                     *keymappings-user*
+
+n  <SNR>60_    * <SNR>60_
+o  ar            <Plug>(textobj-rubyblock-a)
+x  ar            <Plug>(textobj-rubyblock-a)
+o  ir            <Plug>(textobj-rubyblock-i)
+x  ir            <Plug>(textobj-rubyblock-i)
+
+VROOM                                            *keymappings-vroom*
+
+   <Leader>R     :VroomRunNearestTest<CR>
+   <Leader>r     :VroomRunTestFile<CR>
+
+
+==============================================================================
+Special Mappings~
+
+AUTOCLOSE                                        *keymappings-autoclose*
+
+x  <Leader>a{  *@<Esc>`>a}<Esc>`<i{<Esc>
+x  <Leader>a}  *@<Esc>`>a}<Esc>`<i{<Esc>
+x  <Leader>a#{ *@<Esc>`>a}<Esc>`<i#{<Esc>
+x  <Leader>a)  *@<Esc>`>a)<Esc>`<i(<Esc>
+x  <Leader>a(  *@<Esc>`>a)<Esc>`<i(<Esc>
+x  <Leader>a'  *@<Esc>`>a'<Esc>`<i'<Esc>
+x  <Leader>a]  *@<Esc>`>a]<Esc>`<i[<Esc>
+x  <Leader>a[  *@<Esc>`>a]<Esc>`<i[<Esc>
+x  <Leader>a"  *@<Esc>`>a"<Esc>`<i"<Esc>
+
+FILETYPE                                         *keymappings-filetype*
+
+n  <SwipeRight> @:ta<CR>
+n  <SwipeLeft>  @:po<CR>
+
+
+==============================================================================
+Plugins' Mappables~
+
+DASH                                             *keymappings-mappables-dash*
+
+   <Plug>DashGlobalSearch     & <SNR>28_DashGlobalSearch
+   <Plug>DashSearch           & <SNR>28_DashSearch
+
+EASY-ALIGN                                       *keymappings-mappables-easy-align*
+
+n  <Plug>(EasyAlignOperator)  * :set opfunc=<SNR>40_easy_align_op<CR>g@
+v  <Plug>(EasyAlignRepeat)    * :<C-U>call <SNR>40_repeat_in_visual()<CR>
+n  <Plug>(EasyAlignRepeat)    * :call <SNR>40_easy_align_repeat()<CR>
+v  <Plug>(LiveEasyAlign)      * :<C-U>call <SNR>40_live_easy_align_op(visualmode(), 1)<CR>
+n  <Plug>(LiveEasyAlign)      * :set opfunc=<SNR>40_live_easy_align_op<CR>g@
+v  <Plug>(EasyAlign)          * :<C-U>call <SNR>40_easy_align_op(visualmode(), 1)<CR>
+n  <Plug>(EasyAlign)          * :set opfunc=<SNR>40_easy_align_op<CR>g@
+
+GITGUTTER                                        *keymappings-mappables-gitgutter*
+
+n  <Plug>GitGutterPreviewHunk * :GitGutterPreviewHunk<CR>
+n  <Plug>GitGutterRevertHunk  * :GitGutterRevertHunk<CR>
+n  <Plug>GitGutterStageHunk   * :GitGutterStageHunk<CR>
+n  <Plug>GitGutterPrevHunk    * &diff ? '[c' : ":\<C-U>execute v:count1 . 'GitGutterPrevHunk'\<CR>"
+n  <Plug>GitGutterNextHunk    * &diff ? ']c' : ":\<C-U>execute v:count1 . 'GitGutterNextHunk'\<CR>"
+
+NETRW                                            *keymappings-mappables-netrw*
+
+n  <Plug>NetrwBrowseX         * :call netrw#NetrwBrowseX(expand("<cfile>"),0)<CR>
+
+SURROUND                                         *keymappings-mappables-surround*
+
+v  <Plug>VgSurround           * :<C-U>call <SNR>56_opfunc(visualmode(),visualmode() ==# 'V' ? 0 : 1)<CR>
+v  <Plug>VSurround            * :<C-U>call <SNR>56_opfunc(visualmode(),visualmode() ==# 'V' ? 1 : 0)<CR>
+n  <Plug>YSurround            * :<C-U>set opfunc=<SNR>56_opfunc2<CR>g@
+n  <Plug>Ysurround            * :<C-U>set opfunc=<SNR>56_opfunc<CR>g@
+n  <Plug>YSsurround           * :<C-U>call <SNR>56_opfunc2(v:count1)<CR>
+n  <Plug>Yssurround           * :<C-U>call <SNR>56_opfunc(v:count1)<CR>
+n  <Plug>Csurround            * :<C-U>call <SNR>56_changesurround()<CR>
+n  <Plug>Dsurround            * :<C-U>call <SNR>56_dosurround(<SNR>56_inputtarget())<CR>
+n  <Plug>SurroundRepeat       * .
+
+TCOMMENT                                         *keymappings-mappables-tcomment*
+
+n  <Plug>TComment-gc9c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 9) | set opfunc=tcomment#Operator<CR>g@
+n  <Plug>TComment-gc8c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 8) | set opfunc=tcomment#Operator<CR>g@
+n  <Plug>TComment-gc7c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 7) | set opfunc=tcomment#Operator<CR>g@
+n  <Plug>TComment-gc6c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 6) | set opfunc=tcomment#Operator<CR>g@
+n  <Plug>TComment-gc5c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 5) | set opfunc=tcomment#Operator<CR>g@
+n  <Plug>TComment-gc4c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 4) | set opfunc=tcomment#Operator<CR>g@
+n  <Plug>TComment-gc3c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 3) | set opfunc=tcomment#Operator<CR>g@
+n  <Plug>TComment-gc2c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 2) | set opfunc=tcomment#Operator<CR>g@
+n  <Plug>TComment-gc1c        * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("count", 1) | set opfunc=tcomment#Operator<CR>g@
+v  <Plug>TComment-<C-_>9      * :call tcomment#SetOption("count", 9)<CR>
+no <Plug>TComment-<C-_>9      * :call tcomment#SetOption("count", 9)<CR>
+v  <Plug>TComment-<C-_>8      * :call tcomment#SetOption("count", 8)<CR>
+no <Plug>TComment-<C-_>8      * :call tcomment#SetOption("count", 8)<CR>
+v  <Plug>TComment-<C-_>7      * :call tcomment#SetOption("count", 7)<CR>
+no <Plug>TComment-<C-_>7      * :call tcomment#SetOption("count", 7)<CR>
+v  <Plug>TComment-<C-_>6      * :call tcomment#SetOption("count", 6)<CR>
+no <Plug>TComment-<C-_>6      * :call tcomment#SetOption("count", 6)<CR>
+v  <Plug>TComment-<C-_>5      * :call tcomment#SetOption("count", 5)<CR>
+no <Plug>TComment-<C-_>5      * :call tcomment#SetOption("count", 5)<CR>
+v  <Plug>TComment-<C-_>4      * :call tcomment#SetOption("count", 4)<CR>
+no <Plug>TComment-<C-_>4      * :call tcomment#SetOption("count", 4)<CR>
+v  <Plug>TComment-<C-_>3      * :call tcomment#SetOption("count", 3)<CR>
+no <Plug>TComment-<C-_>3      * :call tcomment#SetOption("count", 3)<CR>
+v  <Plug>TComment-<C-_>2      * :call tcomment#SetOption("count", 2)<CR>
+no <Plug>TComment-<C-_>2      * :call tcomment#SetOption("count", 2)<CR>
+v  <Plug>TComment-<C-_>1      * :call tcomment#SetOption("count", 1)<CR>
+no <Plug>TComment-<C-_>1      * :call tcomment#SetOption("count", 1)<CR>
+n  <Plug>TComment-gc          * :<C-U>if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") | set opfunc=tcomment#Operator<CR>g@
+x  <Plug>TComment-gc          * :TCommentMaybeInline<CR>
+n  <Plug>TComment-gcb         * :<C-U>if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") | call tcomment#SetOption("mode_extra", "B") | set opfunc=tcomment#OperatorLine<CR>g@
+n  <Plug>TComment-gcc         * :<C-U>if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") | set opfunc=tcomment#OperatorLine<CR>g@$
+   <Plug>TComment-ic          * :<C-U>call tcomment#TextObjectInlineComment()<CR>
+x  <Plug>TComment-gC          * :TCommentMaybeInline!<CR>
+n  <Plug>TComment-gCb         * :let w:tcommentPos = getpos(".") | call tcomment#SetOption("mode_extra", "B") | set opfunc=tcomment#OperatorLine<CR>g@
+n  <Plug>TComment-gCc         * :let w:tcommentPos = getpos(".") | set opfunc=tcomment#OperatorLineAnyway<CR>g@$
+n  <Plug>TComment-gC          * :let w:tcommentPos = getpos(".") | set opfunc=tcomment#OperatorAnyway<CR>g@
+   <Plug>TComment-,_s         * :TCommentAs <C-R>=&ft<CR>_
+   <Plug>TComment-,_n         * :TCommentAs <C-R>=&ft<CR><Space>
+   <Plug>TComment-,_a         * :TCommentAs<Space>
+   <Plug>TComment-,_b         * :TCommentBlock<CR>
+   <Plug>TComment-,_r         * :TCommentRight<CR>
+x  <Plug>TComment-,_i         * :TCommentInline<CR>
+   <Plug>TComment-,_<Space>   * :TComment<Space>
+   <Plug>TComment-,_p         * vip:TComment<CR>
+x  <Plug>TComment-,__         * :TCommentMaybeInline<CR>
+nos<Plug>TComment-,__         * :TComment<CR>
+   <Plug>TComment-<C-_>ca     * :<C-U>call tcomment#SetOption("as", input("Comment as: ", &filetype, "customlist,tcomment#Complete"))<CR>
+   <Plug>TComment-<C-_>cc     * :<C-U>call tcomment#SetOption("count", v:count1)<CR>
+   <Plug>TComment-<C-_>s      * :TCommentAs <C-R>=&ft<CR>_
+   <Plug>TComment-<C-_>n      * :TCommentAs <C-R>=&ft<CR><Space>
+   <Plug>TComment-<C-_>a      * :TCommentAs<Space>
+   <Plug>TComment-<C-_>b      * :TCommentBlock<CR>
+   <Plug>TComment-<C-_>i      * v:TCommentInline mode=I#<CR>
+   <Plug>TComment-<C-_>r      * :TCommentRight<CR>
+   <Plug>TComment-<C-_><Space> * :TComment<Space>
+   <Plug>TComment-<C-_>p      * m`vip:TComment<CR>``
+v  <Plug>TComment-<C-_><C-_>  * :TCommentMaybeInline<CR>
+no <Plug>TComment-<C-_><C-_>  * :TComment<CR>
+
+UNIMPAIRED                                       *keymappings-mappables-unimpaired*
+
+n  <Plug>unimpaired_line_xml_decode * :<C-U>call <SNR>41_Transform("xml_decode",v:count1)<CR>
+x  <Plug>unimpaired_xml_decod * :<C-U>call <SNR>41_Transform("xml_decode",visualmode())<CR>
+n  <Plug>unimpaired_xml_decode * :<C-U>call <SNR>41_TransformSetup("xml_decode")<CR>g@
+n  <Plug>unimpaired_line_xml_encode * :<C-U>call <SNR>41_Transform("xml_encode",v:count1)<CR>
+x  <Plug>unimpaired_xml_encode * :<C-U>call <SNR>41_Transform("xml_encode",visualmode())<CR>
+n  <Plug>unimpaired_xml_encode * :<C-U>call <SNR>41_TransformSetup("xml_encode")<CR>g@
+n  <Plug>unimpaired_line_url_decode * :<C-U>call <SNR>41_Transform("url_decode",v:count1)<CR>
+x  <Plug>unimpaired_url_decode * :<C-U>call <SNR>41_Transform("url_decode",visualmode())<CR>
+n  <Plug>unimpaired_url_decode * :<C-U>call <SNR>41_TransformSetup("url_decode")<CR>g@
+n  <Plug>unimpaired_line_url_encode * :<C-U>call <SNR>41_Transform("url_encode",v:count1)<CR>
+x  <Plug>unimpaired_url_encode * :<C-U>call <SNR>41_Transform("url_encode",visualmode())<CR>
+n  <Plug>unimpaired_url_encode * :<C-U>call <SNR>41_TransformSetup("url_encode")<CR>g@
+n  <Plug>unimpaired_line_string_decode * :<C-U>call <SNR>41_Transform("string_decode",v:count1)<CR>
+x  <Plug>unimpaired_string_decode * :<C-U>call <SNR>41_Transform("string_decode",visualmode())<CR>
+n  <Plug>unimpaired_string_decode * :<C-U>call <SNR>41_TransformSetup("string_decode")<CR>g@
+n  <Plug>unimpaired_line_string_encode * :<C-U>call <SNR>41_Transform("string_encode",v:count1)<CR>
+x  <Plug>unimpaired_string_encode * :<C-U>call <SNR>41_Transform("string_encode",visualmode())<CR>
+n  <Plug>unimpaired_string_encode * :<C-U>call <SNR>41_TransformSetup("string_encode")<CR>g@
+n  <Plug>unimpairedPutBelow   * :call <SNR>41_putline(']p')<CR>
+n  <Plug>unimpairedPutAbove   * :call <SNR>41_putline('[p')<CR>
+n  <Plug>unimpairedPaste      * :call <SNR>41_setup_paste()<CR>
+   <Plug>unimpairedMoveSelectionDown * :<C-U>call <SNR>41_MoveSelectionDown(v:count1)<CR>
+   <Plug>unimpairedMoveSelectionUp * :<C-U>call <SNR>41_MoveSelectionUp(v:count1)<CR>
+n  <Plug>unimpairedMoveDown   * :<C-U>call <SNR>41_Move('+',v:count1,'Down')<CR>
+n  <Plug>unimpairedMoveUp     * :<C-U>call <SNR>41_Move('--',v:count1,'Up')<CR>
+n  <Plug>unimpairedBlankDown  * :<C-U>call <SNR>41_BlankDown(v:count1)<CR>
+n  <Plug>unimpairedBlankUp    * :<C-U>call <SNR>41_BlankUp(v:count1)<CR>
+o  <Plug>unimpairedContextNext * :call <SNR>41_ContextMotion(0)<CR>
+o  <Plug>unimpairedContextPrevious * :call <SNR>41_ContextMotion(1)<CR>
+n  <Plug>unimpairedContextNext * :call <SNR>41_Context(0)<CR>
+n  <Plug>unimpairedContextPrevious * :call <SNR>41_Context(1)<CR>
+n  <Plug>unimpairedOPrevious    <Plug>unimpairedDirectoryPrevious:echohl WarningMSG|echo "[o is deprecated. Use [f"|echohl NONE<CR>
+n  <Plug>unimpairedONext        <Plug>unimpairedDirectoryNext:echohl WarningMSG|echo "]o is deprecated. Use ]f"|echohl NONE<CR>
+n  <Plug>unimpairedDirectoryPrevious * :<C-U>edit <C-R>=<SNR>41_fnameescape(<SNR>41_FileByOffset(-v:count1))<CR><CR>
+n  <Plug>unimpairedDirectoryNext * :<C-U>edit <C-R>=<SNR>41_fnameescape(<SNR>41_FileByOffset(v:count1))<CR><CR>
+n  <Plug>unimpairedTLast      * :<C-U>exe "".(v:count ? v:count : "")."tlast"<CR>
+n  <Plug>unimpairedTFirst     * :<C-U>exe "".(v:count ? v:count : "")."tfirst"<CR>
+n  <Plug>unimpairedTNext      * :<C-U>exe "".(v:count ? v:count : "")."tnext"<CR>
+n  <Plug>unimpairedTPrevious  * :<C-U>exe "".(v:count ? v:count : "")."tprevious"<CR>
+n  <Plug>unimpairedQNFile     * :<C-U>exe "".(v:count ? v:count : "")."cnfile"<CR>zv
+n  <Plug>unimpairedQPFile     * :<C-U>exe "".(v:count ? v:count : "")."cpfile"<CR>zv
+n  <Plug>unimpairedQLast      * :<C-U>exe "".(v:count ? v:count : "")."clast"<CR>zv
+n  <Plug>unimpairedQFirst     * :<C-U>exe "".(v:count ? v:count : "")."cfirst"<CR>zv
+n  <Plug>unimpairedQNext      * :<C-U>exe "".(v:count ? v:count : "")."cnext"<CR>zv
+n  <Plug>unimpairedQPrevious  * :<C-U>exe "".(v:count ? v:count : "")."cprevious"<CR>zv
+n  <Plug>unimpairedLNFile     * :<C-U>exe "".(v:count ? v:count : "")."lnfile"<CR>zv
+n  <Plug>unimpairedLPFile     * :<C-U>exe "".(v:count ? v:count : "")."lpfile"<CR>zv
+n  <Plug>unimpairedLLast      * :<C-U>exe "".(v:count ? v:count : "")."llast"<CR>zv
+n  <Plug>unimpairedLFirst     * :<C-U>exe "".(v:count ? v:count : "")."lfirst"<CR>zv
+n  <Plug>unimpairedLNext      * :<C-U>exe "".(v:count ? v:count : "")."lnext"<CR>zv
+n  <Plug>unimpairedLPrevious  * :<C-U>exe "".(v:count ? v:count : "")."lprevious"<CR>zv
+n  <Plug>unimpairedBLast      * :<C-U>exe "".(v:count ? v:count : "")."blast"<CR>
+n  <Plug>unimpairedBFirst     * :<C-U>exe "".(v:count ? v:count : "")."bfirst"<CR>
+n  <Plug>unimpairedBNext      * :<C-U>exe "".(v:count ? v:count : "")."bnext"<CR>
+n  <Plug>unimpairedBPrevious  * :<C-U>exe "".(v:count ? v:count : "")."bprevious"<CR>
+n  <Plug>unimpairedALast      * :<C-U>exe "".(v:count ? v:count : "")."last"<CR>
+n  <Plug>unimpairedAFirst     * :<C-U>exe "".(v:count ? v:count : "")."first"<CR>
+n  <Plug>unimpairedANext      * :<C-U>exe "".(v:count ? v:count : "")."next"<CR>
+n  <Plug>unimpairedAPrevious  * :<C-U>exe "".(v:count ? v:count : "")."previous"<CR>
+
+TEXTOBJ-USER                                     *keymappings-mappables-user*
+
+o  <Plug>(textobj-rubyblock-i) * :<C-U>call <SNR>60_select_function_wrapper(g:__textobj_rubyblock.obj_specs["-"]["*select-i-function*"],"o")<CR>
+v  <Plug>(textobj-rubyblock-i) * :<C-U>call <SNR>60_select_function_wrapper(g:__textobj_rubyblock.obj_specs["-"]["*select-i-function*"],"v")<CR>
+o  <Plug>(textobj-rubyblock-a) * :<C-U>call <SNR>60_select_function_wrapper(g:__textobj_rubyblock.obj_specs["-"]["*select-a-function*"],"o")<CR>
+v  <Plug>(textobj-rubyblock-a) * :<C-U>call <SNR>60_select_function_wrapper(g:__textobj_rubyblock.obj_specs["-"]["*select-a-function*"],"v")<CR>
+
+
+ vim:tw=78:et:ft=help:norl:
