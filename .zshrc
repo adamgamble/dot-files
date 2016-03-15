@@ -4,6 +4,9 @@
 # Path to your oh-my-zsh configuration
 ZSH=$HOME/.oh-my-zsh
 
+# use another custom folder than $ZSH/custom
+ZSH_CUSTOM=$HOME/dot-files/oh-my-zsh/custom
+
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
 #   # Other themes I kinda liked:
 #   # agnoster, eastwood, gallois, suvash, amuse, ys, jonathan, pure
@@ -31,7 +34,6 @@ export EDITOR=vim
 # Base16 Shell
 BASE16_SCHEME="railscasts"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
-
 
 # ------------------------------------------------------------------------------
 # PATH
