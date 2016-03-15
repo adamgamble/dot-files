@@ -1,5 +1,5 @@
 [submodule ".vim"]
-	path = .vim
+	path = .config/nvim
 	url = git@github.com:errinlarsen/vimfiles.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
