@@ -1,10 +1,7 @@
-# Automatically created by GitHub for Mac
-
 .DS_Store
 .AppleDouble
 .LSOverride
 Icon
-
 
 # Thumbnails
 ._*
@@ -12,3 +9,11 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+# Stuff I found gets annoying
+.bundle
+.env
+.rake_tasks
+tags
+vendor/bundle
+.byebug_history

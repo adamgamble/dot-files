@@ -10,15 +10,9 @@
 [github]
 	user = errinlarsen
 	token = 554ea1d460e4714d5ef84af8364c92ac
-[gist]
-	private = true
-	extension = .rb
-	browse = yes
 [rerere]
 	enabled = 1
 	autoupdate = true
-[core]
-	excludesfile = /Users/errinlarsen/.gitignore_global
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   ba = for-each-ref --sort=committerdate --format='%(committerdate:short) %(refname:short)' refs/heads refs/remotes
@@ -33,10 +27,4 @@
 [push]
 	default = simple
 [init]
-	templatedir = ~/.git_template
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+	templatedir = ~/.config/git/template
