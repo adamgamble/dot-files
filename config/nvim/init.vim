@@ -90,8 +90,8 @@ set expandtab                  " use spaces, not <tab>s
 let s:home_dir = expand("$HOME/")
 
 " Load key-mappings
-if filereadable(s:home_dir . ".nvim/keymappings.vim")
-  source ~/.nvim/keymappings.vim
+if filereadable(s:home_dir . ".config/nvim/keymappings.vim")
+  source ~/.config/nvim/keymappings.vim
 endif
 
 
@@ -210,6 +210,7 @@ command! -nargs=+ -complete=file -bar AG silent! grep! <args>|cwindow|redraw!
 " ---------------------------------------------------------------------------
 " vim-Airline
 " ---------------------------------------------------------------------------
+let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#default#layout = [
     \ [ 'a', 'b', 'c' ],
@@ -386,14 +387,14 @@ let g:netrw_altfile = 1
 
 " Finally, load custom configs
 " - currently, ExtraWhitespace stuff
-if filereadable(s:home_dir . '.nvimrc.local')
-  source ~/.nvimrc.local
+if filereadable(s:home_dir . '.config/nvim/init.vim.local')
+  source ~/.config/nvim/init.vim.local
 endif
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 augroup ErrinsVimrcAuGroup
   autocmd!
-  autocmd bufwritepost .nvimrc,vimrc nested source %
+  autocmd bufwritepost .config/nvim/init.vim,vimrc nested source %
 augroup END
 
 
