@@ -3,7 +3,7 @@ set nocompatible               " be iMproved
 " ===========================================================================
 "  Plug.vim config
 " ===========================================================================
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Step one...
 Plug 'tpope/vim-sensible'
