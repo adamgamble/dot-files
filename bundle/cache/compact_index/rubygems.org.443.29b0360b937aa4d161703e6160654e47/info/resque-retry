@@ -1,0 +1,22 @@
+---
+0.0.1 resque:~> 1.8.0|checksum:PKI9ZXk4fkrZPWGFGDnce18XO82ynnKCQ1lpvOh/Bf0=
+0.0.2 resque:~> 1.8.0,resque-scheduler:~> 1.8.0|checksum:/y8T8eYjj+pcY1ylI9HMpwb5TiQSCsgZ1HOoC+MmHWc=
+0.0.3 resque:~> 1.8.0,resque-scheduler:~> 1.8.0|checksum:Qu7FI1rZ0fVwVsFlmlYCLoTIYyN4xQ5vixwEveN0oVc=
+0.0.4 resque:>= 1.8.0,resque-scheduler:>= 1.8.0|checksum:ZS6izMLq5lhq3N42u8B5OHvcSIlbNKQ1bVuWIbPZcOE=
+0.0.5 resque:>= 1.8.0,resque-scheduler:>= 1.8.0|checksum:Zw77yzFQcNXTLnw/A0uenecsDqNSzTaVcFS0aI9PWsw=
+0.0.6 resque:>= 1.8.0,resque-scheduler:>= 1.8.0|checksum:uIFSy/FxpCkXIQGJvirVP7BcMXSiHpeTw0EeTTnIRx4=
+0.1.0 resque:>= 1.8.0,resque-scheduler:>= 1.8.0|checksum:87kL08GLS+wsZYBWlEBTst0KibmNIUj7ZPUQ4EP9XIg=
+0.2.1 rake:>= 0,resque:>= 1.8.0,resque-scheduler:>= 1.8.0|checksum:ZyzUdMbjv6+EvatdgfCvOKaEqfh/fwsJKV5x0CO1Zho=
+0.2.2 rake:>= 0,resque:>= 1.8.0,resque-scheduler:>= 1.8.0|checksum:V3k16MNV1j+yeTV8iKUot30yKwdK8AL6nJmKPZnr33g=
+1.0.0.a resque:>= 1.10.0,resque-scheduler:>= 1.9.9|checksum:XG0liP6Y/S4dRiCDu5U9jqLBS+NQJsi/IDgznAhKZF8=,rubygems:> 1.3.1
+1.0.0 resque:>= 1.10.0,resque-scheduler:>= 1.9.9|checksum:G8Ay+z4B051+ADwhfCK17zl3m9ygJ1nHleRQt5XWdcM=
+1.1.0 resque:~> 1.25,resque-scheduler:~> 1.9|checksum:hBW1BWrRVZDbuplwvcQ++/4oIs/yO6mnfj2i6runs+w=
+1.1.1 resque:~> 1.25,resque-scheduler:~> 2.5|checksum:wmodJ/RKruVEQ/gO+CyB9POKhBnpo+rYJB4hOf52x00=
+1.1.4 resque:~> 1.25,resque-scheduler:~> 2.5|checksum:Zy1PJt9hzWnBUIlbESKnzz1CZwb0D9sdLYgsJVSQhYE=
+1.2.0 resque:~> 1.25,resque-scheduler:~> 2.5|checksum:OKOOxbNqBEO2H3NNM/lDhttH07t94nS5czgQj77tpDU=,ruby:>= 0
+1.2.1 resque:~> 1.25,resque-scheduler:~> 2.5|checksum:EcoTePAFs9iOSAaq/9aF6VzzTXmTFTji/2Nt6ivs5PU=,ruby:>= 0
+1.3.0 resque:~> 1.25,resque-scheduler:~> 3.0|checksum:qcc41MSHx4aKpamvk7Mza/DNKFFVO1s5WpwvID0GOzY=,ruby:>= 0
+1.3.1 resque:~> 1.25,resque-scheduler:~> 3.0|checksum:JaCuckj+rM06NzEAuMJoDj3/stz5e126jvv65Xcm6iY=,ruby:>= 0
+1.3.2 resque:~> 1.25,resque-scheduler:~> 3.0|checksum:91DgMf0pytQivPWdh7Gny3gQCBAiYwTP0pq5zY+NO08=,ruby:>= 0
+1.4.0 resque:~> 1.25,resque-scheduler:~> 4.0|checksum:DTOkwwwEUnztMdxyCcS1Tt7n8nrM0MIxcQFvf4VITV4=,ruby:>= 0
+1.5.0 resque:~> 1.25,resque-scheduler:~> 4.0|checksum:

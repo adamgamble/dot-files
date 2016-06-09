@@ -1,0 +1,9 @@
+---
+0.1.0 |checksum:WPnXdHELC0BzAW0A97SJ/PZTfBSAtJNPzJHnCylNDko=
+0.1.1 hodel_3000_compliant_logger:>= 0|checksum:xKSZV9VBjuLaaJzrOsmNniuXv01gXIL6WXCJyn8qWuA=
+0.1.2 hodel_3000_compliant_logger:>= 0|checksum:qoVyHf40C/P6VF8GAqRKTlrphr62zL74XFVAqdzbp6A=
+0.9.1 activerecord:>= 0,hodel_3000_compliant_logger:>= 0,hodel_3000_compliant_logger:>= 0|checksum:0pZ2zYeAXqimqU8psUvBEGhe5RByxOAE7OBZnIFTgTk=
+0.9.2 activerecord:>= 0,hodel_3000_compliant_logger:>= 0|checksum:1DnX3wM5IQC70gES3j9+Re4QX4f44kDbLY6sam3YsLI=
+0.9.3 activerecord:>= 0,hodel_3000_compliant_logger:>= 0|checksum:KN5RP7NQM2/RasFeugAXOG2Z1GqyqrtXkrAwAaGNvyc=
+0.10.0 activerecord:>= 0,hodel_3000_compliant_logger:>= 0|checksum:OmlBZMLD45z4S8t6M5IqqS27EIKxlR1ImpGmBzWnM98=
+0.10.1 activerecord:>= 0,hodel_3000_compliant_logger:>= 0|checksum:YDldl0Mt2Oo6Qq3RsTKnkELx+h9b/HVfSmsGsYwGHUo=

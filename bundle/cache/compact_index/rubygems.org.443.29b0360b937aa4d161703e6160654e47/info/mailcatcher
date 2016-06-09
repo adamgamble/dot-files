@@ -1,0 +1,40 @@
+---
+0.1.1 eventmachine:>= 0,json:>= 0,mail:>= 0,sinatra:>= 0,sqlite3-ruby:>= 0,sunshowers:>= 0,thin:>= 0|checksum:Sep7zr0y9gVL4WjyBjhLWlnYrJKFfDpirckZnKOX7gM=
+0.1.2 bundler:>= 0,eventmachine:>= 0,i18n:>= 0,json:>= 0,mail:>= 0,sinatra:>= 0,sqlite3-ruby:>= 0,sunshowers:>= 0,thin:>= 0|checksum:RlVG/jS7JcwFi2fmkpijl26ZammE15WzZuaB7RqGByI=
+0.1.3 bundler:>= 0,eventmachine:>= 0,haml:>= 0,i18n:>= 0,json:>= 0,mail:>= 0,sinatra:>= 0,sqlite3-ruby:>= 0,sunshowers:>= 0,thin:>= 0|checksum:DaoQki/1M9qed3uqp/G/A/Dt3MyGwjlqOR8FGZ685Uk=
+0.1.6 eventmachine:>= 0,haml:>= 0,i18n:>= 0,json:>= 0,mail:>= 0,sinatra:>= 0,sqlite3-ruby:>= 0,sunshowers:>= 0,thin:>= 0|checksum:hevqatlT0+KMKStie5R6ERDPf48K0lmvJhGtvSS29qk=
+0.2.0 eventmachine:>= 0,haml:>= 0,i18n:>= 0,json:>= 0,mail:>= 0,skinny:>= 0,sqlite3-ruby:>= 0,thin:>= 0|checksum:HPh/PIaQIbt/tbGoBT+1yg+SAP6px2MenrWAvxpmXFc=
+0.2.2 eventmachine:>= 0,haml:>= 0,i18n:>= 0,json:>= 0,mail:>= 0,sinatra:>= 0,skinny:>= 0.1.2,sqlite3-ruby:>= 0,thin:>= 0|checksum:pn1c36bm0vG/2bTof7C6sCKN+Fw4XEJC/55b96jooTU=
+0.2.3 eventmachine:>= 0,haml:>= 0,i18n:>= 0,json:>= 0,mail:>= 0,sinatra:>= 0,skinny:>= 0.1.2,sqlite3-ruby:>= 0,thin:>= 0|checksum:Y1v3+K5ex+yQDLJkgrrs1G7TYZKMePm3+VOFyXM+Ig8=
+0.2.4 eventmachine:>= 0,haml:>= 0,i18n:>= 0,json:>= 0,mail:>= 0,sinatra:>= 0,skinny:>= 0.1.2,sqlite3-ruby:>= 0,thin:>= 0|checksum:uh1vI9MvaZKdzjMtCqeuq92t0VUH3kdHVOWTgHER3ak=
+0.3.0 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,json:~> 1.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:cFWmT8sIx4tajbTE9Acyn80YgfMTcN+PAWXofZOnqQs=
+0.3.1 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,json:~> 1.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:AsuZOmh81aJXfJ/vz01l64mu/OTEYzwvYdK+JK6mYDs=
+0.3.2 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,json:~> 1.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:URRLhzN0129Wdn00CYCW/wbFiim0higeNoIrOxrnbuQ=
+0.4.0 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,json:~> 1.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:eKRZypWixTF6eSKjFu8Yxiz2rhQVTlWDion/JyxDj6w=
+0.4.1 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,json:~> 1.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:xNb4mhbMgm2lxBQ357b+SjAdddEThSo6OSJV16fM40Y=
+0.4.3 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,json:~> 1.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:WEa5Gzm3JXwp9E6ZXeiTlDQwU6bPGBYW7T+EQqGFLac=
+0.4.4 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:FaSyUPWXo8qA96zdgW2SPSn2ZC95TxfWp0WVlJJXrtI=
+0.4.5 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:xmvKU4AJVyZRM2R58ag5kQore5+spm0cnJOb5d/C1nM=
+0.4.6 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:Athcmc6FxCxREktU7Ccbde1KdgvIgnbLFDmJBb1E0RQ=
+0.4.7 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:rs2zMfV2d5qbcVRizL2aGG2477LLnQidldKpepKIZoY=
+0.5.0 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:zdt4mkRLt0DtnydaWG6RZAfqbevX4p9nxQxj+wqsCWY=
+0.5.1 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.1,sqlite3:~> 1.3,thin:~> 1.2|checksum:bQuPGkaZi6qp4Wyg/ijEQWz9LItTGLsZ9XCMZ4JOOTw=
+0.5.2 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:vdAwSeXy38fDmgeMqJ7s3GIiQrvIV/4RIM1RG560C94=
+0.5.3 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:Gyku0894c7FM2X81jTf+BO0E9+N8EaFvk8jdwPsF3hY=
+0.5.4 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:91gr3lgOuwdklAtmDgMvHco9987ygXdpH7FaD7Uhg9o=
+0.5.5 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:1Vr3Q3TSODfkZxmoEO87541yOLjpLua5BmTGH8Wn3bU=
+0.5.6 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:hM+iAndiL0h4/SWpyHMKzvojNpyj7YzA6lWFJEOa44I=
+0.5.7 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:+jHAdjGYW1n+xP6HDHwEsyVieRy77rJbiU1vjFM0VbA=
+0.5.7.1 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:B3UgFdha1+soRzGcOI49+sgTwkc0dDaQrxmys0giXsA=
+0.5.7.2 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:>= 0.2.1&~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:hyqEd44+kLub2T63R1f/1yye0wisMPSaUWK24XzZRyA=
+0.5.8 activesupport:~> 3.0,eventmachine:~> 0.12,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:>= 0.2.1&~> 0.2,sqlite3:~> 1.3,thin:~> 1.2|checksum:HExcmyt9ycKf6AldChcM6JUQ2G0EwL8cF37o4uRfJgg=
+0.5.9 activesupport:~> 3.0,eventmachine:~> 1.0,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:>= 0,sqlite3:~> 1.3,thin:>= 0|checksum:X7fmF/k6fFYxTSvzx09+9w5kCxVM2FoAi3BIy4ds9vw=
+0.5.10 activesupport:~> 3.0,eventmachine:~> 1.0.0,haml:~> 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:Nkpa3zbV4DwIhEXYSnxrgEZqvKSjFqZFMxXjrtM2w8g=
+0.5.11 activesupport:~> 3.0,eventmachine:~> 1.0.0,haml:< 5&>= 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:MH0H4TuCHRFU+Jc5SehC1+HrKDPrSnARC4Y1c2+6sDU=
+0.5.12 activesupport:~> 3.0,eventmachine:~> 1.0.0,haml:< 5&>= 3.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:JseP5Q+y9zLhuqfI4NsFOeCyixIonOoqCcMDIT23I+I=
+0.6.0pre1 activesupport:< 5&>= 4.0.0,eventmachine:!= 1.0.4&~> 1.0.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:C6QKUVXxRZDlOla3ZwKG8JtUI/B4TqE74gbo6jm02vU=,ruby:>= 1.8.7,rubygems:> 1.3.1
+0.6.0 activesupport:< 5&>= 4.0.0,eventmachine:~> 1.0.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:4TobTB+w6T2LWsnlqz8M1gFqFnXqP4F6Eqq+y7mH6ps=,ruby:>= 1.8.7
+0.6.1 activesupport:< 5&>= 4.0.0,eventmachine:<= 1.0.5&~> 1.0.0,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:kL/KY+L4cSAkArzoYbXj9rmdyUOGFM4ifHbe/W/Kt+Q=,ruby:>= 1.8.7
+0.6.2 activesupport:< 5&>= 4.0.0,eventmachine:= 1.0.8,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:
+0.6.3 activesupport:< 5&>= 4.0.0,eventmachine:= 1.0.9.1,mail:~> 2.3,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:4026ec92af479b2fa713f3be296e65b7558745310581684d9cf71a202d662b0a,ruby:>= 1.9.3,rubygems:>= 0
+0.6.4 activesupport:~> 4.0,eventmachine:= 1.0.9.1,mail:~> 2.3,rack:~> 1.5,sinatra:~> 1.2,skinny:~> 0.2.3,sqlite3:~> 1.3,thin:~> 1.5.0|checksum:7fae7dcf94c5806601723d5e817bfc5a155623355506e53d0d157b1b8169c168,ruby:>= 1.9.3,rubygems:>= 0

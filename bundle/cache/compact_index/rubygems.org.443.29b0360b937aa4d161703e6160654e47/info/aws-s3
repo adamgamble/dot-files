@@ -1,0 +1,14 @@
+---
+0.5.1 builder:>= 0,mime-types:>= 0,xml-simple:>= 0|checksum:kuWgFlU1/gXxS2qYLP+nobhgXZh7lFRbvcyzgqPEj40=
+0.6.0 builder:>= 0,mime-types:>= 0,xml-simple:>= 0|checksum:DOl1clX9nT/u9UrU7Sy53ZXdCb19juORrieIEu/f7Kw=
+0.6.1 builder:>= 0,mime-types:>= 0,xml-simple:>= 0|checksum:USTNT7Qu3DQn4QGfxtc3oiTTw/Q4etyRQNebsm/RYDc=
+0.6.2 builder:>= 0,mime-types:>= 0,xml-simple:>= 0|checksum:cdGiSYF+HATDB2Txb9Hd00S/knAb7UD5LMcwahhc0Sw=
+0.1.0 builder:> 0.0.0,xml-simple:> 0.0.0|checksum:1Kc+ysXNp0AV/X4Ia8DFbThvrAZ2nH1nY2jbnw8tJAw=,rubygems:
+0.1.1 builder:> 0.0.0,xml-simple:> 0.0.0|checksum:yk2jRmfEhL8BD72GMlAu3thzbXHlhP+hOF0Mp50V5t8=,rubygems:
+0.1.2 builder:> 0.0.0,xml-simple:> 0.0.0|checksum:6px0ET90ZmMhOgdf9SteF9knNveXoVeySfvx2yTwOOQ=,rubygems:
+0.2.0 builder:> 0.0.0,mime-types:> 0.0.0,xml-simple:> 0.0.0|checksum:baHg/1TvYsHFVEK/X1KqcyTV+Sfqwk4Nj3p4Fos1qmM=,rubygems:
+0.2.1 builder:> 0.0.0,mime-types:> 0.0.0,xml-simple:> 0.0.0|checksum:VRkHaVWfuFm2RJhbI08LEPH+lAtKo4e8m6tx8cms6oM=,rubygems:
+0.3.0 builder:> 0.0.0,mime-types:> 0.0.0,xml-simple:> 0.0.0|checksum:2dapV9ImZztA87c9voAZMAnqoH13VGcvETp7+7DBpG4=,rubygems:
+0.4.0 builder:> 0.0.0,mime-types:> 0.0.0,xml-simple:> 0.0.0|checksum:kmIYeppiwdMdNNJIRBSwkv/tpTxodfZYDwH4hG97T7A=,rubygems:
+0.5.0 builder:>= 0,mime-types:>= 0,xml-simple:>= 0|checksum:zrewsCawjQZQoR4zNWW7+Qn4fvK6RSwCAQcVpPqyAZc=
+0.6.3 builder:>= 0,mime-types:>= 0,xml-simple:>= 0|checksum:X/3sJkiZCYek4CT7fzrp4gxda9aSVDI3r6WIceydgkY=

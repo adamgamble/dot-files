@@ -1,0 +1,18 @@
+---
+0.0.1 bacon:>= 1.1.0,hoe:>= 1.8.0,launchy:>= 0.3.3,newgem:>= 1.2.3,nokogiri:>= 1.0.6,sinatra:>= 0.9.1|checksum:orl5YcWualugPI5YmHIcVwBudtXqGCAceBxnVRXvb+U=
+0.0.3.1 bacon:>= 1.1.0,hoe:>= 1.8.0,newgem:>= 1.2.3,nokogiri:>= 1.0.6,sinatra:>= 0.9.1|checksum:tXBLnJ1+RewMWwfUgiUhJV0x/qIaBqiTznle3yoTIp4=
+0.0.3 bacon:>= 1.1.0,hoe:>= 1.8.0,newgem:>= 1.2.3,nokogiri:>= 1.0.6,sinatra:>= 0.9.1|checksum:ypkcvgY1wfCuhpQvigMBFHi2ntiUgrroYEJkEsDMYE8=
+0.0.4.1 bacon:>= 1.1.0,hoe:>= 2.3.3,newgem:>= 1.5.1,nokogiri:>= 1.0.6,sinatra:>= 0.9.1|checksum:lJLRW3xJ7I0RWWwnZ7HsTKnT0OptgrQCSK4yFeuWQYI=
+0.0.4 bacon:>= 1.1.0,hoe:>= 2.3.3,newgem:>= 1.5.1,nokogiri:>= 1.0.6,sinatra:>= 0.9.1|checksum:ykJegwkHpTOr8Uu99EA6VYt97OfzZudxAU/3tRuFEyY=
+0.1.0 rack:= 1.0|checksum:/S0MAKjn/nFNAge4HyAu0TfCYYQcB2xBHP7YooYdbTY=
+0.1.1 rack:>= 1.0.0|checksum:H+eUucznhewIQpvgt0GSZioFsde8bCkde4pzh0qJoPU=
+0.1.2 rack:>= 1.0.0|checksum:Qw1h70ZUaN3hYuJVzRpIJTvI5TlB59YKFDFI7Z2L/T8=
+0.1.3 rack:>= 1.0.0|checksum:AWa9sVO0atyOwVAD0vp1EAfIkhHNKVDlKX+kkNR1hQg=
+0.1.4 rack:>= 1.0.0|checksum:tbt3vFq7n8gpAKa2okg6WVtcrhZvS1ENYjaBghzoCQU=
+0.1.5 rack:>= 1.0.0|checksum:kQwKfxALbXIs4OWMj50zitWNXRZGj5b8Ye3J2XpQ0p4=
+0.1.6 rack:>= 1.0.0|checksum:4JQRJ+K1l95Q+9LAxzS1rGzWYfautJpd4xOzHV0RHl4=
+0.1.7 rack:>= 1.0.0|checksum:p8jvw7NgyvIaLppFDBkdKBFyhlUPvsQs92ct3hpl20U=
+0.1.8 rack:>= 1.0.0|checksum:OK4qnWIboVoKZv1A7ARtLYMRflzcAYjHTYE5+4nKT60=
+0.1.9 rack:>= 1.0.0|checksum:+xuSb2iNY+9l+gscKq7TAIQdhG55H6Gj+A+aucn3f0w=
+0.1.10 rack:>= 1.0.0|checksum:GeBdWw/z77BYThGLoZ/ngis5NUcL1KGeDO392CWHUXw=
+0.1.11 rack:>= 1.0.0|checksum:Ra+gk4klGxyXvtzYqmJdyBCzoOL4EoxQqHuj9cMG+08=

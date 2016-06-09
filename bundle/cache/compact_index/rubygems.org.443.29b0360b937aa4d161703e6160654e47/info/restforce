@@ -1,0 +1,44 @@
+---
+0.0.1 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:XdgM4yqePImyrfkpa5o3NGtwbU6ainNJfVKOrT+erzE=
+0.0.2 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:p2q6x6FpBakWoFX3GG+2dw71Wx02x8wHxHP1j/wKBCg=
+0.0.3 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:Dn618iz4JSRpLmBJhmHeeaHjmBUi0H7Cj8ZtbD6EVkk=
+0.0.4 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:QpLXfegQMR/KVAWcdPXkUT+5m8BEJv8HK0uJDuDe/vk=
+0.0.5 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:Wc3anhc4Ljpwj34KhTj3e9aV5wbDuL1P6JD7dDRgW9Q=
+0.0.6 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:1Vq5tmkpIbxPBxNYYKKT60XJTohtvNWGWbLcN+qWeOM=
+0.0.7 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:lFCsFIRsT/QspzTSFsA4CwmPeqJQFsU87+K4fM3lcd8=
+0.0.8 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:ZskHcvu7s8EGi1Ip3B5+pCHDVs6sKwOO5+j8XMqqO8U=
+0.1.0 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:A1JiNgVZXUm20PpIajzQGtTKUEjiFdI+1YGmOo/Osfg=
+0.1.1 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:cM1aXawcWvmz/Cj10NFyXOXE53Y64K4YZtOrPHlGql4=
+0.1.2 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:KcicRF3OLtG2xLg4blZj0IwVIJSV37GW5JKnpVFPH/Q=
+0.1.3 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:LoR6zOEEk1QWsu7enmL89rpfvSFcjEx3F06KUL4ghC4=
+0.1.4 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:>= 0,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:bNjny/H6Jp0mYMSMVxdbfMMPqyV8XLV4+7zByTY78nA=
+0.1.5 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,faye:= 0.8.3,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:KtMgSkXftKbaxfbYXgQmsRGZEWGXAo0UgPBi04zOqow=
+0.1.6 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:FOIxC7T4Jq9Jc33yOiqIy3Xf9L406KbioUZO+a2oRtU=
+0.1.7 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:0A2oWfAw/nMMbN45VN9voQZGXce3UCSiZ0KcDwk3lAQ=
+0.1.8 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:rAXaiTN6+pfpZ/Chj2dCnD7Z0hGqtFbhoVQPelQdwhU=
+0.1.9 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:Y4hhaqAx+AYQhUKwQ+SyDWI2FbiLWQw0nfEO4/tF/wM=
+0.1.10 faraday:~> 0.8.4,faraday_middleware:~> 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5,rake:>= 0|checksum:0Z9J3HpHUhb6JRsERg+wVkjLiIGee0/mUYpHjd4kI2k=
+1.0.0 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:qbVcaU+uRDuvsn5kSMSCdgQ2rhE0pFUtBur3kwt2dlc=
+1.0.1 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:dqbYlkSHuvmJkxRCsyl4EZ1pxRVlhfZLKvdWTf41/bQ=
+1.0.2 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:U/xKSJelnh6o5L+Yd2wOolvabO6+EzinK1swzSAAzPc=
+1.0.3 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:7J2sU6LueF2TGw5iAO0UwFa2Kyh2jtunZhLjaamzXuQ=
+1.0.4 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:osobsdFSF2Umc/ms27PsQK82e2/UCoXoDqeX+vdlkqg=
+1.0.5 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:+oaAMzS1luKLTycol+itL3B0lyIWZfFThx6/CzFyKV4=
+1.0.6 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:tbli6CFLaEOCdnKASD33anN8YlDr0yXM75aWuiRog2w=
+1.1.0 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:8f1eaIS3isxtn3OmPTonBfeUA8O2PypoYKM00CMslv8=
+1.2.0 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:R7udSfNMmIqSqwym4K1/Acfq5+u5DNY6mc9JqQ7/x+g=
+1.3.0 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:Wubjsa9Sko+B7yOAzxPtQ4GLvC9I1D6SyRJTxBMGkEI=
+1.4.0 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:AUWKBByHzzgX4pw3HgsjjugkwQlnsRjELIneH5bXqxs=
+1.4.1 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:~> 1.2.0,json:~> 1.7.5|checksum:zV/R7fHJy9c3O6moWH7A39C5Z2x6PtKnj28Tk7k364E=
+1.4.2 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:< 2.1&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:t4Q/O4jzJ54TcwfLXhxvFY3oZ6lMVR6vmi5FeEI41yA=
+1.4.3 faraday:~> 0.8.4,faraday_middleware:>= 0.8.8,hashie:< 2.1&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:yx4WPGdRMPxrYEVD4VyBA9DOs1Yx11NZZvRiSjpAUpI=
+1.5.0 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 2.1&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:Srf/l9hsmrWud0GDbw6/20+bnZ4tq+mAjn9QultQhKA=,ruby:>= 0
+1.5.1 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:cUWTqe5jzQ2B9D+HLTqFdlu3AtC+Oa2mR3EjpmwxeBg=,ruby:>= 0
+1.5.2 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:Y61Ij5dcmw9MRbyNfxpQt9filVfnVpu19yOaNF6ms+E=,ruby:>= 0
+1.5.3 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:ryBZQf6PNynnP7yZg4lKf6UZ7XDvZcEHOXo7vO8X9Hs=,ruby:>= 0
+2.0.0 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:Y/zeDX2OcK9V4QQmTOyBGTTeEPj4rzgtI4OZY3HaPjA=,ruby:>= 1.9.3
+2.1.0 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:fGlapp+tDPV/LuWksFNhyrh3kjej2iJQHYpJe8j2Vew=,ruby:>= 1.9.3
+2.1.1 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:
+2.1.2 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:
+2.1.3 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:324e9f1374cff290a43bb96d0eff133b2bb0cab3a824a4a5495dde4bb00ef778,ruby:>= 1.9.3,rubygems:>= 0
+2.2.0 faraday:~> 0.9.0,faraday_middleware:>= 0.8.8,hashie:< 4.0&>= 1.2.0,json:< 1.9.0&>= 1.7.5|checksum:5c0382e488a744921301367f4e346c2ad747d952cb227487e4f30bc218728a7f,ruby:>= 1.9.3,rubygems:>= 0

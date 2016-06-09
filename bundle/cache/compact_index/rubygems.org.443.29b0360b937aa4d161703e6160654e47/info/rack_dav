@@ -1,0 +1,6 @@
+---
+0.1.2 |checksum:iF5OR0MaT0TMFMG6JL3YpN1E28mtbOgg2T75KsLGcgg=
+0.1.3 |checksum:ce6IO0ISmjEpmhWE4l+GqjEZpn6rQWN7lHn1yLf8aDs=
+0.3.1 nokogiri:>= 0,rack:~> 1.4.0|checksum:z4jsW5mlHxOmli+NWghA+aL4mjqkJ7pnkjaL/t5RGpc=
+0.4.0 nokogiri:~> 1.5,rack:~> 1.4|checksum:XNv5u7QSuUDz6f1vXMPvQ+Nhn6mwTNDQ0whCRYeCFjg=,ruby:>= 0
+0.4.1 ffi-xattr:~> 0.1,nokogiri:~> 1.5,rack:~> 1.4|checksum:

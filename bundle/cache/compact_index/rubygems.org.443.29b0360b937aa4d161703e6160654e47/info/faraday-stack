@@ -1,0 +1,6 @@
+---
+0.1.0 faraday:~> 0.6|checksum:Bnp5LsAgp0+kztYDVcexUHKbMG3vLbXRBxFZ1y8uCi4=
+0.1.2 faraday:~> 0.6|checksum:P7/86cT1JfkXPPj8S7npUi5pwd7usvfo2V+MyGW96Yw=
+0.1.3 faraday:~> 0.6|checksum:aVYGaf+wxflLU+Iz8YTW/O6/AaFdOhDOqgbKJw5l7sY=
+0.1.4 faraday:< 0.8&>= 0.6|checksum:l3qPRtQUQTIc7kF5sy4S72hQC6XzqJgV0/JLmwcIw3c=
+0.1.5 faraday:< 0.8&>= 0.6|checksum:qXuHgvnSql7miMBidHmtHVCS3MTCF56dzv7aMRglxLo=

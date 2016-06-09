@@ -1,0 +1,6 @@
+---
+0.1.0 debugger:~> 1.1.3,pry:~> 0.9.9|checksum:pLI88zAKsZtiLekPUwGqvZ+nOYvhNxrQSSk8mS4pMRw=
+0.2.0 debugger:~> 1.1.3,pry:~> 0.9.9|checksum:ZKcGHTZBIl/apELdqZS6ztJoFmJ9lCyjPESO7FS0WpE=
+0.2.1 debugger:~> 1.2.0,pry:~> 0.9.10|checksum:DmRe1pVGqytK4AN341+XtF6GPCHWRP5dCkcARBp+Dek=
+0.2.2 debugger:~> 1.3,pry:~> 0.9.10|checksum:6f/TXrTsv+zy7spxaCBKbOP900vNwwhXKU6svOuqK08=
+0.2.3 debugger:~> 1.3,pry:< 0.11.0&>= 0.9.10|checksum:OXX5y0oBFYEEzbQVXDU4Ukgym7npBplwnUaw5TU7OrI=,ruby:>= 1.9.2

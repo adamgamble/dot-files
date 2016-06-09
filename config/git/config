@@ -28,3 +28,7 @@
 	default = simple
 [init]
 	templatedir = ~/.config/git/template
+[core]
+	editor = /usr/local/bin/nvim
+[commit]
+	template = /Users/errinlarsen/.config/git/message-template

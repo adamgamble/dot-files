@@ -1,0 +1,43 @@
+---
+0.1.1 eventmachine:>= 0,hoe:>= 2.0.0,json:>= 0,rack:>= 0|checksum:DTVPauUoB0I7mhTlArbjNjGdLDaX332k9n0bRsjKN1U=
+0.1.0 eventmachine:>= 0,hoe:>= 2.0.0,json:>= 0,rack:>= 0|checksum:/KjaeGyobejXAQELLWoY/Ie0969eVLHYT9BhhRONXxs=
+0.2.2 eventmachine:>= 0,json:>= 0,rack:>= 0|checksum:apDzRxrfZrPDtOuw5oF4w9ZhEMp1flI1OX1FR0B/4oo=
+0.3.0 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0|checksum:T5+jzBtqVC+HTSwxeFQoty7cobBkDgniYXKHVufZifs=
+0.3.1 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0|checksum:sfsZe21WpdDCK6a7hiwlH+sFLjBv7CNBp1ALUZt2+fY=
+0.3.2 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:6wSaF6Kv9rmyvgdSqb3vr2DQXwMwEshxsxxZy0vnC7Q=
+0.3.3 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:FrHvO7v+iaV4ov+hCoUWXrYgg3rfwWoOKNm/OyFgx/Q=
+0.3.4 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:wQdlUv02ujIrcSwDnh4uFobC0tN873xUFMuj1IuKj38=
+0.5.0 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:E7dQUXTYP0zGWv6hm3+Olvfy+HT2vYCWV2FpV/Snl14=
+0.5.1 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:91JuUbXrWMrrI1OyMcYCXtvpgMZp6mmIDLUj/xzAq2w=
+0.5.2 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:LCUqHIPt+nUF/hgRQHcj7VIfpgVfzJOOcHOFo8z9xN8=
+0.5.3 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:h4d5hl7EWOitPvEUyawTsoRixvJ4Ffm1ri318xI89dQ=
+0.5.4 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:m/Lhd+YN2AO4iKlNbdoWBBGeoPViVGIZDH1kaEoqzpk=
+0.5.5 em-http-request:>= 0.2,eventmachine:>= 0.12,json:>= 1.0,rack:>= 1.0,thin:>= 1.2|checksum:YeNzccN/js4OI2/ZNUjNO+70QZm6jTbvbtK7CUlweb4=
+0.6.0 em-hiredis:>= 0.0.1,em-http-request:>= 0.2,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:TNFgg+w3LLBDAiwid0vStfgUhHfUPT7Gqwt8qi7ulQU=
+0.6.1 em-hiredis:>= 0.0.1,em-http-request:>= 0.2,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:QWzvuYHes2/5MPDdipyosNYxnvfi/TKO8Uj5MttlUBA=
+0.6.2 em-hiredis:>= 0.0.1,em-http-request:>= 0.2,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:jUtD+I3mh7BBXTk4c+TUWbHBKtGCtgowxD98rFngFiM=
+0.6.3 em-hiredis:>= 0.0.1,em-http-request:>= 0.2,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:8nmclVQB9awfWfFykHcmtwLMznX892xaV9C+ivGhZqY=
+0.6.4 em-hiredis:>= 0.0.1,em-http-request:>= 0.2,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:PCdenHAar563xa+8pK97M031Hr8l16il2NlA+ODgtu4=
+0.6.5 em-hiredis:>= 0.0.1,em-http-request:>= 0.2,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:wyQr3g8pmMNvGg1xVQRe0fAnJHaPrd0rXZEeJQ+X7p0=
+0.6.6 em-hiredis:>= 0.0.1,em-http-request:~> 0.3,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:uMTssTQx6YYoarMAmM/5iKa283Cy+wvzfNbqLiRtlkQ=
+0.6.7 em-hiredis:>= 0.0.1,em-http-request:~> 0.3,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:+2llSSaLzYWXHgrsjMyop4lSynYhlq/aP20sfvhmqCE=
+0.7.0 cookiejar:>= 0.3.0,em-hiredis:>= 0.0.1,em-http-request:~> 0.3,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:Urwsgd1kzUStLu0TB4DWTaaonVaaSuIpN/WY434QQOI=
+0.7.1 cookiejar:>= 0.3.0,em-hiredis:>= 0.0.1,em-http-request:~> 0.3,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:LWAj8ZAC2wLrXNBxvSKcZOx0jXd8bpmiLS3hc5NeKvY=
+0.8.0 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:BOUR9/Yynxp+HPH8SEoYCU0QfhxPfxhbeXB7elkaEJQ=
+0.8.1 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:Jty4TEdGGReOXi5bQjeEa9vpas+J8cfghz16bhlWTpY=
+0.8.2 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:UtqxbaJpRAldtwsSh6uPPvUd+K/mU8PMtEadfgrZ1VA=
+0.8.3 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:PKZl9BNeX2lki5L5WOB2+AtT/Zt7JJp+8msdqNAzXd8=
+0.8.4 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:eJFfgjjyCO251MSKGyk+/ZZ9sHSO9AXpYAMzDrc/Zv4=
+0.8.5 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:PDimKqXUxkEw7O9goswSqrGZ7zkAEh4LoCGzbrDjCgQ=
+0.8.6 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:q8KdJuR0iEBXETu5P8zByGsgEVLFq/aVKiRiLZqjCME=
+0.6.8 em-hiredis:>= 0.0.1,em-http-request:~> 0.3,eventmachine:>= 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:1QLNQqaGOXSaC6oh97E80wEkSAFl+Rq5rOOdJtmfffg=
+0.7.2 cookiejar:>= 0.3.0,em-hiredis:>= 0.0.1,em-http-request:~> 0.3,eventmachine:~> 0.12.0,json:>= 1.0,rack:>= 1.0,thin:~> 1.2|checksum:eyXa34N54ZVroqX9NBqCSPuz9AmHMDIQpxNMuvvqZ6w=
+0.8.8 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:ds5FzEEu+lfhWsT125Dtd7qbzxRIVBFPpl50i05I22g=
+0.8.9 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:kj6Yy0e0a99wkpBZZTjXBtTC9rFW19tuvEhbCNHzSTI=
+1.0.0 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.7.0,multi_json:>= 1.0.0,rack:>= 1.0.0,websocket-driver:>= 0.3.0|checksum:nYe515n8SANFzJBsCCeo1Pd0WqDmQMgj88mO/dVcLZA=
+1.0.1 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.7.0,multi_json:>= 1.0.0,rack:>= 1.0.0,websocket-driver:>= 0.3.0|checksum:yUcvXNtfVC0kndHwdMDr59sqsTqxGCQ50X5I25XxDIk=
+1.0.3 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.7.0,multi_json:>= 1.0.0,rack:>= 1.0.0,websocket-driver:>= 0.3.0|checksum:Pg+8WE7yPOsD1Op2sev/fhY6OyOrQAepLy6HP3EZBn4=,ruby:>= 0
+0.8.11 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.4.0,rack:>= 1.0.0,yajl-ruby:>= 1.0.0|checksum:T4DLPYXgqamvzl6dfzkyljzi7aJuR1FLGx0RCJFswEw=,ruby:>= 0
+1.1.0 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.9.1,multi_json:>= 1.0.0,rack:>= 1.0.0,websocket-driver:>= 0.5.1|checksum:eaoj1/O4lKKGaIk8NCjJ1x4uwZ8WXFvaaGPVMi8uvZ8=,ruby:>= 0
+1.1.1 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.9.1,multi_json:>= 1.0.0,rack:>= 1.0.0,websocket-driver:>= 0.5.1|checksum:U5nCmBibj92KCsyRA+A+G2MY0jCHMnH0VAxSxUj0LF8=,ruby:>= 0
+1.1.2 cookiejar:>= 0.3.0,em-http-request:>= 0.3.0,eventmachine:>= 0.12.0,faye-websocket:>= 0.9.1,multi_json:>= 1.0.0,rack:>= 1.0.0,websocket-driver:>= 0.5.1|checksum:YT1VjUkRllUQ8iZy93QilBlpXHSSns1YY/o3P7+Rs3w=,ruby:>= 0

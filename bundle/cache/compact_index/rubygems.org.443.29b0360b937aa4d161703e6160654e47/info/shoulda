@@ -1,0 +1,30 @@
+---
+2.10.2 |checksum:1wx8E4WyrDpuyoMC/1tckx4mdWy0O0YT7iEFlrVW7m0=
+2.10.1 |checksum:WaoxyF8Pe6wDN00Qs9WmfO+Q3MBdbkak+0UaCxt9RrM=
+2.10.0 |checksum:fuxhnDn/L7eE8o5kVSnWLLeTPZMfbaDNgX8+8nPG4y8=
+2.9.2 |checksum:LB9heY8d8BJAUEfjiLoIG+2hEGbzSJ4ICZjPEgm6Dwo=
+2.9.1 |checksum:jHvmrShEXe0vjdgUfuhXudFyPDr79AR0ZE+82MYOBts=
+2.9.0 |checksum:Z+5oaUcFxCsOOdlnvu5KS0e+qIoR8WpQ7htMLwo/m80=
+2.0.6 |checksum:YgXJpZ8NsBm0do3NbiBEmsNHTUHo9UvYCO5S2vggniI=
+2.0.5 activesupport:>= 2.0.0|checksum:j49uwnkhbhIEr0+ZtINpa04KZ16pa/Rctv2pWWOaTEQ=
+2.0.4 activesupport:>= 2.0.0|checksum:SaaweWsxumyyPTaVE7boFAy3bGlDjT0cT/fc1yNMSes=
+2.0.3 activesupport:>= 2.0|checksum:o18sWumENydws2PCMmH0p7afWfNP0zagxLzA/6CRbbk=
+2.0.2 activesupport:>= 2.0|checksum:2QEfSYfU3NBp/b/P3Arkk3m09pYBv1w3U+vTN5gVWpo=
+2.0.1 activesupport:>= 2.0|checksum:oFXgPKneaSKde60YliNCvcnanZnRHOqJJ2X2BtHXYqs=
+2.0.0 activesupport:>= 2.0|checksum:rbOIUGBqU3KEhVVvXq+4kRdX6sL99pX1pOr63YrQK9c=
+2.10.3 |checksum:JSrOIFiL/1h5Ab/gUbAOT/tWnC9u4Ow0vFbuKh1ssB0=
+2.11.0 |checksum:XYF6j7TvDCu+0mGcZiva3C2AYy7NZu3tUtMLfvyHn5o=
+2.11.1 |checksum:QBICSsljfZIihFDCjL6uyYUTGMjGzeIfX94JwxSIm3E=
+2.11.2 |checksum:EY4aHiemZ86g9mVHUR8Tv2ucljJiI2Wb/9IVUn7wBYg=
+2.11.3 |checksum:c/x+xGOzXA5p1N9AjLzE8QnlV18F8cynGmM2Yth9U4c=
+3.0.0.beta1 shoulda-context:~> 1.0.0.beta1,shoulda-matchers:~> 1.0.0.beta1|checksum:LqiSzTaqiUHL692URjx/ttNaNJPUFXV8E+XIIkJw7Qc=
+3.0.0.beta2 shoulda-context:~> 1.0.0.beta1,shoulda-matchers:~> 1.0.0.beta1|checksum:jmFUMXEWDzgumM/Mu4OGGcc7iXsAXQC3HuPD5XmxdMM=
+3.0.1 shoulda-context:~> 1.0.0,shoulda-matchers:~> 1.0.0|checksum:L6B9Jy/88iHBhZbf88ZadTU4EaakP/Y1XRJmOcgA0p0=
+3.1.0 shoulda-context:~> 1.0,shoulda-matchers:~> 1.2|checksum:lvFMfBdRxcd63GM59IBCUMOyPjj56dmQK9NpgfBD4pE=
+3.1.1 shoulda-context:~> 1.0,shoulda-matchers:~> 1.2|checksum:pBgHSpDRsPhGJBz8Yz9Q9LXg2e4BbUprFu3bTnN88KI=
+3.2.0 shoulda-context:~> 1.0,shoulda-matchers:~> 1.3|checksum:N1lj+kkTg2siZFKGr/VIUBoewmHla68JU9TpAEHXNM4=
+3.3.0 shoulda-context:~> 1.0,shoulda-matchers:~> 1.4|checksum:UWtn13qOqesemweZ893TB2FrAYztlW4JEzE2T/mzSoA=
+3.3.1 shoulda-context:~> 1.0,shoulda-matchers:~> 1.4.1|checksum:GyuuvI7+WH8WekBC5Kd67DCh1Xspd8YISCY5oXemJ9M=
+3.3.2 shoulda-context:~> 1.0.1,shoulda-matchers:~> 1.4.1|checksum:UucLccv7fAHazhTiaKYthsId3R5ewBFsix5jLY4E5BI=
+3.4.0 shoulda-context:>= 1.0.1&~> 1.0,shoulda-matchers:>= 1.4.1&~> 1.0|checksum:EYtZkKQaL8Ljpxx+VL4WamjQHRefQtfM7YO6qBdaho4=
+3.5.0 shoulda-context:>= 1.0.1&~> 1.0,shoulda-matchers:< 3.0&>= 1.4.1|checksum:vnpp+x2uQZIuqKWozasUizhwsyLKUVKws5HVo0pwVTM=

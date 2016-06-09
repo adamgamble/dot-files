@@ -1,0 +1,25 @@
+---
+1.7.2 right_http_connection:>= 1.2.1|checksum:wrxN2BD5UmlR6IvJ+Nwz64OTup1f+7udSsIRtm7XxXY=
+1.7.3 right_http_connection:>= 1.2.1|checksum:xo7Gqv5UwE4ugS4OIt1LQlVEmCeyY0Tz3stydaQq670=
+1.8.0 right_http_connection:>= 1.2.1|checksum:+/EmXA/cIufeW/NJhtI0SXEbsBil8sT3o2m6d/9417M=
+1.8.1 right_http_connection:>= 1.2.1|checksum:Zl/uJg4Q4Zt2QwVxONYie1EvY/VMwDJoRIp7boGlpDs=
+1.9.0 right_http_connection:>= 1.2.1|checksum:VaUVSGzi+CWFmrVEuY4hzCsRu4arFXVmJQhuzCmeD0g=
+1.1.0 activesupport:>= 1.4.1,hoe:>= 1.2.1,right_http_connection:>= 0.1.4|checksum:ArRLK2WdEPkZ7pL/aADliOLbWKRaPZyodsBZZHv+UMk=,rubygems:
+1.10.0 right_http_connection:>= 1.2.4|checksum:yRH4OaOqwvCDmECNe3YxgRqHfRGZ0YUKhhJ4iT53aZI=
+1.2.0 hoe:>= 1.2.1,right_http_connection:>= 0.1.4|checksum:Fd/eZFbxMeFg4P6oTUeGvn4Zjh2eoivngAxwAkK3k2I=,rubygems:
+1.3.0 hoe:>= 1.3.0,right_http_connection:>= 0.1.4|checksum:bOznqfjLi+Ajl3ClRkqKAXs+deq9KdKZgcDC0lvMxyU=,rubygems:
+1.4.2 hoe:>= 1.3.0,right_http_connection:>= 1.2.0|checksum:vCIPgXvhnkSF1S+t+R0oMa/92gEXMk7JipLBYCsKk5s=,rubygems:
+1.4.3 hoe:>= 1.3.0,right_http_connection:>= 1.2.0|checksum:9igWQVQ3VbevnBWUOed5qVq/rxHsMA85UFy/eRrHVw0=,rubygems:
+1.5.0 hoe:>= 1.3.0,right_http_connection:>= 1.2.1|checksum:IpxEm7gi34GJ7TFNQakHSgDGXtfI1exiW/LQey6wIqU=,rubygems:
+1.6.0 right_http_connection:>= 1.2.1|checksum:G2Qao3DZjBJRc5Q005mIZqZs0uxcj8liaH4JppGNvxQ=,rubygems:
+1.6.1 right_http_connection:>= 1.2.1|checksum:M+CDDQFp5isEyVtdg3YObN+esrYUvjxHlkpKz2pGAMs=,rubygems:
+1.6.2 right_http_connection:>= 1.2.1|checksum:A3ltFiRgPCPgcg8nnjQguAex0Zz9zuVL9crWH6UeUh0=,rubygems:
+1.7.0 right_http_connection:>= 1.2.1|checksum:IiXi2deWdsCqf3VPqweR8SPh8N1pOuVrGRjXFdihPxY=,rubygems:
+1.7.1 right_http_connection:>= 1.2.1|checksum:AtFMlW2pcxeUvUQ+/krUHj3/kxjWTY+gk37yjDCol1E=,rubygems:
+2.0.0 right_http_connection:>= 1.2.1|checksum:HTdUPF8TeZ6k6Nx9F1iF6D00gzfS12Ea3sG7XsTjBDY=
+2.1.0 right_http_connection:>= 1.2.5|checksum:hLGPusLy/7XAKDZX0nPTF6elL+TgGr+zxihUzJLvsr4=
+3.0.0 right_http_connection:>= 1.2.5|checksum:YrJsnAtirP1rvUPGFb0ILwu3veOESI+Ms9ONAvmRigs=
+3.0.3 right_http_connection:>= 1.2.5|checksum:T4DohjTURw23o3tKDHaN4iEzc6q3hx43LHiyk3wwtYU=
+3.0.4 right_http_connection:>= 1.2.5|checksum:FxHg0/4v/Z6eELk5WkHGbJWQNZOFdW6+/MM0Fa4NPSM=
+3.0.5 right_http_connection:>= 1.2.5|checksum:k0BDDBGUVEzVny9cAnVYCVtDwwKUXN1vG77FiGuvrV8=
+3.1.0 right_http_connection:>= 1.2.5|checksum:CSjIFYDjjJ/uwO32/JYWosjlTMvzZ3MStugAvP0udKg=

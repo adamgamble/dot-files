@@ -1,0 +1,33 @@
+---
+0.1 mongo:= 1.0|checksum:j0DBtcWUpqXYp5xURywy1WKmvZsMagGk4xpdD03jF2o=,rubygems:>= 1.3.6
+0.1.1 mongo:= 1.0|checksum:AssLm04dp8+TFyoInaKOSKJKm1uPmSsK6VOCLuCZII4=,rubygems:>= 1.3.6
+0.1.2 mongo:= 1.0.1|checksum:9xLetFbOhRqyaFj3se/A4/DDB5zgOKjMJ+wDEBp4eKA=,rubygems:>= 1.3.6
+0.1.3 mongo:= 1.0.1|checksum:e+OmAMMDw9v280IRKDJc1fo/VjdvnVSesujGd8xvGoI=,rubygems:>= 1.3.6
+0.1.4 mongo:~> 1.0.1|checksum:X0SLfld0MZdeVFwrku/Jl0WgI8D6EVtrcDG4hClofNg=
+0.2 mongo:~> 1.0.1|checksum:8zX/FbyqXdF8brF712gL58/I32eF+SMbjJYmIyoefVE=
+0.2.1 mongo:~> 1.0.1|checksum:HMEsqjiB/euj4yDRJn6jpLvsECVz5xu+tzh76D6SxUo=
+0.3.0 mongo:~> 1.0.1|checksum:TkcND88Yj92hOTKqNqqA01GPo1FUPn/ZTOATAXKwj7w=
+0.3.1 mongo:~> 1.0.1|checksum:Zs00g1CT9D6eBPLz7BKqEUys+2u/MFfnVJwoxHUlU9w=
+0.3.2 mongo:~> 1.0.1|checksum:Ns0atn2lsDamcW7kiYNEZnb5yens+I3eL0icE5hejj8=
+0.3.3 mongo:~> 1.0.1|checksum:hzFJLDYpsj3EFNWhJ7i4VKVUsKjv2lUY3Yjm4aZTFgQ=
+0.3.4 mongo:~> 1.0.7|checksum:r8kVN/bIOoCst2PFsBx5BkhwsWfkydE7OIynaigXC+0=
+0.3.5 mongo:~> 1.0.8|checksum:KaZwDj8h5NShmHgalrUv/nY7vCly/HMpJFHNwneMMIs=
+0.3.6 mongo:~> 1.1|checksum:2bj0f6bpqoq2p1FYJuyyNJLwZjgOBO9k6Kg982DJnQo=
+0.3.7 mongo:~> 1.1|checksum:K0jq9WeRE6iN712KephCBss+Kjlrr44ta6xW1xyRK5w=
+0.3.8 mongo:~> 1.3|checksum:SWZopaTncS3YAKW4Bcy78tmuRSHDPymIcMvRG8qaqpA=
+0.4.0 mongo:~> 1.3|checksum:tt0wS85V+yRkNkuIJB/Kn1UmoxCD6deV85WVr+e1gmI=
+0.4.1 mongo:~> 1.3.1|checksum:2ltqW+x8yw2HDysJ36dOYoT6pKRbF//eSQakN5sjvf8=
+0.4.2 mongo:< 1.5.0&~> 1.3.0,mongo:< 1.5.0&~> 1.3.0|checksum:UoQZP6mO+0jRAK5jHRE9oTQz3nedQ1yRgsvmXmVkrgY=
+0.4.3 mongo:~> 1.3|checksum:jfwfuP036YaKGt8Lm91G+XmTfDf0778et0fBOWpirVc=
+0.4.4 mongo:~> 1.5|checksum:p6N6FoiqCTtjM6NDjfXs9fxfooZVtn9ORcWZnRLAAv4=
+0.5.0 mongo:~> 1.5|checksum:IRwqohUsZRBEFLOlxFIcY70sr4GllV5LqK248GeXp1s=
+0.5.1 mongo:~> 1.5|checksum:ulvrVU3fOitfyhvUo7ZXAai3nf5wpjxMZkTgGuieDXE=
+0.5.2 mongo:~> 1.5|checksum:dZDotmvEI5Jq4W5nBMTlijRHAV2UCRWzVqxSdeHf+yQ=
+0.6.0 mongo:~> 1.5|checksum:U32vMlG12Yj3OFtbi/i6JJ929O0z23Vu4dZzCixI6+0=
+0.6.1 mongo:~> 1.5|checksum:+Up5s2puRCDa6fjQJPN1P20RCCTv3KnAIFHCgHWjkgw=
+0.6.2 mongo:~> 1.5|checksum:02ZFZNOR6FrFbH4lJkwO5+6dkT3pJ+w8no5fmW0QjnM=
+0.6.3 mongo:~> 1.5|checksum:p0k34u0g5ddVnSEC6Qno4zuP+WEZ8Za7CyNhR5I8tHc=
+0.6.4 mongo:~> 1.5|checksum:qtmiBiD/ZtRtXoIQUQyII7VvnQuJbxclPj/PAIF8qcs=
+0.6.5 mongo:~> 1.5|checksum:IvBE1pzghi5PDAfTdZ+xQvBqctzpIPEO80qMm04rOB0=
+0.6.6 mongo:~> 1.5|checksum:NDFR5ciNESVq5L97iRZwUSitVrvOkeK0uW6s6kEnfDE=
+0.7.0 mongo:~> 1.5|checksum:a2d62dd94aff2187346f8f05b86c3544e6caa22d80962e93ee22320be7f2e5d8,ruby:>= 0,rubygems:>= 0

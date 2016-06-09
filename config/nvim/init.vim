@@ -67,13 +67,14 @@ syntax enable
 filetype plugin indent on      " load file type plugins + indentation
 
 " set modelines=0                " don't check top and bottom limes for settings
-set nobackup                   " don't save a backup when writing
+" set nobackup                   " don't save a backup when writing
 set nowritebackup
 " set noswapfile                 " don't use a swapfile
 
 " set clipboard=unnamed       " unnamedplus (maybe? for nvim?)
 
 set ttimeoutlen=-1            " set to default; overrides vim-sensible plugin
+
 
 " ---------------------------------------------------------------------------
 " Whitespace
@@ -101,7 +102,9 @@ endif
 set title                      " Set title of the window
 
 " NOTE: vim-sensible sets scrolloff=1 by default...
-set scrolloff=3                " Keep 3 lines at top/bottom when scrolling
+set scrolloff=2                " Keep 2 lines at top/bottom when scrolling
+set sidescroll=2
+set showbreak=↪>\
 
 set hidden                     " keep buffers loaded but hidden when abondoned
 set wildmode=list:longest      "  - options
@@ -332,6 +335,11 @@ hi GitGutterChangeLine       ctermfg=NONE ctermbg=18
 hi GitGutterDeleteLine       ctermfg=NONE ctermbg=18
 hi GitGutterChangeDeleteLine ctermfg=NONE ctermbg=18
 
+
+" ---------------------------------------------------------------------------
+"  vim-Markdown
+" ---------------------------------------------------------------------------
+let g:markdown_fenced_languages = ['html', 'ruby', 'bash=sh']
 
 
 " ---------------------------------------------------------------------------

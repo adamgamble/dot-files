@@ -1,0 +1,27 @@
+---
+0.1.0 em-websocket:= 0.3.6,ruby-hmac:= 0.4.0,thin:= 1.3.1,yajl-ruby:= 1.1.0|checksum:ck3rbwNcHNqYSQG9FnI09ru7C8Tx6s1uR+npP2MHVBo=
+0.1.1 em-websocket:= 0.3.6,ruby-hmac:= 0.4.0,thin:= 1.3.1,yajl-ruby:= 1.1.0|checksum:CTSjdpl6HlWfszpfZ+rDlIcex51eiFN5USbCyT6olNg=
+0.1.2 em-websocket:= 0.3.6,ruby-hmac:= 0.4.0,thin:= 1.3.1,yajl-ruby:= 1.1.0|checksum:ZeNwi+ZFUl50lXSj7vXYrh/SaXD4rYSnqH3zCbSi6aQ=
+0.1.3 em-websocket:= 0.3.6,ruby-hmac:= 0.4.0,thin:= 1.4.1,yajl-ruby:= 1.1.0|checksum:T5J34HzKalRMgZziSWRcKhkvzu1wonxTX+nFkogABIQ=
+0.1.4 em-websocket:= 0.3.8,ruby-hmac:= 0.4.0,thin:= 1.4.1,yajl-ruby:= 1.1.0|checksum:Gqx9Eg8yEp91msPNLAKa02mXsM2AX3cdR3dlCvCBSrE=
+0.1.5 em-websocket:= 0.3.8,ruby-hmac:= 0.4.0,thin:= 1.5.0,yajl-ruby:= 1.1.0|checksum:E361yH2YC8Vwz7ELkQtvVNgLa4x5wS4XqBzkn0ghs8w=
+0.2.0 em-websocket:= 0.3.8,multi_json:= 1.3.7,thin:= 1.5.0|checksum:M/orZ7Iys2nW05LErmvTA382cUKiBJ8IlbeMTOIJiGU=
+0.3.0 em-http-request:= 1.0.3,em-websocket:= 0.3.8,multi_json:= 1.4.0,thin:= 1.5.0|checksum:qDDowTjTNPyyM6rXnWx/5TwhVZcpbzA45n0xw3MMlOc=
+0.4.0 em-http-request:= 1.0.3,em-websocket:= 0.3.8,multi_json:= 1.5.0,thin:= 1.5.0|checksum:KmI/OW9V+5TbN5pXriaUOuC6dcj18rMV9xSg2jQnNHo=
+0.5.0 em-http-request:= 1.0.3,em-websocket:= 0.3.8,multi_json:= 1.5.0,thin:= 1.5.0|checksum:+NES/XyljdGy6i4CenQ9LXecAXqcpUPZgTKIodlRq1I=
+0.6.0 em-http-request:= 1.0.3,em-websocket:= 0.4.0,multi_json:= 1.5.0,thin:= 1.5.0|checksum:7LpsTTh1kGeTQwZExdLC8z8i/bOWghogyhr91HQp8uk=
+0.7.0 em-http-request:= 1.0.3,em-websocket:= 0.4.0,multi_json:= 1.6.1,thin:= 1.5.0|checksum:0LhRQqoIbB9ty5w+GfyYNCIW10YLe6RCGRBq7VydBks=
+0.8.0 em-http-request:= 1.0.3,em-websocket:= 0.5.0,multi_json:= 1.7.3,thin:= 1.5.1|checksum:Xoo30TyjPp88I6ve5C/2Kx0h2/a1n/jpj4nRMdBRYL4=
+0.9.0 em-http-request:~> 1.0,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:3j4g04XC9jhCsR9JXhBuAeGyn/YhZ3sqP0nfCBHmDmA=
+0.10.0 em-http-request:~> 1.0.0,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:hC8QAU/NwcKqFAndnCrmYB0Z50Sa5eFJ+Q203q+maRg=
+0.11.0 em-http-request:~> 1.0.0,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:4uJ1EvQaX8WfDC1BejkeJX/6mJ0lWVY3In6OpYWPja0=
+0.12.0 em-http-request:< 1.2.0&>= 1.0.0,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:H8AlaY+bMEnjCCcugTzCzxeOkJI2TM1osvFThePnshI=
+0.13.0 em-http-request:< 1.2.0&>= 1.0.0,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:+LXRcUZPRaNLoH3NuXXHCSTvh5Fqq+IephfOpGQ1eMc=
+0.14.0 em-http-request:< 1.2.0&>= 1.0.0,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:sv4ZFOWWyo8AyyJ3hrN/maZKtqXpuEbJNW7R9rGn+10=
+1.0.0 em-http-request:~> 1.1,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:0kwUpQ+dnZkhtu/PDpB8DL8PYjhgyGhhEv+DQGOjUks=,ruby:>= 0
+1.0.1 em-http-request:~> 1.1,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:MDhh/M7bhh765bikk8GE7cNxwnY801ZAtcfT38X0HEU=,ruby:>= 0
+1.1.0 em-http-request:~> 1.1,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:hFoAggCiBIwZtl8aijVx1ZFsJPMhY6abWojjH+uNxOA=,ruby:>= 0
+1.2.0 em-http-request:~> 1.1,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:6jSPgyKKKQ5yzUxJcYi35nNuP9n+iZvQNxBPBvWxaco=,ruby:>= 0
+1.3.0 em-http-request:~> 1.1,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:aZamp57WhEr4FLDSeLhtEM0U77vnXR0HR+9/Zcqb8/s=,ruby:>= 0
+1.4.0 em-http-request:~> 1.1,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:eBc5oUdX0Il8XPmHkdRID0jLRyy3gormOJkMhOCYAwg=,ruby:>= 0
+1.5.0 em-http-request:~> 1.1,em-websocket:~> 0.5,multi_json:~> 1.6,thin:~> 1.5|checksum:607e709fa653e77de00dba37770bdfb554df4c117b5e60123484bb0dfa3b2d6f,ruby:>= 0,rubygems:>= 0

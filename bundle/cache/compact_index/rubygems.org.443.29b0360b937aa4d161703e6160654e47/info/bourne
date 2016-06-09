@@ -1,0 +1,12 @@
+---
+1.0 mocha:= 0.9.8|checksum:8G92+Qw8SnLkLFcVzynhnzp4db5leRorW1bHYzKAL60=
+1.1.0 mocha:= 0.10.4|checksum:mZo5wuMdrNgqW3kzVM45r6qzwBicnvKnYMSyWqm5mik=
+1.1.1 mocha:= 0.10.4|checksum:qFSzXjm3SbotVmuf9epRExR7GdzIBBtNwTEcJyOpx0s=
+1.1.2 mocha:= 0.10.5|checksum:8JK5WNIhWDEfiZ3Y+bB+LKhb0BEWR3TAW485zns6+o8=
+1.2.0 mocha:= 0.12.3|checksum:UlqACQmknc6vJQji7tNIJl5xLOSy602+aA+lYArrE0g=
+1.2.1 mocha:= 0.12.7|checksum:AlLT19J9d3TMRg9+QXQDdmGnrUzTunbe3WpJ3pFBIik=
+1.3.0 mocha:= 0.13.0|checksum:xf1qdFHbyBHhX1Le6I9RenoJoOG1OgUG015RQMLosoQ=
+1.3.2 mocha:= 0.13.2|checksum:89ulAymur/d51DHF7tT8FJc0ZOGNHG+gGzmQsm7DGn8=
+1.4.0 mocha:~> 0.13.2|checksum:hq7G8fIHgU40HJEsqsp+TonpQGViYQePxilvWqBWjm8=
+1.5.0 mocha:< 0.15&>= 0.13.2|checksum:uWSS1IBcpYEXO8npe3ox85htdJ+U1Cq8e/7yDWq3qKE=
+1.6.0 mocha:~> 1.1|checksum:yIlHHuE+eu2mYdhKa7hqpWZbi2lhDpSf/eMvQZo6JaU=,ruby:>= 0

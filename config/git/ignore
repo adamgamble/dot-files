@@ -13,6 +13,7 @@ Icon
 # Stuff I found gets annoying
 .bundle
 .env
+.env.local
 .rake_tasks
 tags
 vendor/bundle

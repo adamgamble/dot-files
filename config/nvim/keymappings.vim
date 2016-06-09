@@ -25,25 +25,33 @@ nnoremap  j                 gj
 nnoremap  k                 gk
 
 " Turn off arrow keys
-" http://yehudakatz.com/2010/07/29/everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
+" - http://yehudakatz.com/2010/07/29/ \
+"     everyone-who-tried-to-convince-me-to-use-vim-was-wrong/
 inoremap  <up>              <nop>
 inoremap  <down>            <nop>
 inoremap  <left>            <nop>
 inoremap  <right>           <nop>
 
 " Move between splits
-nnoremap  <C-h>             <C-w>h
+if has('nvim')  " ...because, nvim respects terminfo, but vim doesn't
+  nnoremap <BS> <C-w>h
+else
+  nnoremap <C-h> <C-w>h
+endif
+
+" nnoremap  <C-h>             <C-w>h  " See above
 nnoremap  <C-j>             <C-w>j
 nnoremap  <C-k>             <C-w>k
 nnoremap  <C-l>             <C-w>l
 
+
 " Scrolling (because: CTRL keys Sux0rs && RSI)
-"         <C-y>                   " Scroll screen up one line
-"         <C-u>                   " Scroll up half a window
-"         <C-m>                   " Scroll down half a window
-nnoremap  <C-m>             <C-d>
-"         <C-n>                   " Scroll screen down one line
-nnoremap  <C-n>             <C-e>
+" nnoremap  <C-e>             <C-e> " Scroll screen down one line
+" nnoremap  <C-y>             <C-y> " Scroll screen up one line
+" nnoremap  <C-d>             <C-d> " Scroll down half a window
+" nnoremap  <C-u>             <C-u> " Scroll up half a window
+" nnoremap  <C-f>             <C-f> " Scroll down a full page
+" nnoremap  <C-b>             <C-b> " Scroll up a full page
 
 " Move between tabs
 " nnoremap  <Bslash>          gt
@@ -123,14 +131,14 @@ map       ===               mmgg=G`m^zz
 
 " vim-easy-align:
 " - Start interactive EasyAlign in visual mode
-vmap <Enter> <Plug>(EasyAlign)
+" vmap <Enter> <Plug>(EasyAlign)
 
 " - Start interactive EasyAlign with a Vim movement
-nmap <Leader>a <Plug>(EasyAlign)
+" nmap <Leader>a <Plug>(EasyAlign)
 
 " Easy commenting - TComment
-nnoremap  //                :TComment<CR>
-vnoremap  //                :TComment<CR>
+" nnoremap  //                :TComment<CR>
+" vnoremap  //                :TComment<CR>
 
 " " Generate ctags for all bundled gems as well
 " map     <Leader>rt        :!ctags --extra=+f --languages=-javascript
@@ -188,10 +196,10 @@ noremap   <Leader>T         :VroomRunNearestTest<CR>
 noremap   <C-g><C-g>        :GitGutterLineHighlightsToggle<CR>
 
 " Toggle Gundo
-nnoremap <Leader>gu :GundoToggle<CR>
+" nnoremap <Leader>gu :GundoToggle<CR>
 
 " Toggle Tagbar
-nnoremap <Leader>tb :TagbarToggle<CR>
+" nnoremap <Leader>tb :TagbarToggle<CR>
 
 
 " ---------------------------------------------------------------------------
