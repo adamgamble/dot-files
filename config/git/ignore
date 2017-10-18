@@ -1,20 +1,60 @@
-.DS_Store
+### MacOS ######################################################################
+*.DS_Store
 .AppleDouble
 .LSOverride
+
+# Icon must end with two \r
 Icon
+
 
 # Thumbnails
 ._*
 
-# Files that might appear on external disk
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
 .Spotlight-V100
+.TemporaryItems
 .Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
 
-# Stuff I found gets annoying
-.bundle
-.env
-.env.local
-.rake_tasks
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Dropbox ####################################################################
+# settings and caches
+.dropbox
+.dropbox.attr
+.dropbox.cache
+
+### Vim ########################################################################
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# session
+Session.vim
+
+# temporary
+.netrwhist
+*~
+
+# auto-generated tag files
 tags
-vendor/bundle
-.byebug_history
+
+### Personal ###################################################################
+# Oh-My-Zsh plugin: rake-fast - Fast rake autocompletion plugin
+.rake_tasks
+
+# Environment normalization
+/vendor/bundle
+
+# for GradesFirst
+config/lock_session.yml

@@ -20,7 +20,7 @@ nnoremap  <Right>           :echoe "Use l"<CR>
 nnoremap  <Up>              :echoe "Use k"<CR>
 nnoremap  <Down>            :echoe "Use j"<CR>
 
-" Change up/down
+" Change up/down (j/k are linewise; gj/gk allows up/down within wrapped line)
 nnoremap  j                 gj
 nnoremap  k                 gk
 
@@ -33,13 +33,13 @@ inoremap  <left>            <nop>
 inoremap  <right>           <nop>
 
 " Move between splits
-if has('nvim')  " ...because, nvim respects terminfo, but vim doesn't
-  nnoremap <BS> <C-w>h
-else
-  nnoremap <C-h> <C-w>h
-endif
+" if has('nvim')  " ...because, nvim respects terminfo, but vim doesn't
+"   nnoremap <BS> <C-w>h
+" else
+"   nnoremap <C-h> <C-w>h
+" endif
 
-" nnoremap  <C-h>             <C-w>h  " See above
+nnoremap  <C-h>             <C-w>h
 nnoremap  <C-j>             <C-w>j
 nnoremap  <C-k>             <C-w>k
 nnoremap  <C-l>             <C-w>l
@@ -105,6 +105,84 @@ map       <Esc>T            :tabedit %%
 " " find current file in file browser
 " noremap   <C-p>             :NERDTreeFind<cr>
 
+" FZF...
+" <C-p> or <C-t> to search files
+" nnoremap <silent> <C-t> :FZF -m<cr>
+" nnoremap <silent> <C-p> :FZF -m<cr>
+
+" fzf - Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+nmap    <c-x><tab> <plug>(fzf-maps-i)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
+
+" fzf - Insert mode completion
+imap <c-x><c-w> <plug>(fzf-complete-word)
+imap <c-x><c-d> <plug>(fzf-complete-path)
+imap <c-x><c-g> <plug>(fzf-complete-file-ag)
+imap <c-x><c-b> <plug>(fzf-complete-line)
+
+
+" fzf - Advanced customization using autoload functions
+" inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+
+" fzf - personalized mappings
+" ---------------------------------------------------------------------------
+" Files [PATH]    | Files (similar to  `:FZF` )
+noremap <Leader>ff          :FzfFiles<cr>
+noremap <Leader>FF          :FzfFiles
+
+" GFiles [OPTS]   | Git files (git ls-files)
+noremap <Leader>fg          :FzfGFiles<cr>
+noremap <Leader>FG          :FzfGFiles
+
+" GFiles?         | Git files (git status)
+" Buffers         | Open buffers
+noremap <Leader>fb          :FzfBuffers<cr>
+noremap <Leader>FB          :FzfBuffers
+
+" Colors          | Color schemes
+" Ag [PATTERN]    | {ag}{5} search result (ALT-A to select all, ALT-D to deselect all)
+" RG [PATTERN]    | {rg}{5} search result
+noremap <Leader>fr          :FzfRg<cr>
+noremap <Leader>FR          :FzfRg
+
+" Lines [QUERY]   | Lines in loaded buffers
+noremap <Leader>fl          :FzfLines<cr>
+noremap <Leader>FL          :FzfLines
+
+" BLines [QUERY]  | Lines in the current buffer
+
+" Tags [QUERY]    | Tags in the project ( `ctags -R` )
+noremap <Leader>ft          :FzfTags<cr>
+noremap <Leader>FT          :FzfTags
+
+" BTags [QUERY]   | Tags in the current buffer
+" Marks           | Marks
+" Windows         | Windows
+" Locate PATTERN  |  `locate`  command output
+" History         |  `v:oldfiles`  and open buffers
+" History:        | Command history
+" History/        | Search history
+" Snippets        | Snippets ({UltiSnips}{6})
+
+" Commits         | Git commits (requires {fugitive.vim}{7})
+noremap <Leader>fc          :FzfCommits<cr>
+noremap <Leader>FC          :FzfCommits
+
+" BCommits        | Git commits for the current buffer
+" Commands        | Commands
+" Maps            | Normal mode mappings
+
+" Helptags        | Help tags [1]
+noremap <Leader>fh          :FzfHelptags<cr>
+noremap <Leader>FH          :FzfHelptags
+
+" Filetypes       | File types
+
+
+" RAILS...
+" ---------------------------------------------------------------------------
 " View routes or Gemfile in large split
 map       <Leader>gr        :topleft :split config/routes.rb<cr>
 map       <Leader>gg        :topleft 100 :split Gemfile<cr>
@@ -130,11 +208,11 @@ imap      <silent> <F6>     <Esc> mmgg=G'mzz
 map       ===               mmgg=G`m^zz
 
 " vim-easy-align:
-" - Start interactive EasyAlign in visual mode
-" vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap <Leader>a <Plug>(EasyAlign)
 
-" - Start interactive EasyAlign with a Vim movement
-" nmap <Leader>a <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap <Leader>a <Plug>(EasyAlign)
 
 " Easy commenting - TComment
 " nnoremap  //                :TComment<CR>
@@ -157,9 +235,6 @@ map       ===               mmgg=G`m^zz
 
 " Search using :Ag (i.e. The Silver Searcher)
 nnoremap <Leader>ag         :Ag<SPACE>
-
-" turn current search highlight off
-nnoremap  <Leader><Space>   :noh<CR>
 
 " Remove trailing whitespace
 nnoremap  <Leader>tw         :%s/\s\+$//e<CR>:let @/=''<CR>

@@ -1,8 +1,0 @@
----
-0.1.0 eventmachine:>= 0,thin:>= 0|checksum:M8ahGdQ57ZbPs0JSB73JIUqcqCpXfIWMg8Ucv4ObRwI=
-0.1.2 eventmachine:>= 0,thin:>= 0|checksum:b+Ukv4D6qA/r8iInxQpkXgefoBrGDcCz8z5wnT/nJts=
-0.2.0 eventmachine:~> 0.12,thin:~> 1.2|checksum:lLwqplBhVVBRghy5A2q+jm1KbbSHbgeqSZqhdvRknyY=
-0.2.1 eventmachine:~> 0.12,thin:~> 1.2|checksum:Fa4euyxcEgUAsJBT6hZkuIpfDxeiXkSBaXmzPjTO7HY=
-0.2.2 eventmachine:~> 1.0,thin:>= 0|checksum:9Ays7M/j4dmCb2AZWgkPQ+p8ETDDazFwiH22mp+1IQI=
-0.2.3 eventmachine:~> 1.0.0,thin:~> 1.5.0|checksum:/oER2aYAmxHg/s27WUjKtngmHFH5z0iHN2G4wOzaCEU=
-0.2.4 eventmachine:~> 1.0.0,thin:< 1.7&>= 1.5|checksum:498d447cc99f638470b87fc5814bc82cd799cb9453f3a04523ff518f50df7ef8,ruby:>= 1.8.7,rubygems:>= 0

@@ -2,3 +2,4 @@ gem-ctags
 bundler
 pry
 pry-doc
+neovim

@@ -3,17 +3,21 @@ set nocompatible               " be iMproved
 " ===========================================================================
 "  Plug.vim config
 " ===========================================================================
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Step one...
-Plug 'tpope/vim-sensible'
+if !has('nvim')
+  Plug 'tpope/vim-sensible'
+endif
 
 " General utility
-Plug 'L9'
-Plug 'textobj-user'
+Plug 'vim-scripts/L9'
+Plug 'kana/vim-textobj-user'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'rizzatti/funcoo.vim'
+Plug 'tpope/vim-dispatch'       " Hook into external test/compile/run stuff
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " UI enhancements
 Plug 'chriskempson/base16-vim'
@@ -21,37 +25,42 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Specific utilities
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'bufexplorer.zip'
-Plug 'rking/ag.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-vinegar'        " Enhancements for netrw: built-in Dir browser
 Plug 'tpope/vim-repeat'         " repeat (supported) Plugins' commands
 Plug 'tpope/vim-unimpaired'     " ...many things; always in pairs ;)
 Plug 'tpope/vim-fugitive'       " Git
 Plug 'airblade/vim-gitgutter'   " See 'signs' for Git-tracked changes
-Plug 'tpope/vim-dispatch'       " Hook into external test/compile/run stuff
+Plug 'timakro/vim-searchant'    " improved search highlighting
+Plug 'junegunn/vim-easy-align'  " 🌻  A Vim alignment plugin
+Plug 'junegunn/vim-peekaboo'    " 👀  \"/ @ / CTRL-R
+" Plug 'bufexplorer.zip'
+" Plug 'rking/ag.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'gerw/vim-HiLinkTrace'     " Show syntax/color hierarchies
 
 " General Programming/Markup language helpers
-Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
+" Plug 'scrooloose/syntastic'
 
 " Specific Programming/Markup language helpers
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/rbenv-ctags'
 Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-bundler'
 Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-haml'
 Plug 'thoughtbot/vim-rspec'
 Plug 'kchmck/vim-coffee-script'
-" Plug 'slim-template/vim-slim'
+Plug 'slim-template/vim-slim'
 " Plug 'file:///Users/errinlarsen/Code/github.com/errinlarsen/vim-curly'
 
 " Add plugins to &runtimepath
@@ -60,6 +69,9 @@ call plug#end()
 " load vim-sensible NOW; allows below to override vim-sensible
 runtime! plugin/sensible.vim
 
+" nelstrom/vim-textobj-rubyblock requires that the matchit.vim plugin is enabled
+runtime macros/matchit.vim
+
 " ===========================================================================
 "  General config
 " ===========================================================================
@@ -67,10 +79,6 @@ syntax enable
 filetype plugin indent on      " load file type plugins + indentation
 
 " set modelines=0                " don't check top and bottom limes for settings
-" set nobackup                   " don't save a backup when writing
-set nowritebackup
-" set noswapfile                 " don't use a swapfile
-
 " set clipboard=unnamed       " unnamedplus (maybe? for nvim?)
 
 set ttimeoutlen=-1            " set to default; overrides vim-sensible plugin
@@ -117,7 +125,6 @@ set ttyfast
 set laststatus=2               " Always show the statusline in all windows
 set noshowmode       " Hide default mode text (e.g. --INSERT-- below statusline)
 set number
-set undofile
 
 set previewheight=24
 set splitbelow splitright
@@ -125,6 +132,7 @@ set splitbelow splitright
 set linebreak
 set textwidth=80
 set formatoptions+=n
+set listchars=tab:≫∙,trail:∘,extends:⇰,precedes:∙
 
 
 " ---------------------------------------------------------------------------
@@ -175,17 +183,38 @@ set smartcase                  " ... unless they contain >= 1 capital letter
 " endfunction
 
 " -----[ Greping ] ------------------------------------------
-if executable('ag')
-  " use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor\ --ignore\ log
+" use rg over grep
+if executable('rg')
+  set grepprg=rg\ --vimgrep
+  set grepformat^=%f:%l:%c:%m
 endif
 
 
 " ---------------------------------------------------------------------------
-"  Directories
+"  Files/Directories
 " ---------------------------------------------------------------------------
-set backupdir=~/tmp,/tmp
-set undodir=~/.nvim/.tmp,~/tmp,~/.tmp,/tmp
+" swap files:
+" set noswapfile                                          " don't use a swapfile
+" set dir=~/.local/share/nvim/swap         " default: $XDG_DATA_HOME/nvim/swap//
+                                        " swap files (.swp) in a common location
+                                         " - `//` means use the file's full path
+
+" backup files:
+" - The following is cut-n-pasted from `:help backup-table`...
+"   'backup' 'writebackup'	action
+"      off	     off	      no backup made
+"      off	     on		      backup current file, deleted afterwards (default)
+"      on	       off	      delete old backup, backup current file
+"      on	       on		      delete old backup, backup current file
+
+" set writebackup           " backup files (~) are made while writing (default),
+" set nobackup                              " then deleted afterwards (default),
+" set backupdir=.,$XDG_DATA_HOME/nvim/backup " default: .,$XDG_DATA_HOME/nvim/backup
+set backupdir=~/.local/share/nvim/backup/,~/tmp,.         " in a common location
+
+" undo files:
+set undofile                                 " turn on undo files, and put them
+" set undodir=~/.local/share/nvim/undo       " default: $XDG_DATA_HOME/nvim/undo
 
 
 " ---------------------------------------------------------------------------
@@ -207,7 +236,14 @@ set suffixes+=.old
 " Ag
 " ---------------------------------------------------------------------------
 " bind \ (back slash) to grep shortcut
-command! -nargs=+ -complete=file -bar AG silent! grep! <args>|cwindow|redraw!
+" command! -nargs=+ -complete=file -bar AG silent! grep! <args>|cwindow|redraw!
+
+
+" ---------------------------------------------------------------------------
+" Ale (linter)
+" ---------------------------------------------------------------------------
+" Show errors or warnings in statusline - Set this. Airline will handle the rest 
+let g:airline#extensions#ale#enabled = 1
 
 
 " ---------------------------------------------------------------------------
@@ -246,13 +282,6 @@ let g:AutoCloseProtectedRegions = ["Character"]
 
 
 " ---------------------------------------------------------------------------
-" BufExplorer
-" ---------------------------------------------------------------------------
-let g:bufExplorerShowRelativePath = 1  " Show relative paths
-let g:bufExplorerSplitRight = 0        " Split left
-
-
-" ---------------------------------------------------------------------------
 "  CoffeeScript
 " ---------------------------------------------------------------------------
 let coffee_compile_vert = 1
@@ -263,40 +292,11 @@ let coffee_compile_vert = 1
 
 
 " ---------------------------------------------------------------------------
-" CtrlP
-" ---------------------------------------------------------------------------
-" Exclude files and directories using Vim's wildignore...
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-
-" ...and CtrlP's own g:ctrlp_custom_ignore:
-" let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-" ...the following is being ignored because `g:ctrlp_user_command` is set!
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
-
-" Default: let g:ctrlp_user_command = 'find %s -type f'
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-" ag is fast enough that CtrlP doesn't need to cache!
-" Default: let g:ctrlp_use_caching = 0
-
-" Default: let g:ctrlp_open_new_file = 'v'
-let g:ctrlp_open_new_file = 'r'  " in the current window
-
-" Default: let g:ctrlp_open_multiple_files = 'v'
-let g:ctrlp_open_multiple_files = '1vr'
-
-let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'undo', 'changes']
-
-
-" ---------------------------------------------------------------------------
 " delimitMate
 " ---------------------------------------------------------------------------
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
+
 
 " ---------------------------------------------------------------------------
 "  Fugitive
@@ -304,6 +304,65 @@ let delimitMate_expand_space = 1
 augroup ErrinsFugitiveCommit
   autocmd FileType gitcommit setlocal textwidth=72
 augroup END
+
+
+" ---------------------------------------------------------------------------
+"  fzf.vim
+" ---------------------------------------------------------------------------
+" give the same prefix to the fzf.vim commands; i.e. :Files => :FzfFiles
+let g:fzf_command_prefix = 'Fzf'
+
+" This is the default extra key bindings:
+" let g:fzf_action = {'ctrl-t': 'tab split', 'ctrl-x': 'split', 'ctrl-v': 'vsplit'}
+
+" Default fzf layout
+" - down / up / left / right
+" let g:fzf_layout = { 'down': '~40%' }
+
+" In Neovim, you can set up fzf window using a Vim command
+let g:fzf_layout = { 'window': 'enew' }
+" let g:fzf_layout = { 'window': '-tabnew' }
+
+" Customize fzf colors to match your color scheme
+" let g:fzf_colors =
+" \ { 'fg':      ['fg', 'Normal'],
+"   \ 'bg':      ['bg', 'Normal'],
+"   \ 'hl':      ['fg', 'Comment'],
+"   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+"   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+"   \ 'hl+':     ['fg', 'Statement'],
+"   \ 'info':    ['fg', 'PreProc'],
+"   \ 'prompt':  ['fg', 'Conditional'],
+"   \ 'pointer': ['fg', 'Exception'],
+"   \ 'marker':  ['fg', 'Keyword'],
+"   \ 'spinner': ['fg', 'Label'],
+"   \ 'header':  ['fg', 'Comment'] }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+" let g:fzf_history_dir = '~/.fzf-history'
+
+" --column: Show column number
+" --line-number: Show line number
+" --no-heading: Do not show file headings in results
+" --fixed-strings: Search term as a literal string
+" --ignore-case: Case insensitive search
+" --no-ignore: Do not respect .gitignore, etc...
+" --hidden: Search hidden files and folders
+" --follow: Follow symlinks
+" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
+
+" --color: Search color options
+" command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+command! -bang -nargs=* FzfRg
+      \ call fzf#vim#grep(
+      \   'rg --column --line-number --no-heading --color=always --ignore-case '.shellescape(<q-args>), 1,
+      \   <bang>0 ? fzf#vim#with_preview('up:60%')
+      \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+      \   <bang>0)
+
 
 " ---------------------------------------------------------------------------
 "  GitGutter
@@ -324,7 +383,7 @@ let g:gitgutter_diff_args = '-w'        " Ignore whitespace
 " let g:gitgutter_signs = 0             " Default: 1 (on)
 
 " Always show the sign column
-let g:gitgutter_sign_column_always = 1  " Default: 0 (off)
+set signcolumn=yes
 
 " Turn on line highlighting by default
 " let g:gitgutter_highlight_lines = 1   " Default: 0 (off)
@@ -374,16 +433,6 @@ augroup END
 
 
 " ---------------------------------------------------------------------------
-"  Syntastic
-" ---------------------------------------------------------------------------
-" Jump to first detected issue when saving/opening
-" let g:syntastic_auto_jump=1      " Default: 0 (off)
-
-" Automatically open/close the syntastic-error-window (location-list)
-" let g:syntastic_auto_loc_list=1  " Default: 2 (error window closed wo/errors)
-
-
-" ---------------------------------------------------------------------------
 "  Vinegar
 " ---------------------------------------------------------------------------
 let g:netrw_altfile = 1
@@ -409,6 +458,43 @@ augroup END
 " ===========================================================================
 " Config options for plugins not being used
 " ===========================================================================
+" ---------------------------------------------------------------------------
+" BufExplorer
+" ---------------------------------------------------------------------------
+" let g:bufExplorerShowRelativePath = 1  " Show relative paths
+" let g:bufExplorerSplitRight = 0        " Split left
+
+
+" ---------------------------------------------------------------------------
+" CtrlP
+" ---------------------------------------------------------------------------
+" " Exclude files and directories using Vim's wildignore...
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+
+" " ...and CtrlP's own g:ctrlp_custom_ignore:
+" " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+" " ...the following is being ignored because `g:ctrlp_user_command` is set!
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+"   \ 'file': '\v\.(exe|so|dll)$',
+"   \ }
+
+" " Default: let g:ctrlp_user_command = 'find %s -type f'
+" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" " ag is fast enough that CtrlP doesn't need to cache!
+" " Default: let g:ctrlp_use_caching = 0
+
+" " Default: let g:ctrlp_open_new_file = 'v'
+" let g:ctrlp_open_new_file = 'r'  " in the current window
+
+" " Default: let g:ctrlp_open_multiple_files = 'v'
+" let g:ctrlp_open_multiple_files = '1vr'
+
+" let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'undo', 'changes']
+
+
 " ---------------------------------------------------------------------------
 "  Gist
 " ---------------------------------------------------------------------------
@@ -450,6 +536,16 @@ augroup END
 "  Pipe2Eval
 " ---------------------------------------------------------------------------
 " let g:pipe2eval_map_key = '!'
+
+
+" ---------------------------------------------------------------------------
+"  Syntastic
+" ---------------------------------------------------------------------------
+" Jump to first detected issue when saving/opening
+" let g:syntastic_auto_jump=1      " Default: 0 (off)
+
+" Automatically open/close the syntastic-error-window (location-list)
+" let g:syntastic_auto_loc_list=1  " Default: 2 (error window closed wo/errors)
 
 
 " ---------------------------------------------------------------------------

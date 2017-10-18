@@ -18,17 +18,37 @@
   ba = for-each-ref --sort=committerdate --format='%(committerdate:short) %(refname:short)' refs/heads refs/remotes
 	ig = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"
 	ctags = !.git/hooks/ctags
+	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
 [web]
 	browser = open
+; [merge]
+; 	tool = fugitive
+; [mergetool "fugitive"]
+; 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
 [merge]
-	tool = fugitive
-[mergetool "fugitive"]
-	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+  keepBackup = false
+  tool = p4merge
+[mergetool "p4merge"]
+  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$REMOTE\"" "\"$PWD/$LOCAL\"" "\"$PWD/$MERGED\""
+  keepTemporaries = false
+  trustExitCode = false
+  keepBackup = false
+[diff]
+    tool = p4merge
+[difftool "p4merge"]
+  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
 [push]
 	default = simple
 [init]
 	templatedir = ~/.config/git/template
 [core]
 	editor = /usr/local/bin/nvim
-[commit]
-	template = /Users/errinlarsen/.config/git/message-template
+[pager]
+	diff = ~/.config/git/diff-highlight | less
+	log = ~/.config/git/diff-highlight | less
+	show = ~/.config/git/diff-highlight | less
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22

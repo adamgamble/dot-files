@@ -14,7 +14,7 @@ ZSH_THEME="jonathan-customized"
 
 # Which plugins to load?
 plugins=(
-  systemadmin osx brew gnu-utils git gitfast colored-man colorize
+  osx brew gnu-utils git gitfast colored-man colorize
   rbenv ruby gem rake rake-fast bundler rails
 )
 
@@ -22,6 +22,9 @@ plugins=(
 # ------------------------------------------------------------------------------
 # ENV
 # ------------------------------------------------------------------------------
+# for fzf
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
 # for rbenv
 export RBENV_ROOT=$HOME/.rbenv
 
@@ -31,9 +34,16 @@ export NVM_DIR=$HOME/.nvm
 # Vim
 export EDITOR=vim
 
+# cowsay
+export COWPATH="$(brew --prefix cowsay)/share/cows:$HOME/.cows"
+
 # Base16 Shell
 BASE16_SCHEME="railscasts"
 BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+
+# GitHub Access Token for Homebrew
+export HOMEBREW_GITHUB_API_TOKEN="27ef0172f646c2046580def0154a4f9cc09da165"
+
 
 # ------------------------------------------------------------------------------
 # PATH
@@ -74,19 +84,25 @@ bindkey -v
 eval "$(rbenv init -)"
 
 # initialize erlenv if it's there
-[[ -x $(which erlenv) ]] && eval "$(erlenv init -)"
+# [[ -x $(which erlenv) ]] && eval "$(erlenv init -)"
 
 # initialize exenv if it's there
-[[ -x $(which exenv) ]] && eval "$(exenv init -)"
+# [[ -x $(which exenv) ]] && eval "$(exenv init -)"
 
 # for nvm if it's there
-[[ -d $(brew --prefix nvm) ]] && source $(brew --prefix nvm)/nvm.sh
+# [[ -d $(brew --prefix nvm) ]] && source $(brew --prefix nvm)/nvm.sh
 
 # start oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
+# setup fzf auto-completion and key bindings
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # Because: pretty -- if it's there
-[[ -x $(which archey) ]] && archey -c
+[[ -x $(which archey) ]] && archey -c -o
+
+# Got t3h L3rn!n...!
+[ -f ~/.vocab ] && chmod +x ~/.vocab && ~/.vocab
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
