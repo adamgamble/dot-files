@@ -242,14 +242,16 @@ set suffixes+=.old
 " ---------------------------------------------------------------------------
 " Ale (linter)
 " ---------------------------------------------------------------------------
-" Show errors or warnings in statusline - Set this. Airline will handle the rest 
+" Show errors or warnings in statusline - Set this. Airline will handle the rest
 let g:airline#extensions#ale#enabled = 1
 
 
 " ---------------------------------------------------------------------------
 " vim-Airline
 " ---------------------------------------------------------------------------
-let g:airline_theme='base16'
+if !has("gui_vimr")                            " if NOT in VimR GUI...
+  let g:airline_theme='base16color'            " ...then use 'base16color' theme
+endif
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#default#layout = [
     \ [ 'a', 'b', 'c' ],
