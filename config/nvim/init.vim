@@ -255,7 +255,7 @@ endif
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#default#layout = [
     \ [ 'a', 'b', 'c' ],
-    \ [ 'x', 'y', 'z', 'warning' ]
+    \ [ 'x', 'y', 'z', 'error', 'warning' ]
   \ ]
 " let g:airline#extensions#default#section_truncate_width = {  " defaults
 "   \ 'b': 79,
