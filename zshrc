@@ -38,8 +38,8 @@ export EDITOR=vim
 export COWPATH="$(brew --prefix cowsay)/share/cows:$HOME/.cows"
 
 # Base16 Shell
-BASE16_SCHEME="railscasts"
-BASE16_SHELL="$HOME/.config/base16-shell/base16-$BASE16_SCHEME.dark.sh"
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # GitHub Access Token for Homebrew
 export HOMEBREW_GITHUB_API_TOKEN="27ef0172f646c2046580def0154a4f9cc09da165"
@@ -76,9 +76,6 @@ alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
 # ------------------------------------------------------------------------------
 # Vim
 bindkey -v
-
-# Base16 Shell
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 # initialize rbenv
 eval "$(rbenv init -)"

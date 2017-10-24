@@ -1,4 +1,6 @@
-set nocompatible               " be iMproved
+" Nvim makes many of my previous settings enabled by default. I've commented
+" those out and tagged them with '[Nvim]' to make that clear
+
 
 " ===========================================================================
 "  Plug.vim config
@@ -18,11 +20,6 @@ Plug 'tomtom/tlib_vim'
 Plug 'rizzatti/funcoo.vim'
 Plug 'tpope/vim-dispatch'       " Hook into external test/compile/run stuff
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
-" UI enhancements
-Plug 'chriskempson/base16-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 " Specific utilities
 Plug 'junegunn/fzf.vim'
@@ -63,6 +60,11 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'slim-template/vim-slim'
 " Plug 'file:///Users/errinlarsen/Code/github.com/errinlarsen/vim-curly'
 
+" UI enhancements
+Plug 'chriskempson/base16-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -75,8 +77,8 @@ runtime macros/matchit.vim
 " ===========================================================================
 "  General config
 " ===========================================================================
-syntax enable
-filetype plugin indent on      " load file type plugins + indentation
+" syntax enable                  " [Nvim]
+" filetype plugin indent on      " load file type plugins + indentation [Nvim]
 
 " set modelines=0                " don't check top and bottom limes for settings
 " set clipboard=unnamed       " unnamedplus (maybe? for nvim?)
@@ -87,7 +89,7 @@ set ttimeoutlen=-1            " set to default; overrides vim-sensible plugin
 " ---------------------------------------------------------------------------
 " Whitespace
 " ---------------------------------------------------------------------------
-set nowrap                     " don't wrap lines
+set nowrap                     " don't wrap lines by default
 set tabstop=2 shiftwidth=2     " a tab is two spaces
 set softtabstop=2              " do I need this?
 set expandtab                  " use spaces, not <tab>s
@@ -119,10 +121,9 @@ set wildmode=list:longest      "  - options
 set visualbell                 " no beeping
 
 set cursorline                 " highlight the Cursor Line (current line)
-set cursorcolumn               " ... same, but Column
+" set cursorcolumn               " ... same, but Column
 
-set ttyfast
-set laststatus=2               " Always show the statusline in all windows
+" set laststatus=2               " Always show statusline in all windows [Nvim]
 set noshowmode       " Hide default mode text (e.g. --INSERT-- below statusline)
 set number
 
@@ -139,48 +140,36 @@ set listchars=tab:≫∙,trail:∘,extends:⇰,precedes:∙
 "  Color scheme
 " ---------------------------------------------------------------------------
 set t_Co=256
-set background=dark " light is default
-let base16colorspace=256
-colorscheme base16-railscasts
+set background=dark            " light is default
 
-" Cursor row/column colors:
-hi CursorLine guibg=#262626, ctermbg=235
-hi CursorColumn guibg=#262626, ctermbg=235
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+" Customized highlight groups
+hi Error        guifg=#b6b3eb guibg=#da4939 ctermfg=05 ctermbg=01
+hi qfLineNr     guifg=#b6b3eb guibg=#272935 ctermfg=05 ctermbg=18
+hi QuickFixLine               guibg=#272935            ctermbg=08
+hi! link SearchCurrent Error
 
 " check to make sure vim has been compiled with colorcolumn
 if exists("+colorcolumn")
   set colorcolumn=+1,+2,+3,+4,+5,+6
-  " execute "set colorcolumn=" . join(map(range(2,259), '"+" . v:val'), ',')
 endif
 
 " Trying some custom comment-only keyword highlighting:
 " syn keyword rubyTodo	  FIXME NOTE TODO OPTIMIZE XXX todo contained
 autocmd Syntax * syntax keyword Todo ERRIN NOTES containedin=.*Comment.* contained
 
+
 " ---------------------------------------------------------------------------
 " Searching
 " ---------------------------------------------------------------------------
-set hlsearch                   " highlight matches
+" set hlsearch                   " highlight matches [Nvim]
 set ignorecase                 " searches are case insensitive ...
 set smartcase                  " ... unless they contain >= 1 capital letter
 
-" -----[ Highlight matches when jumping to next ]-------------
-" This rewires n and N to do the highlighing...
-" nnoremap <silent> n   n:call HLNext(0.3)<cr>
-" nnoremap <silent> N   N:call HLNext(0.3)<cr>
-
-" " ... which just highlights the match in red
-" " TODO: I think this is slow...
-" function! HLNext (blinktime)
-"   let [bufnum, lnum, col, off] = getpos('.')
-"   let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
-"   let target_pat = '\c\%#'.@/
-"   let ring = matchadd('Error', target_pat, 101)
-"   redraw
-"   exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
-"   call matchdelete(ring)
-"   redraw
-" endfunction
 
 " -----[ Greping ] ------------------------------------------
 " use rg over grep
@@ -210,11 +199,14 @@ endif
 " set writebackup           " backup files (~) are made while writing (default),
 " set nobackup                              " then deleted afterwards (default),
 " set backupdir=.,$XDG_DATA_HOME/nvim/backup " default: .,$XDG_DATA_HOME/nvim/backup
-set backupdir=~/.local/share/nvim/backup/,~/tmp,.         " in a common location
+" set backupdir=~/.local/share/nvim/backup/,~/tmp,.         " in a common location
 
 " undo files:
-set undofile                                 " turn on undo files, and put them
 " set undodir=~/.local/share/nvim/undo       " default: $XDG_DATA_HOME/nvim/undo
+
+" ALL of the above are: [Nvim]
+
+set undofile                                 " turn on undo files, and put them
 
 
 " ---------------------------------------------------------------------------
@@ -244,7 +236,11 @@ set suffixes+=.old
 " ---------------------------------------------------------------------------
 " Show errors or warnings in statusline - Set this. Airline will handle the rest
 let g:airline#extensions#ale#enabled = 1
+let g:ale_open_list = 'on_save'
 
+augroup Errin_qf_toc
+  autocmd FileType qf setlocal textwidth=0
+augroup END
 
 " ---------------------------------------------------------------------------
 " vim-Airline
@@ -276,12 +272,6 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " let g:airline#extensions#tabline#fnamecollapse = 1
 " let g:airline#extensions#tabline#fnametruncate = 0
 
-" ---------------------------------------------------------------------------
-" AutoClose
-" ---------------------------------------------------------------------------
-let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'}
-let g:AutoCloseProtectedRegions = ["Character"]
-
 
 " ---------------------------------------------------------------------------
 "  CoffeeScript
@@ -299,11 +289,15 @@ let coffee_compile_vert = 1
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 
+" AutoClose
+let g:AutoClosePairs = {'(': ')', '{': '}', '[': ']', '"': '"', "'": "'", '#{': '}'}
+let g:AutoCloseProtectedRegions = ["Character"]
+
 
 " ---------------------------------------------------------------------------
 "  Fugitive
 " ---------------------------------------------------------------------------
-augroup ErrinsFugitiveCommit
+augroup vimrc
   autocmd FileType gitcommit setlocal textwidth=72
 augroup END
 
@@ -346,24 +340,19 @@ let g:fzf_layout = { 'window': 'enew' }
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 " let g:fzf_history_dir = '~/.fzf-history'
 
-" --column: Show column number
-" --line-number: Show line number
-" --no-heading: Do not show file headings in results
-" --fixed-strings: Search term as a literal string
-" --ignore-case: Case insensitive search
-" --no-ignore: Do not respect .gitignore, etc...
-" --hidden: Search hidden files and folders
-" --follow: Follow symlinks
-" --glob: Additional conditions for search (in this case ignore everything in the .git/ folder)
-
-" --color: Search color options
-" command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
+" RipGrep options for FzfRG command:
+" --column          - Show column numbers (1 based; 1st match in line) in output.
+    " ...this implies --line-number (Show line numbers; 1-based)
+" --no-heading      -  Don't  group  matches  by each file.
+" --color WHEN      - Whether to use color in the output.
+    " ...when 'always', coloring is attempted based on environment
+" -i, --ignore-case - Case insensitive search.
 command! -bang -nargs=* FzfRg
-      \ call fzf#vim#grep(
-      \   'rg --column --line-number --no-heading --color=always --ignore-case '.shellescape(<q-args>), 1,
-      \   <bang>0 ? fzf#vim#with_preview('up:60%')
-      \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-      \   <bang>0)
+  \  call fzf#vim#grep(
+  \    'rg --column --no-heading --color=always -i '.shellescape(<q-args>), 1,
+  \    <bang>0 ? fzf#vim#with_preview('up:60%')
+  \            : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \    <bang>0)
 
 
 " ---------------------------------------------------------------------------
@@ -391,10 +380,10 @@ set signcolumn=yes
 " let g:gitgutter_highlight_lines = 1   " Default: 0 (off)
 
 " Highlight line colors - uses DiffAdd, DiffChange, and DiffDelete by default
-hi GitGutterAddLine          ctermfg=NONE ctermbg=18
-hi GitGutterChangeLine       ctermfg=NONE ctermbg=18
-hi GitGutterDeleteLine       ctermfg=NONE ctermbg=18
-hi GitGutterChangeDeleteLine ctermfg=NONE ctermbg=18
+hi GitGutterAddLine          ctermfg=NONE ctermbg=02
+hi GitGutterChangeLine       ctermfg=NONE ctermbg=04
+hi GitGutterDeleteLine       ctermfg=NONE ctermbg=08
+hi GitGutterChangeDeleteLine ctermfg=NONE ctermbg=05
 
 
 " ---------------------------------------------------------------------------
@@ -417,8 +406,7 @@ let g:rspec_runner = "os_x_iterm"
 "  Ruby/Rails
 " ---------------------------------------------------------------------------
 " Other files to consider Ruby
-augroup ErrinsOtherRubyFilesAuGroup
-  autocmd!
+augroup vimrc
   autocmd BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
 augroup END
 
@@ -426,8 +414,7 @@ augroup END
 " ---------------------------------------------------------------------------
 "  SASS / SCSS
 " ---------------------------------------------------------------------------
-augroup ErrinsStylesheetsAuGroup
-  autocmd!
+augroup vimrc
   autocmd BufRead,BufNewFile *.scss set filetype=scss
   " autocmd BufNewFile,BufReadPost *.scss setl foldmethod=indent
   " autocmd BufNewFile,BufReadPost *.sass setl foldmethod=indent
@@ -440,19 +427,19 @@ augroup END
 let g:netrw_altfile = 1
 " let g:netrw_banner = 1
 
+
 " ---------------------------------------------------------------------------
 "  Misc
 " ---------------------------------------------------------------------------
 
 " Finally, load custom configs
 " - currently, ExtraWhitespace stuff
-if filereadable(s:home_dir . '.config/nvim/init.vim.local')
-  source ~/.config/nvim/init.vim.local
-endif
+" if filereadable(s:home_dir . '.config/nvim/init.vim.local')
+"   source ~/.config/nvim/init.vim.local
+" endif
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
-augroup ErrinsVimrcAuGroup
-  autocmd!
+augroup vimrc
   autocmd bufwritepost .config/nvim/init.vim,vimrc nested source %
 augroup END
 
@@ -461,61 +448,12 @@ augroup END
 " Config options for plugins not being used
 " ===========================================================================
 " ---------------------------------------------------------------------------
-" BufExplorer
-" ---------------------------------------------------------------------------
-" let g:bufExplorerShowRelativePath = 1  " Show relative paths
-" let g:bufExplorerSplitRight = 0        " Split left
-
-
-" ---------------------------------------------------------------------------
-" CtrlP
-" ---------------------------------------------------------------------------
-" " Exclude files and directories using Vim's wildignore...
-" set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
-
-" " ...and CtrlP's own g:ctrlp_custom_ignore:
-" " let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
-" " ...the following is being ignored because `g:ctrlp_user_command` is set!
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-"   \ 'file': '\v\.(exe|so|dll)$',
-"   \ }
-
-" " Default: let g:ctrlp_user_command = 'find %s -type f'
-" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-" " ag is fast enough that CtrlP doesn't need to cache!
-" " Default: let g:ctrlp_use_caching = 0
-
-" " Default: let g:ctrlp_open_new_file = 'v'
-" let g:ctrlp_open_new_file = 'r'  " in the current window
-
-" " Default: let g:ctrlp_open_multiple_files = 'v'
-" let g:ctrlp_open_multiple_files = '1vr'
-
-" let g:ctrlp_extensions = ['tag', 'buffertag', 'quickfix', 'dir', 'undo', 'changes']
-
-
-" ---------------------------------------------------------------------------
 "  Gist
 " ---------------------------------------------------------------------------
 " let g:gist_post_private = 1                  " private gists by default
 " let g:gist_open_browser_after_post = 1       " open browser after posting
 " let g:gist_browser_command = 'open %URL% &'  " use `open` for Gist URLs
 " let g:gist_get_multiplefile = 1              " open all files if more than one
-
-
-" ---------------------------------------------------------------------------
-"  MultipleCursor  " Not yet ready for prime-time
-" ---------------------------------------------------------------------------
-" let g:multi_cursor_use_default_mapping = 0  " Toggle Default mappings
-" let g:multi_cursor_start_key = '<C-m>'
-" let g:multi_cursor_start_key = '<C-n>       " - Default
-" let g:multi_cursor_next_key='<C-n>'         " - Default
-" let g:multi_cursor_prev_key='<C-p>'         " - Default
-" let g:multi_cursor_skip_key='<C-x>'         " - Default
-" let g:multi_cursor_quit_key='<Esc>'         " - Default
 
 
 " ---------------------------------------------------------------------------
@@ -532,54 +470,3 @@ augroup END
 "
 " " Open NERDTree if Vim was started with no files listed on the cmd line
 " autocmd vimenter * if !argc() | NERDTree | endif
-
-
-" ---------------------------------------------------------------------------
-"  Pipe2Eval
-" ---------------------------------------------------------------------------
-" let g:pipe2eval_map_key = '!'
-
-
-" ---------------------------------------------------------------------------
-"  Syntastic
-" ---------------------------------------------------------------------------
-" Jump to first detected issue when saving/opening
-" let g:syntastic_auto_jump=1      " Default: 0 (off)
-
-" Automatically open/close the syntastic-error-window (location-list)
-" let g:syntastic_auto_loc_list=1  " Default: 2 (error window closed wo/errors)
-
-
-" ---------------------------------------------------------------------------
-" TagBar
-" ---------------------------------------------------------------------------
-" open Tagbar on the left
-" let g:tagbar_left = 1
-
-" auto-close Tagbar when tag selected
-" let g:tagbar_autoclose = 1
-
-" sort tags by source-file order by default
-" let g:tagbar_sort = 0
-
-
-" ---------------------------------------------------------------------------
-" TagList
-" ---------------------------------------------------------------------------
-"
-" " Ctags path (brew install ctags)
-" let Tlist_Ctags_Cmd = 'ctags'
-"
-" let Tlist_Use_Right_Window = 1
-" let Tlist_WinWidth = 60
-"
-" " Use only current file to autocomplete from tags
-" " set complete=.,t
-" set complete=.,w,b,u,t,i
-
-
-" ---------------------------------------------------------------------------
-" Clever-F
-" ---------------------------------------------------------------------------
-" let g:clever_f_fix_key_direction = 1       " Always search forward/back with f/F
-" let g:clever_f_chars_match_any_signs = ';' " match any/all signs with f;
