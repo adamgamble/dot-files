@@ -433,10 +433,9 @@ let g:netrw_altfile = 1
 " ---------------------------------------------------------------------------
 
 " Finally, load custom configs
-" - currently, ExtraWhitespace stuff
-" if filereadable(s:home_dir . '.config/nvim/init.vim.local')
-"   source ~/.config/nvim/init.vim.local
-" endif
+if filereadable(s:home_dir . '.config/nvim/init.vim.local')
+  source ~/.config/nvim/init.vim.local      " - currently, ExtraWhitespace stuff
+endif
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 augroup vimrc
