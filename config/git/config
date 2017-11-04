@@ -21,22 +21,23 @@
 	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
 [web]
 	browser = open
-; [merge]
-; 	tool = fugitive
-; [mergetool "fugitive"]
-; 	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+; [diff]
+  ; tool = fugitive
+  ; tool = p4merge
+; [difftool "fugitive"]
+	; cmd = nvim -f -c \"Gdiff\" \"$REMOTE\" \"$LOCAL\"
+; [difftool "p4merge"]
+  ; cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
 [merge]
-  keepBackup = false
-  tool = p4merge
-[mergetool "p4merge"]
-  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$REMOTE\"" "\"$PWD/$LOCAL\"" "\"$PWD/$MERGED\""
-  keepTemporaries = false
-  trustExitCode = false
-  keepBackup = false
-[diff]
-    tool = p4merge
-[difftool "p4merge"]
-  cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
+	tool = fugitive
+  ; tool = p4merge
+[mergetool "fugitive"]
+	cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
+; [mergetool "p4merge"]
+  ; cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$REMOTE\"" "\"$PWD/$LOCAL\"" "\"$PWD/$MERGED\""
+  ; keepTemporaries = false
+  ; trustExitCode = false
+  ; keepBackup = false
 [push]
 	default = simple
 [init]

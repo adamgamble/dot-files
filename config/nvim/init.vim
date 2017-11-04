@@ -179,6 +179,15 @@ if executable('rg')
 endif
 
 
+" -----[ Diffing ] ------------------------------------------
+" 'diffopt' 'dip'		string	(default "filler") -- global
+" - filler		 Show filler lines, to keep the text synchronized with a window
+"            that has inserted lines at the same position.  Mostly useful when
+"            windows are side-by-side and 'scrollbind' is set.
+" - vertical	 Start diff mode with vertical splits
+"            (unless explicitly specified otherwise).
+set diffopt=filler,vertical
+
 " ---------------------------------------------------------------------------
 "  Files/Directories
 " ---------------------------------------------------------------------------
