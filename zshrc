@@ -12,7 +12,7 @@ ZSH_CUSTOM=$HOME/dot-files/oh-my-zsh-custom
 #   # agnoster, eastwood, gallois, suvash, amuse, ys, jonathan, pure
 ZSH_THEME="jonathan-customized"
 
-# Which plugins to load?
+# Which Oh-My-Zsh plugins to load?
 plugins=(
   osx brew gnu-utils git gitfast colored-man colorize
   rbenv ruby gem rake rake-fast bundler rails
@@ -36,10 +36,6 @@ export EDITOR=vim
 
 # cowsay
 export COWPATH="$(brew --prefix cowsay)/share/cows:$HOME/.cows"
-
-# Base16 Shell
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # GitHub Access Token for Homebrew
 export HOMEBREW_GITHUB_API_TOKEN="27ef0172f646c2046580def0154a4f9cc09da165"
