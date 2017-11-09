@@ -1,16 +1,10 @@
 " Nvim makes many of my previous settings enabled by default. I've commented
 " those out and tagged them with '[Nvim]' to make that clear
 
-
 " ===========================================================================
 "  Plug.vim config
 " ===========================================================================
 call plug#begin('~/.local/share/nvim/plugged')
-
-" Step one...
-if !has('nvim')
-  Plug 'tpope/vim-sensible'
-endif
 
 " General utility
 Plug 'vim-scripts/L9'
@@ -35,7 +29,7 @@ Plug 'junegunn/vim-peekaboo'    " 👀  \"/ @ / CTRL-R
 " Plug 'bufexplorer.zip'
 " Plug 'rking/ag.vim'
 " Plug 'ctrlpvim/ctrlp.vim'
-" Plug 'gerw/vim-HiLinkTrace'     " Show syntax/color hierarchies
+Plug 'gerw/vim-HiLinkTrace'     " Show syntax/color hierarchies
 
 " General Programming/Markup language helpers
 Plug 'w0rp/ale'
@@ -43,7 +37,6 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
-" Plug 'scrooloose/syntastic'
 
 " Specific Programming/Markup language helpers
 Plug 'tpope/vim-rbenv'
@@ -51,25 +44,26 @@ Plug 'tpope/rbenv-ctags'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-bundler'
+Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-haml'
-Plug 'thoughtbot/vim-rspec'
 Plug 'kchmck/vim-coffee-script'
 Plug 'slim-template/vim-slim'
-" Plug 'file:///Users/errinlarsen/Code/github.com/errinlarsen/vim-curly'
 
 " UI enhancements
-Plug 'chriskempson/base16-vim'
+Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+" Plug 'YorickPeterse/happy_hacking.vim'
+" Plug 'roosta/srcery'
+" Plug 'jacoborus/tender.vim'
+" Plug 'rakr/vim-two-firewatch'
+" Plug 'chriskempson/base16-vim'
 
 " Add plugins to &runtimepath
 call plug#end()
-
-" load vim-sensible NOW; allows below to override vim-sensible
-runtime! plugin/sensible.vim
 
 " nelstrom/vim-textobj-rubyblock requires that the matchit.vim plugin is enabled
 runtime macros/matchit.vim
@@ -81,9 +75,9 @@ runtime macros/matchit.vim
 " filetype plugin indent on      " load file type plugins + indentation [Nvim]
 
 " set modelines=0                " don't check top and bottom limes for settings
-" set clipboard=unnamed       " unnamedplus (maybe? for nvim?)
+" set clipboard=unnamed          " unnamedplus (maybe? for nvim?)
 
-set ttimeoutlen=-1            " set to default; overrides vim-sensible plugin
+set ttimeoutlen=-1             " set to default; overrides vim-sensible plugin
 
 
 " ---------------------------------------------------------------------------
@@ -137,21 +131,88 @@ set listchars=tab:≫∙,trail:∘,extends:⇰,precedes:∙
 
 
 " ---------------------------------------------------------------------------
-"  Color scheme
+" Colorscheme Toggles/Variables
 " ---------------------------------------------------------------------------
-set t_Co=256
-set background=dark            " light is default
+"
+" GruvBox config
+" ---------------
+" let g:gruvbox_bold = 1                   " default: 1      Enables bold text
+" let g:gruvbox_italic = 1                 " default: 0      Enables italic text (gui default: 1)
+" let g:gruvbox_underline = 1              " default: 1      Enables underlined text
+" let g:gruvbox_undercurl = 1              " default: 1      Enables undercurled text
+" let g:gruvbox_italicize_comments = 1     " default: 1      Enables italic for comments
+" let g:gruvbox_italicize_strings = 1      " default: 0      Enables italic for strings
+" let g:gruvbox_invert_selection = 1       " default: 1      Inverts selected text
+" let g:gruvbox_invert_signs = 0           " default: 0      Inverts GitGutter/Syntastic signs
+" let g:gruvbox_invert_indent_guides = 0   " default: 0      Inverts indent guides
+" let g:gruvbox_invert_tabline = 0         " default: 0      Inverts tabline highlights
+" let g:gruvbox_improved_strings = 1       " default: 0      Extrahighlighted strings
+" let g:gruvbox_improved_warnings = 1      " default: 0      Extrahighlighted warnings
+" let g:gruvbox_termcolors = 256           " default: 256    Refer https://github.com/morhetz/gruvbox/issues/4 for details
+let g:gruvbox_contrast_dark = 'soft'     " default: medium Changes dark mode contrast. Possible values are soft, medium and hard
+" let g:gruvbox_contrast_light = 'medium'  " default: medium Changes light mode contrast. Possible values are soft, medium and hard
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+" For color-setting variables, possible values are any from the gruvbox palette.
+" ------------------------------------------------------------------------------
+" let g:gruvbox_hls_cursor = 'orange'      " default: orange Changes cursor background while search is highlighted
+" let g:gruvbox_number_column = 'none'     " default: none   Changes number column background color
+" let g:gruvbox_sign_column = 'bg1'        " default: bg1    Changes sign column background color
+" let g:gruvbox_color_column = 'bg1'       " default: bg1    Changes color column background color
+" let g:gruvbox_vert_split = 'bg0'         " default: bg0    Changes vertical split background color
+
+" Functions
+" ----------
+" gruvbox#invert_signs_toggle()  " (...)
+" gruvbox#hls_show()  " (...)
+" gruvbox#hls_show_cursor() " (...)
+" gruvbox#hls_hide()  " (...)
+" gruvbox#hls_hide_cursor()  " (...)
+" gruvbox#hls_toggle()  " (...)
+
+
+" Srcry config
+" -------------
+" let g:srcery_bold = 1            " Enables bold text. default: 1
+" let g:srcery_italic = 1          " Enables italic text. default: gui 1, term 0
+" let g:srcery_underline = 1       " Enables underlined text. default: 1
+" let g:srcery_undercurl = 1       " Enables undercurled text. default: 1
+" let g:srcery_inverse = 1         " Enables inverse colors. default: 1
+
+" TwoFirewatch config
+" --------------
+" let g:two_firewatch_italics=1
+
+" Base16 config
+" --------------
+" if filereadable(expand("~/.vimrc_background"))
+"   let base16colorspace=256
+"   source ~/.vimrc_background
+" endif
 
 " Customized highlight groups
-hi Error        guifg=#b6b3eb guibg=#da4939 ctermfg=05 ctermbg=01
-hi qfLineNr     guifg=#b6b3eb guibg=#272935 ctermfg=05 ctermbg=18
-hi QuickFixLine               guibg=#272935            ctermbg=08
-hi! link SearchCurrent Error
+" hi Error        guifg=#b6b3eb guibg=#da4939 ctermfg=05 ctermbg=01
+" hi qfLineNr     guifg=#b6b3eb guibg=#272935 ctermfg=05 ctermbg=18
+" hi QuickFixLine               guibg=#272935            ctermbg=08
+" hi! link SearchCurrent Error
+
+
+" ---------------------------------------------------------------------------
+"  Color scheme
+" ---------------------------------------------------------------------------
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Colorscheme/Theme
+" ------------------
+colorscheme gruvbox
+" colorscheme happy_hacking
+" colorscheme srcery
+" colorscheme tender
+" colorscheme two-firewatch
+
+set background=dark            " light is default
 
 " check to make sure vim has been compiled with colorcolumn
 if exists("+colorcolumn")
@@ -241,22 +302,12 @@ set suffixes+=.old
 
 
 " ---------------------------------------------------------------------------
-" Ale (linter)
-" ---------------------------------------------------------------------------
-" Show errors or warnings in statusline - Set this. Airline will handle the rest
-let g:airline#extensions#ale#enabled = 1
-let g:ale_open_list = 'on_save'
-
-augroup Errin_qf_toc
-  autocmd FileType qf setlocal textwidth=0
-augroup END
-
-" ---------------------------------------------------------------------------
 " vim-Airline
 " ---------------------------------------------------------------------------
-if !has("gui_vimr")                            " if NOT in VimR GUI...
-  let g:airline_theme='base16color'            " ...then use 'base16color' theme
-endif
+let g:airline_theme = 'gruvbox'
+" let g:airline_theme = 'tender'
+" let g:airline_theme = 'twofirewatch'
+
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#default#layout = [
     \ [ 'a', 'b', 'c' ],
@@ -280,6 +331,18 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " let g:airline#extensions#tabline#fnamemod = ':~:.'
 " let g:airline#extensions#tabline#fnamecollapse = 1
 " let g:airline#extensions#tabline#fnametruncate = 0
+
+
+" ---------------------------------------------------------------------------
+" Ale (linter)
+" ---------------------------------------------------------------------------
+" Show errors or warnings in statusline - Set this. Airline will handle the rest
+let g:airline#extensions#ale#enabled = 1
+let g:ale_open_list = 'on_save'
+
+augroup Errin_qf_toc
+  autocmd FileType qf setlocal textwidth=0
+augroup END
 
 
 " ---------------------------------------------------------------------------
@@ -389,10 +452,10 @@ set signcolumn=yes
 " let g:gitgutter_highlight_lines = 1   " Default: 0 (off)
 
 " Highlight line colors - uses DiffAdd, DiffChange, and DiffDelete by default
-hi GitGutterAddLine          ctermfg=NONE ctermbg=02
-hi GitGutterChangeLine       ctermfg=NONE ctermbg=04
-hi GitGutterDeleteLine       ctermfg=NONE ctermbg=08
-hi GitGutterChangeDeleteLine ctermfg=NONE ctermbg=05
+" hi GitGutterAddLine          ctermfg=NONE ctermbg=02
+" hi GitGutterChangeLine       ctermfg=NONE ctermbg=04
+" hi GitGutterDeleteLine       ctermfg=NONE ctermbg=08
+" hi GitGutterChangeDeleteLine ctermfg=NONE ctermbg=05
 
 
 " ---------------------------------------------------------------------------

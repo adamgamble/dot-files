@@ -173,6 +173,8 @@ noremap <Leader>FC          :FzfCommits
 " BCommits        | Git commits for the current buffer
 " Commands        | Commands
 " Maps            | Normal mode mappings
+noremap <Leader>fm          :FzfMaps<cr>
+noremap <Leader>FM          :FzfMaps
 
 " Helptags        | Help tags [1]
 noremap <Leader>fh          :FzfHelptags<cr>
@@ -181,6 +183,17 @@ noremap <Leader>FH          :FzfHelptags
 " Filetypes       | File types
 
 
+" ---------------------------------------------------------------------------
+" Ruby...
+" ---------------------------------------------------------------------------
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>n :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+
+" ---------------------------------------------------------------------------
 " RAILS...
 " ---------------------------------------------------------------------------
 " View routes or Gemfile in large split
@@ -207,12 +220,16 @@ imap      <silent> <F6>     <Esc> mmgg=G'mzz
 " Auto format
 map       ===               mmgg=G`m^zz
 
+
+" ---------------------------------------------------------------------------
 " vim-easy-align:
+" ---------------------------------------------------------------------------
 " Start interactive EasyAlign in visual mode (e.g. vipga)
-xmap <Leader>a <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap <Leader>a <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 
 " Easy commenting - TComment
 " nnoremap  //                :TComment<CR>
@@ -234,7 +251,7 @@ nmap <Leader>a <Plug>(EasyAlign)
 " map <c-space> ?
 
 " Search using :Ag (i.e. The Silver Searcher)
-nnoremap <Leader>ag         :Ag<SPACE>
+" nnoremap <Leader>ag         :Ag<SPACE>
 
 " Remove trailing whitespace
 nnoremap  <Leader>tw         :%s/\s\+$//e<CR>:let @/=''<CR>
@@ -261,10 +278,6 @@ map q: <nop>
 " ---------------------------------------------------------------------------
 " Execute current buffer as ruby
 noremap   <Leader>rb        :w !ruby<CR>
-
-" vim-vroom
-noremap   <Leader>t         :VroomRunTestFile<CR>
-noremap   <Leader>T         :VroomRunNearestTest<CR>
 
 " Toggle GitGutter
 " noremap   <C-g><C-g>        :GitGutterToggle<CR> <Bar> :GitGutterLineHighlightsToggle<CR>
