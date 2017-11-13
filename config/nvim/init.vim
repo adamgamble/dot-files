@@ -21,15 +21,20 @@ Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-vinegar'        " Enhancements for netrw: built-in Dir browser
 Plug 'tpope/vim-repeat'         " repeat (supported) Plugins' commands
 Plug 'tpope/vim-unimpaired'     " ...many things; always in pairs ;)
-Plug 'tpope/vim-fugitive'       " Git
-Plug 'airblade/vim-gitgutter'   " See 'signs' for Git-tracked changes
 Plug 'timakro/vim-searchant'    " improved search highlighting
 Plug 'junegunn/vim-easy-align'  " 🌻  A Vim alignment plugin
 Plug 'junegunn/vim-peekaboo'    " 👀  \"/ @ / CTRL-R
+Plug 'junegunn/vim-slash'       " Enhancing in-buffer search experience
 " Plug 'bufexplorer.zip'
 " Plug 'rking/ag.vim'
 " Plug 'ctrlpvim/ctrlp.vim'
 Plug 'gerw/vim-HiLinkTrace'     " Show syntax/color hierarchies
+
+" Git + GitHub stuff
+Plug 'tpope/vim-fugitive'       " Git
+Plug 'airblade/vim-gitgutter'   " See 'signs' for Git-tracked changes
+Plug 'junegunn/gv.vim'          " A git commit browser
+Plug 'junegunn/vim-github-dashboard'  " :octocat: Browse GitHub events in Vim
 
 " General Programming/Markup language helpers
 Plug 'w0rp/ale'
@@ -47,20 +52,22 @@ Plug 'tpope/vim-bundler'
 Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-haml'
-Plug 'kchmck/vim-coffee-script'
-Plug 'slim-template/vim-slim'
+Plug 'tpope/vim-markdown'         
+" Plug 'tpope/vim-haml'            " Not using right now!
+" Plug 'kchmck/vim-coffee-script'  " Not using right now!
+" Plug 'slim-template/vim-slim'    " Not using right now!
 
 " UI enhancements
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'YorickPeterse/happy_hacking.vim'
-" Plug 'roosta/srcery'
-" Plug 'jacoborus/tender.vim'
-" Plug 'rakr/vim-two-firewatch'
+
+" ...other/previous/tried-em colorschemes
 " Plug 'chriskempson/base16-vim'
+" Plug 'YorickPeterse/happy_hacking.vim'
+" Plug 'rakr/vim-two-firewatch'
+" Plug 'jacoborus/tender.vim'
+" Plug 'roosta/srcery'
 
 " Add plugins to &runtimepath
 call plug#end()
@@ -425,6 +432,15 @@ command! -bang -nargs=* FzfRg
   \    <bang>0 ? fzf#vim#with_preview('up:60%')
   \            : fzf#vim#with_preview('right:50%:hidden', '?'),
   \    <bang>0)
+
+
+" ---------------------------------------------------------------------------
+"  vim-github-dashboard
+" ---------------------------------------------------------------------------
+let g:github_dashboard = {
+  \ 'username': 'errinlarsen',
+  \ 'password': $VIM_GITHUB_DASHBOARD_API_TOKEN
+  \ }
 
 
 " ---------------------------------------------------------------------------

@@ -57,10 +57,6 @@ nnoremap  <C-l>             <C-w>l
 " nnoremap  <Bslash>          gt
 " nnoremap  <Bar>             gT
 
-" Center screen when scrolling search results
-nmap      n                 nzz
-nmap      N                 Nzz
-
 
 " ---------------------------------------------------------------------------
 "  Splits/Tabs
@@ -245,6 +241,10 @@ nmap ga <Plug>(EasyAlign)
 " ---------------------------------------------------------------------------
 "  Searches
 " ---------------------------------------------------------------------------
+" Center screen when scrolling search results
+" nmap      n                 nzz
+" nmap      N                 Nzz
+
 " " search (forwards)
 " nmap <space> /
 " " search (backwards)
@@ -258,6 +258,16 @@ nnoremap  <Leader>tw         :%s/\s\+$//e<CR>:let @/=''<CR>
 
 " Highlight Merge-conflicts
 nnoremap  <Leader>mc        /<<<<<\\|=====\\|>>>>><CR>
+
+" Vim-Slash
+" ----------
+" noremap <plug>(slash-after) zz  " Place current match at center of window
+
+"if has('timers')
+"  "Blink 2 times with 50ms interval
+"  noremap <expr> <plug>(slash-after) slash#blink(2, 50)
+"endif
+
 
 " ---------------------------------------------------------------------------
 "  vim.wikia.com/wiki/Short_mappings_for_common_tasks

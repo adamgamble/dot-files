@@ -1,4 +1,5 @@
 gem-ctags
 bundler
+neovim
 pry
 pry-doc

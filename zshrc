@@ -23,7 +23,7 @@ plugins=(
 # ENV
 # ------------------------------------------------------------------------------
 # for fzf
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 # for rbenv
 export RBENV_ROOT=$HOME/.rbenv
@@ -38,7 +38,10 @@ export EDITOR=vim
 export COWPATH="$(brew --prefix cowsay)/share/cows:$HOME/.cows"
 
 # GitHub Access Token for Homebrew
-export HOMEBREW_GITHUB_API_TOKEN="27ef0172f646c2046580def0154a4f9cc09da165"
+export HOMEBREW_GITHUB_API_TOKEN=$(<$HOME/.local/share/brew/GITHUB_TOKEN)
+
+# GitHub Access Token for vim-github-dashboard
+export VIM_GITHUB_DASHBOARD_API_TOKEN=$(<$HOME/.local/share/nvim/GITHUB_TOKEN)
 
 
 # ------------------------------------------------------------------------------
