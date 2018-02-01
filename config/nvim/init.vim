@@ -31,8 +31,9 @@ Plug 'junegunn/vim-slash'       " Enhancing in-buffer search experience
 Plug 'gerw/vim-HiLinkTrace'     " Show syntax/color hierarchies
 
 " Git + GitHub stuff
-Plug 'tpope/vim-fugitive'       " Git
-Plug 'airblade/vim-gitgutter'   " See 'signs' for Git-tracked changes
+Plug 'tpope/vim-fugitive'       " a Git wrapper so awesome, it should be illegal
+Plug 'tpope/vim-rhubarb'        " GitHub extension for fugitive.vim
+Plug 'airblade/vim-gitgutter'   " git diff in sign column; stages/undoes hunks
 Plug 'junegunn/gv.vim'          " A git commit browser
 Plug 'junegunn/vim-github-dashboard'  " :octocat: Browse GitHub events in Vim
 
@@ -53,9 +54,10 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-markdown'         
-" Plug 'tpope/vim-haml'            " Not using right now!
-" Plug 'kchmck/vim-coffee-script'  " Not using right now!
-" Plug 'slim-template/vim-slim'    " Not using right now!
+Plug 'junegunn/vim-emoji'       " 😃 Emoji in Vim
+" Plug 'tpope/vim-haml'           " Not using right now!
+" Plug 'kchmck/vim-coffee-script' " Not using right now!
+" Plug 'slim-template/vim-slim'   " Not using right now!
 
 " UI enhancements
 Plug 'morhetz/gruvbox'
@@ -472,6 +474,12 @@ set signcolumn=yes
 " hi GitGutterChangeLine       ctermfg=NONE ctermbg=04
 " hi GitGutterDeleteLine       ctermfg=NONE ctermbg=08
 " hi GitGutterChangeDeleteLine ctermfg=NONE ctermbg=05
+
+" Use emoji for gitgutter signs
+" let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+" let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+" let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+" let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
 
 " ---------------------------------------------------------------------------

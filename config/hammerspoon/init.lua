@@ -1,198 +1,111 @@
--- Hammerspoon configuration, heavily influenced by sdegutis default configuration
--- ... also, originally grabbed from:
---   https://github.com/Hammerspoon/hammerspoon/wiki/ztomer's-init.lua
+-- Define default Spoons which will be loaded later
+if not hspoon_list then
+    hspoon_list = {
+        -- "AClock",
+        -- "BingDaily",
+        -- "CircleClock",
+        -- "ClipShow",
+        -- "CountDown",
+        -- "HCalendar",
+        -- "HSaria2",
+        -- "HSearch",
+        -- "SpeedMenu",
+        "WinWin",
+        -- "FnMate",
+    }
+end
 
--- init grid
-hs.grid.MARGINX = 0
-hs.grid.MARGINY = 0
-hs.grid.GRIDWIDTH = 12
-hs.grid.GRIDHEIGHT = 8
-
--- disable animation
-hs.window.animationDuration = 0
-
-
--- hotkey mash
-local mash 	 = {"ctrl", "alt"}
-local mash_app 	 = {"cmd", "alt", "ctrl"}
-local mash_shift = {"ctrl", "alt", "shift"}
-
-local almost_maxed = hs.geometry.rect'[1,0,10x8]'
-local upper_left   = hs.geometry.rect'[1,0,8x6]'
-local centered     = hs.geometry.rect'[1,0,8x6]'
-local lower_right  = hs.geometry.rect'[1,0,8x6]'
-
---------------------------------------------------------------------------------
-
--- -- application help
--- local function open_help()
---   help_str = "d - Dictionary, 1 - Terminal, 2 - Pathfinder, " ..
---             "3 - Chrome, 4 - Dash, 5 - Trello, 6 - Quiver"        
---   hs.alert.show(
---    help_str, 2)
--- end
-
--- -- Launch applications
--- hs.hotkey.bind(mash_app, 'D', function () hs.application.launchOrFocus("Dictionary") end)
--- hs.hotkey.bind(mash_app, '1', function () hs.application.launchOrFocus("iterm") end)
--- hs.hotkey.bind(mash_app, '2', function () hs.application.launchOrFocus("Path Finder") end)
--- hs.hotkey.bind(mash_app, '3', function () hs.application.launchOrFocus("Google Chrome") end)
--- -- mash_app '4' reserved for dash global key
--- hs.hotkey.bind(mash_app, '5', function () hs.application.launchOrFocus("Trello X") end)
--- hs.hotkey.bind(mash_app, '6', function () hs.application.launchOrFocus("Quiver") end)
--- hs.hotkey.bind(mash_app, '/', open_help)
-
--- global operations
-hs.hotkey.bind(mash, ';', function() hs.grid.snap(hs.window.focusedWindow()) end)
-hs.hotkey.bind(mash, "'", function() hs.fnutil.map(hs.window.visibleWindows(), hs.grid.snap) end)
-
--- -- adjust grid size
--- hs.hotkey.bind(mash, '=', function() hs.grid.resizeWindowWider() end)
--- hs.hotkey.bind(mash, '-', function() hs.grid.resizeWindowThinner() end)
--- hs.hotkey.bind(mash, ']', function() hs.grid.resizeWindowTaller() end)
--- hs.hotkey.bind(mash, '[', function() hs.grid.resizeWindowShorter() end)
-
--- change focus
-hs.hotkey.bind(mash_shift, 'H', function() hs.window.focusedWindow():focusWindowWest() end)
-hs.hotkey.bind(mash_shift, 'L', function() hs.window.focusedWindow():focusWindowEast() end)
-hs.hotkey.bind(mash_shift, 'K', function() hs.window.focusedWindow():focusWindowNorth() end)
-hs.hotkey.bind(mash_shift, 'J', function() hs.window.focusedWindow():focusWindowSouth() end)
-
-hs.hotkey.bind(mash, 'M', hs.grid.maximizeWindow)
-
--- multi monitor
-hs.hotkey.bind(mash, 'N', function() hs.window.focusedWindow():moveOneScreenEast() end)
-hs.hotkey.bind(mash, 'P', function() hs.window.focusedWindow():moveOneScreenWest() end)
-
--- move windows
-hs.hotkey.bind(mash, 'H', hs.grid.pushWindowLeft)
-hs.hotkey.bind(mash, 'J', hs.grid.pushWindowDown)
-hs.hotkey.bind(mash, 'K', hs.grid.pushWindowUp)
-hs.hotkey.bind(mash, 'L', hs.grid.pushWindowRight)
-
--- resize windows
-hs.hotkey.bind(mash, '-', hs.grid.resizeWindowShorter)
-hs.hotkey.bind(mash, '=', hs.grid.resizeWindowTaller)
-hs.hotkey.bind(mash, ']', hs.grid.resizeWindowWider)
-hs.hotkey.bind(mash, '[', hs.grid.resizeWindowThinner)
-
-hs.hotkey.bind(mash, "Y", function()
-  local window  = hs.window.focusedWindow()
-  local w_frame = window:frame()
-  local screen  = window:screen()
-  local s_frame = screen:frame()
-
-  w_frame.x = s_frame.x - s_frame.x / 12
-  w_frame.y = 0
-  w_frame.w = s_frame.w / 12 * 10
-  w_frame.h = s_frame.h
-  window:setFrame(w_frame)
-end)
-hs.hotkey.bind(mash, "U", function() hs.window.focusedWindow():moveToUnit(upper_left:toUnitRect()) end)
-hs.hotkey.bind(mash, "I", function() hs.window.focusedWindow():moveToUnit(centered:toUnitRect()) end)
-hs.hotkey.bind(mash, "O", function() hs.window.focusedWindow():moveToUnit(lower_right:toUnitRect()) end)
-
--- Window Hints
-hs.hotkey.bind(mash, '.', hs.hints.windowHints)
-
---------
--- -- Pomodoro module
--- local pom_work_period_sec  = 25 * 60
--- local pom_rest_period_sec  = 5 * 60
--- local pom_work_count       = 0
--- local pom_curr_active_type = "work" -- {"work", "rest"}
--- local pom_is_active        = false
--- local pom_time_left        = pom_work_period_sec
--- local pom_disable_count    = 0
-
--- -- update display
--- local function pom_update_display()
---   local time_min = math.floor( (pom_time_left / 60))
---   local time_sec = pom_time_left - (time_min * 60)
---   local str = string.format ("[%s|%02d:%02d|#%02d]", pom_curr_active_type, time_min, time_sec, pom_work_count)
---   pom_menu:setTitle(str)
--- end
-
--- -- stop the clock
--- local function pom_disable()
---   -- disabling pomodoro twice will reset the countdown
---   local pom_was_active = pom_is_active
---   pom_is_active = false
-
---   if (pom_disable_count == 0) then
---      if (pom_was_active) then
---       pom_timer:stop()
---     end
---   elseif (pom_disable_count == 1) then
---     pom_time_left     = pom_work_period_sec
---     pom_update_display()
---   elseif (pom_disable_count >= 2) then
---     if pom_menu == nil then 
---       pom_disable_count = 2
---       return
---     end
---     pom_menu:delete()
---     pom_menu = nil
---     pom_timer:stop()
---     pom_timer = nil
---   end
-
---   pom_disable_count = pom_disable_count + 1
- 
--- end
-
--- -- update pomodoro timer
--- local function pom_update_time()
---   if pom_is_active == false then
---     return
---   else
---     pom_time_left = pom_time_left - 1
-
---     if (pom_time_left <= 0 ) then
---       pom_disable()
---       if pom_curr_active_type == "work" then 
---         hs.alert.show("Work Complete!", 2)
---         pom_work_count        =  pom_work_count + 1 
---         pom_curr_active_type  = "rest"
---         pom_time_left         = pom_rest_period_sec
---       else 
---           hs.alert.show("Done resting",2)
---           pom_curr_active_type  = "work"
---           pom_time_left         = pom_work_period_sec   
---       end
---     end
---   end
--- end
-
--- -- update menu display
--- local function pom_update_menu()
---   pom_update_time()
---   pom_update_display()
--- end
-
--- local function pom_create_menu(pom_origin)
---   if pom_menu == nil then
---     pom_menu = hs.menubar.new()
---   end
--- end
-
--- local function pom_enable()
---   pom_disable_count = 0;
---   if (pom_is_active) then
---     return
---   elseif pom_timer == nil then
---     pom_create_menu()
---     pom_timer = hs.timer.new(1, pom_update_menu)
---   end
-
---   pom_is_active = true
---   pom_timer:start()
--- end
+-- Load those Spoons
+for _, v in pairs(hspoon_list) do
+    hs.loadSpoon(v)
+end
 
 
--- -- init pomodoro
--- -- pom_create_menu()
--- -- pom_update_menu()
+-- WinWin-based Windows Management
+if spoon.WinWin then
+    -- Toggle Cheatsheet
+    -- cmodal:bind('', 'tab', 'Toggle Cheatsheet', function() spoon.ModalMgr:toggleCheatsheet() end)
 
--- hs.hotkey.bind(mash, '9', function() pom_enable() end)
--- hs.hotkey.bind(mash, '0', function() pom_disable() end)
+    -- Move: left, down, up, right
+    hs.hotkey.bind(
+      {"shift", "ctrl", "cmd", "alt"}, "H", "Move Leftwards",
+      function() spoon.WinWin:stepMove("left")  end,  -- When pressed
+      nil,                                            -- When released
+      function() spoon.WinWin:stepMove("left")  end)  -- When held (repeated)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "J", "Move Downwards",
+      function() spoon.WinWin:stepMove("down")  end,
+      nil,
+      function() spoon.WinWin:stepMove("down")  end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "K", "Move Upwards",
+      function() spoon.WinWin:stepMove("up")    end,
+      nil,
+      function() spoon.WinWin:stepMove("up")    end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "L", "Move Rightwards",
+      function() spoon.WinWin:stepMove("right") end,
+      nil,
+      function() spoon.WinWin:stepMove("right") end)
+
+    -- Half-Screen: left, down, up, right
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "6", "Left-Half of Screen",
+      function() spoon.WinWin:moveAndResize("halfleft") end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "7", "Lower-Half of Screen",
+      function() spoon.WinWin:moveAndResize("halfdown") end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "8", "Upper-Half of Screen",
+      function() spoon.WinWin:moveAndResize("halfup") end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "9", "Right-Half of Screen",
+      function() spoon.WinWin:moveAndResize("halfright") end)
+
+    -- Corner: up/left, up/right, down/left, down/right
+    -- cmodal:bind('', 'Y', 'NorthWest Corner', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("cornerNW") end)
+    -- cmodal:bind('', 'O', 'NorthEast Corner', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("cornerNE") end)
+    -- cmodal:bind('', 'U', 'SouthWest Corner', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("cornerSW") end)
+    -- cmodal:bind('', 'I', 'SouthEast Corner', function() spoon.WinWin:stash() spoon.WinWin:moveAndResize("cornerSE") end)
+
+    -- Center/Full
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "'", "Full-Screen",
+      function() spoon.WinWin:moveAndResize("fullscreen") end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, ";", "Center",
+      function() spoon.WinWin:moveAndResize("center") end)
+
+    -- Stretch: out, in
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "=", "Expand",
+      function() spoon.WinWin:moveAndResize("expand") end,
+      nil,
+      function() spoon.WinWin:moveAndResize("expand") end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "-", "Shrink",
+      function() spoon.WinWin:moveAndResize("shrink") end,
+      nil,
+      function() spoon.WinWin:moveAndResize("shrink") end)
+
+    -- Resize: left, down, up, right
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "Y", "Shrink From Right",
+      function() spoon.WinWin:stepResize("left") end,
+      nil,
+      function() spoon.WinWin:stepResize("left") end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "U", "Grow Downwards",
+      function() spoon.WinWin:stepResize("down") end,
+      nil,
+      function() spoon.WinWin:stepResize("down") end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "I", "Shrink From Bottom",
+      function() spoon.WinWin:stepResize("up") end,
+      nil,
+      function() spoon.WinWin:stepResize("up") end)
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "O", "Grow Rightwards",
+      function() spoon.WinWin:stepResize("right") end,
+      nil,
+      function() spoon.WinWin:stepResize("right") end)
+
+    -- Move Monitors: left, down, up, right, next
+    -- cmodal:bind('', 'left', 'Move to Left Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("left") end)
+    -- cmodal:bind('', 'right', 'Move to Right Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("right") end)
+    -- cmodal:bind('', 'up', 'Move to Above Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("up") end)
+    -- cmodal:bind('', 'down', 'Move to Below Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("down") end)
+    -- cmodal:bind('', 'space', 'Move to Next Monitor', function() spoon.WinWin:stash() spoon.WinWin:moveToScreen("next") end)
+
+    -- Undo/Redo Window Manipulation
+    -- cmodal:bind('', '[', 'Undo Window Manipulation', function() spoon.WinWin:undo() end)
+    -- cmodal:bind('', ']', 'Redo Window Manipulation', function() spoon.WinWin:redo() end)
+
+    -- Center Cursor
+    -- cmodal:bind('', '`', 'Center Cursor', function() spoon.WinWin:centerCursor() end)
+end
