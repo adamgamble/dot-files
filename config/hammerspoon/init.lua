@@ -67,6 +67,26 @@ if spoon.WinWin then
     hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, ";", "Center",
       function() spoon.WinWin:moveAndResize("center") end)
 
+    -- Other particular sizes
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "[", "-3 steps",
+      function()
+        spoon.WinWin:moveAndResize("fullscreen")
+        for i=1,3 do
+          spoon.WinWin:stepResize("up")
+          spoon.WinWin:stepResize("left")
+        end
+      end
+    )
+    hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "]", "-10 steps",
+      function()
+        spoon.WinWin:moveAndResize("fullscreen")
+        for i=1,10 do
+          spoon.WinWin:stepResize("up")
+          spoon.WinWin:stepResize("left")
+        end
+      end
+    )
+
     -- Stretch: out, in
     hs.hotkey.bind({"shift", "ctrl", "cmd", "alt"}, "=", "Expand",
       function() spoon.WinWin:moveAndResize("expand") end,

@@ -501,6 +501,8 @@ let g:rspec_runner = "os_x_iterm"
 
 "  Ruby/Rails
 " ---------------------------------------------------------------------------
+let g:ruby_indent_assignment_style = 'variable'
+
 " Other files to consider Ruby
 augroup vimrc
   autocmd BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
