@@ -14,6 +14,7 @@
 	enabled = 1
 	autoupdate = true
 [alias]
+  co = checkout
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   ba = for-each-ref --sort=committerdate --format='%(committerdate:short) %(refname:short)' refs/heads refs/remotes
 	ig = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"

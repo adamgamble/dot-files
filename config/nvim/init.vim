@@ -348,11 +348,17 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " Show errors or warnings in statusline - Set this. Airline will handle the rest
 let g:airline#extensions#ale#enabled = 1
 let g:ale_open_list = 'on_save'
+let g:ale_ruby_rubocop_executable = 'bundle'
+
+let g:ale_fixers = {
+\   'ruby': [
+\       'rubocop',
+\   ],
+\}
 
 augroup Errin_qf_toc
   autocmd FileType qf setlocal textwidth=0
 augroup END
-
 
 " ---------------------------------------------------------------------------
 "  CoffeeScript

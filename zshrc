@@ -59,6 +59,7 @@ export PATH=/usr/local/Cellar/python:$PATH
 # local project-level bin directories -- `mkdir .git/safe` if trusted project
 export PATH=.git/safe/../../bin:$PATH
 
+export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # ------------------------------------------------------------------------------
 # Personal aliases
@@ -68,7 +69,6 @@ alias ti="tree -I 'vendor|tmp' --matchdirs"
 alias vim="nvim"
 # alias vim="mvim -v"
 alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
-
 
 # ------------------------------------------------------------------------------
 # actions to perform ...
@@ -90,6 +90,9 @@ eval "$(rbenv init -)"
 
 # start oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# Fix things that oh-my-zsh/plugins break...
+unalias rg
 
 # setup fzf auto-completion and key bindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
