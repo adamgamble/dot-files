@@ -14,8 +14,20 @@ ZSH_THEME="jonathan-customized"
 
 # Which Oh-My-Zsh plugins to load?
 plugins=(
-  osx brew gnu-utils git gitfast colored-man colorize
-  rbenv ruby gem rake rake-fast bundler rails
+  # osx
+  # brew
+  gnu-utils
+  git
+  gitfast
+  colored-man-pages
+  # colorize
+  rbenv
+  # ruby
+  # gem
+  rake
+  rake-fast
+  bundler
+  rails
 )
 
 
@@ -28,38 +40,35 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 # for rbenv
 export RBENV_ROOT=$HOME/.rbenv
 
-# for nvm
-export NVM_DIR=$HOME/.nvm
-
 # Vim
 export EDITOR=vim
-
-# cowsay
-export COWPATH="$(brew --prefix cowsay)/share/cows:$HOME/.cows"
 
 # GitHub Access Token for Homebrew
 export HOMEBREW_GITHUB_API_TOKEN=$(<$HOME/.local/share/brew/GITHUB_TOKEN)
 
-# GitHub Access Token for vim-github-dashboard
-export VIM_GITHUB_DASHBOARD_API_TOKEN=$(<$HOME/.local/share/nvim/GITHUB_TOKEN)
+# RipGrep
+# export RIPGREP_CONFIG_PATH=$HOME/.config/ripgrep/ripgrep.config
 
+# Rake
+export RAKEOPT='--trace --verbose'
+
+# N - Node Manager
+export N_PREFIX="$HOME/.n"
 
 # ------------------------------------------------------------------------------
 # PATH
 # ------------------------------------------------------------------------------
-# for erlenv
-export PATH="$HOME/.erlenv/bin:$PATH"
-
-# for exenv
-export PATH="$HOME/.exenv/bin:$PATH"
-
 # for python
 export PATH=/usr/local/Cellar/python:$PATH
+
+# for n (node mgr)
+export PATH=$N_PREFIX/bin:$PATH
 
 # local project-level bin directories -- `mkdir .git/safe` if trusted project
 export PATH=.git/safe/../../bin:$PATH
 
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# local user-level bin directory
+export PATH="$HOME/bin:$PATH"
 
 # ------------------------------------------------------------------------------
 # Personal aliases
@@ -69,6 +78,7 @@ alias ti="tree -I 'vendor|tmp' --matchdirs"
 alias vim="nvim"
 # alias vim="mvim -v"
 alias stree="/Applications/SourceTree.app/Contents/Resources/stree"
+alias rakedb="bundle exec rake --trace db:migrate && RAILS_ENV=test bundle exec rake --trace db:test:prepare db:test:preload"
 
 # ------------------------------------------------------------------------------
 # actions to perform ...
@@ -79,23 +89,13 @@ bindkey -v
 # initialize rbenv
 eval "$(rbenv init -)"
 
-# initialize erlenv if it's there
-# [[ -x $(which erlenv) ]] && eval "$(erlenv init -)"
-
-# initialize exenv if it's there
-# [[ -x $(which exenv) ]] && eval "$(exenv init -)"
-
-# for nvm if it's there
-# [[ -d $(brew --prefix nvm) ]] && source $(brew --prefix nvm)/nvm.sh
-
 # start oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# Fix things that oh-my-zsh/plugins break...
-unalias rg
-
 # setup fzf auto-completion and key bindings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Because: pretty -- if it's there
 [[ -x $(which archey) ]] && archey -c -o

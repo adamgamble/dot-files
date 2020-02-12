@@ -1,56 +1,40 @@
 [user]
-	name = Errin Larsen
-	email = errinlarsen@gmail.com
+  name = errinlarsen
+  email = errinlarsen@gmail.com
 [color]
   branch = auto
   diff = auto
   status = auto
   log = auto
-	ui = auto
+  ui = auto
 [github]
-	user = errinlarsen
-	token = 554ea1d460e4714d5ef84af8364c92ac
+  user = errinlarsen
+  token = 554ea1d460e4714d5ef84af8364c92ac
 [rerere]
-	enabled = 1
-	autoupdate = true
+  enabled = 1
+  autoupdate = true
 [alias]
   co = checkout
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+  sw = switch
+  fp = push --force-with-lease
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   ba = for-each-ref --sort=committerdate --format='%(committerdate:short) %(refname:short)' refs/heads refs/remotes
-	ig = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"
-	ctags = !.git/hooks/ctags
-	dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
+  ig = "!gi() { curl http://www.gitignore.io/api/$@ ;}; gi"
+  ctags = !.git/hooks/ctags
+  dsf = "!f() { [ -z \"$GIT_PREFIX\" ] || cd \"$GIT_PREFIX\" && git diff --color \"$@\" | diff-so-fancy | less --tabs=4 -RFX; }; f"
 [web]
-	browser = open
-; [diff]
-  ; tool = fugitive
-  ; tool = p4merge
-; [difftool "fugitive"]
-	; cmd = nvim -f -c \"Gdiff\" \"$REMOTE\" \"$LOCAL\"
-; [difftool "p4merge"]
-  ; cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$REMOTE\"" "\"$LOCAL\""
+  browser = open
 [merge]
-	tool = fugitive
-  ; tool = p4merge
+  tool = fugitive
 [mergetool "fugitive"]
-	cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
-; [mergetool "p4merge"]
-  ; cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge "\"$PWD/$BASE\"" "\"$PWD/$REMOTE\"" "\"$PWD/$LOCAL\"" "\"$PWD/$MERGED\""
-  ; keepTemporaries = false
-  ; trustExitCode = false
-  ; keepBackup = false
+  cmd = nvim -f -c \"Gdiff\" \"$MERGED\"
 [push]
-	default = simple
+  default = simple
 [init]
-	templatedir = ~/.config/git/template
+  templatedir = ~/.config/git/template
 [core]
-	editor = /usr/local/bin/nvim
+  editor = /usr/local/bin/nvim
 [pager]
-	diff = ~/.config/git/diff-highlight | less
-	log = ~/.config/git/diff-highlight | less
-	show = ~/.config/git/diff-highlight | less
-[color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  diff = diff-so-fancy | less --tabs=4 -RFX
+  log = ~/.config/git/diff-highlight | less --tabs=4 -RFX
+  show = ~/.config/git/diff-highlight | less --tabs=4 -RFX

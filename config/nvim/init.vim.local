@@ -1,6 +1,13 @@
+" vim: ft=vim
 " ---------------------------------------------------------------------------
 "  Trailing whitespace stuff
 " ---------------------------------------------------------------------------
+" http://vim.wikia.com/wiki/Highlight_unwanted_spaces
+" augroup vimrc_local
+"   au BufNewFile,BufRead,InsertLeave * silent! match ExtraWhitespace /\s\+$/
+"   au InsertEnter * silent! match ExtraWhitespace /\s\+\%#\@<!$/
+" augroup END
+
 " match ErrorMsg '\s\+$'
 
 " highlight ExtraWhitespace ctermbg=17 guibg=#cc7833
@@ -24,3 +31,164 @@
 "     let w:whitespace_match_number =  matchadd('ExtraWhitespace', pattern)
 "   endif
 " endfunction
+
+
+" ===========================================================================
+" Config options for plugins not being used
+" ===========================================================================
+" " ---------------------------------------------------------------------------
+" "  fzf-preview.vim
+" " ---------------------------------------------------------------------------
+" " ### The following are all defaults, or are marked...
+" " ---------------------------------------------------------------------------
+" " Add fzf quit mapping
+" let g:fzf_preview_quit_map = 1
+
+" " Use floating window (for neovim)
+" let g:fzf_preview_use_floating_window = 1
+
+" " Commands used for fzf preview.
+" " The file name selected by fzf becomes {}
+" " let g:fzf_preview_command = 'head -100 {-1}'  " DEFAULT-> Not installed ccat and bat
+" let g:fzf_preview_command = 'bat --color=always --style=grid {-1}' " Installed bat
+" " let g:fzf_preview_command = 'ccat --color=always {-1}'             " Installed ccat
+
+" " Commands used for binary file
+" let g:fzf_binary_preview_command = 'echo "{} is a binary file"'
+
+" ""   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+" " Commands used to get the file list from project
+" " let g:fzf_preview_filelist_command = 'git ls-files --exclude-standard'  " DEFAULT-> Not Installed ripgrep
+" let g:fzf_preview_filelist_command = 'rg --files --hidden --follow --no-messages -g \!"* *"' " Installed ripgrep
+" " let g:fzf_preview_filelist_command = 'rg --files --column --no-heading --smart-case --no-messages -g \!"* *"' " Installed ripgrep
+
+" " Commands used to get the file list from git reposiroty
+" let g:fzf_preview_git_files_command = 'git ls-files --exclude-standard'
+
+" " Commands used to get the file list from current directory
+" let g:fzf_preview_directory_files_command = 'rg --files --hidden --follow --no-messages -g \!"* *"'
+
+" " Commands used to get the git status file list
+" let g:fzf_preview_git_status_command = "git status --short --untracked-files=all | awk '{if (substr($0,2,1) !~ / /) print $2}'"
+
+" " Commands used for project grep
+" let g:fzf_preview_grep_cmd = 'rg --line-number --no-heading'
+
+" " Commands used for preview of the grep result
+" let g:fzf_preview_grep_preview_cmd = expand('<sfile>:h:h') . '/bin/preview_fzf_grep'
+
+" " Keyboard shortcuts while fzf preview is active
+" let g:fzf_preview_preview_key_bindings = 'ctrl-d:preview-page-down,ctrl-u:preview-page-up,?:toggle-preview'
+
+" " Specify the color of fzf
+" let g:fzf_preview_fzf_color_option = ''
+
+" " Keyboard shortcut for opening files with split
+" let g:fzf_preview_split_key_map = 'ctrl-x'
+
+" " Keyboard shortcut for opening files with vsplit
+" let g:fzf_preview_vsplit_key_map = 'ctrl-v'
+
+" " Keyboard shortcut for opening files with tabedit
+" let g:fzf_preview_tabedit_key_map = 'ctrl-t'
+
+" " Keyboard shortcut for building quickfix
+" let g:fzf_preview_build_quickfix_key_map = 'ctrl-q'
+
+" " Command to be executed after file list creation
+" " let g:fzf_preview_filelist_postprocess_command = ''  " DEFAULT
+" " let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" ls —color'          " Use dircolors
+" " let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" exa --color=always' " Use exa
+" let g:fzf_preview_filelist_postprocess_command = 'xargs exa --color=always' " Use exa
+
+" " Use vim-devicons
+" let g:fzf_preview_use_dev_icons = 1
+
+" " DEPRECATED
+" " fzf window layout
+" let g:fzf_preview_layout = 'top split new'
+
+" " DEPRECATED
+" " Rate of fzf window
+" let g:fzf_preview_rate = 0.3
+
+" " DEPRECATED
+" " Key to toggle fzf window size of normal size and full-screen
+" let g:fzf_full_preview_toggle_key = '<C-s>'
+
+
+" ---------------------------------------------------------------------------
+"  vimwiki/vimwiki
+" ---------------------------------------------------------------------------
+" let wiki_1 = {}
+" let wiki_1.path = '~/.vimwiki/default/'
+" let wiki_1.syntax = 'markdown'
+" let wiki_1.ext = '.md'
+" let wiki_1.list_margin = 0
+
+" let wiki_2 = {}
+" let wiki_2.path = '~/.vimwiki/Pirates_of_Drinax/'
+" let wiki_2.syntax = 'markdown'
+" let wiki_2.ext = '.md'
+" let wiki_1.list_margin = 0
+
+" let g:vimwiki_list = [wiki_1, wiki_2]
+" let g:vimwiki_dir_link = 'index'
+" let g:vimwiki_listsyms = ' •◦⦿✔︎'
+" let g:vimwiki_listsym_rejected = '✘'
+
+" let g:vimwiki_global_ext = 0
+" map <M-Space> <Plug>VimwikiToggleListItem
+" nnoremap <localleader>wp :Files ~/wiki/<cr>
+
+
+" ---------------------------------------------------------------------------
+"  Gist
+" ---------------------------------------------------------------------------
+" let g:gist_post_private = 1                  " private gists by default
+" let g:gist_open_browser_after_post = 1       " open browser after posting
+" let g:gist_browser_command = 'open %URL% &'  " use `open` for Gist URLs
+" let g:gist_get_multiplefile = 1              " open all files if more than one
+
+
+" ---------------------------------------------------------------------------
+"  CoffeeScript
+" ---------------------------------------------------------------------------
+" let coffee_compile_vert = 1
+" augroup ErrinsCoffeeScriptAuGroup
+"   autocmd!
+"   autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+" augroup END
+
+
+" ---------------------------------------------------------------------------
+"  vim-github-dashboard
+" ---------------------------------------------------------------------------
+" let g:github_dashboard = {
+"   \ 'username': 'errinlarsen',
+"   \ 'password': $VIM_GITHUB_DASHBOARD_API_TOKEN
+"   \ }
+
+
+" ---------------------------------------------------------------------------
+"  RSpec.vim
+" ---------------------------------------------------------------------------
+" Custom Command: Use vim-dispatch
+" let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+
+" Runner: I use iterm ...mostly
+" let g:rspec_runner = "os_x_iterm"
+
+
+" ---------------------------------------------------------------------------
+"  Ag
+" ---------------------------------------------------------------------------
+" bind \ (back slash) to grep shortcut
+" command! -nargs=+ -complete=file -bar AG silent! grep! <args>|cwindow|redraw!
+
+
+
+" When vimrc, either directly or via symlink, is edited, automatically reload it
+" augroup vimrc
+"   autocmd bufwritepost .config/nvim/init.vim,vimrc nested source %
+" augroup END

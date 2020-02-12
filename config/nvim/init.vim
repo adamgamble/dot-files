@@ -7,62 +7,73 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " General utility
-Plug 'vim-scripts/L9'
-Plug 'kana/vim-textobj-user'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'rizzatti/funcoo.vim'
-Plug 'tpope/vim-dispatch'       " Hook into external test/compile/run stuff
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug '/usr/local/opt/fzf'       " 'cause I installed fzf with homebrew
+" Plug 'tpope/vim-dispatch'       " Hook into external test/compile/run stuff
 
 " Specific utilities
-Plug 'junegunn/fzf.vim'
-Plug 'sjl/gundo.vim'
-Plug 'tpope/vim-vinegar'        " Enhancements for netrw: built-in Dir browser
-Plug 'tpope/vim-repeat'         " repeat (supported) Plugins' commands
+Plug 'junegunn/fzf.vim'         " fzf ❤️  vim
+" Plug 'yuki-ycino/fzf-preview.vim'
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'tpope/vim-unimpaired'     " ...many things; always in pairs ;)
-Plug 'timakro/vim-searchant'    " improved search highlighting
-Plug 'junegunn/vim-easy-align'  " 🌻  A Vim alignment plugin
+Plug 'tpope/vim-repeat'         " repeat (supported) Plugins' commands
 Plug 'junegunn/vim-peekaboo'    " 👀  \"/ @ / CTRL-R
 Plug 'junegunn/vim-slash'       " Enhancing in-buffer search experience
-" Plug 'bufexplorer.zip'
-" Plug 'rking/ag.vim'
-" Plug 'ctrlpvim/ctrlp.vim'
-Plug 'gerw/vim-HiLinkTrace'     " Show syntax/color hierarchies
+Plug 'junegunn/vim-easy-align'  " 🌻  A Vim alignment plugin
+Plug 'ntpeters/vim-better-whitespace' " Better whitespace highlighting for Vim
+" Plug 'vimwiki/vimwiki'          " Personal Wiki - http://vimwiki.github.io/
+" Plug 'gerw/vim-HiLinkTrace'     " Show syntax/color hierarchies
 
 " Git + GitHub stuff
 Plug 'tpope/vim-fugitive'       " a Git wrapper so awesome, it should be illegal
-Plug 'tpope/vim-rhubarb'        " GitHub extension for fugitive.vim
-Plug 'airblade/vim-gitgutter'   " git diff in sign column; stages/undoes hunks
+Plug 'mhinz/vim-signify'        " Signify diff in sign column
 Plug 'junegunn/gv.vim'          " A git commit browser
-Plug 'junegunn/vim-github-dashboard'  " :octocat: Browse GitHub events in Vim
+
+" Browsing
+" Plug 'tpope/vim-vinegar'        " Enhancements for netrw: built-in Dir browser
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " tree explorer for vim
+Plug 'Yggdroot/indentLine', { 'on': 'IndentLinesToggle' } " show indention lvls
+
+" Lint
+Plug 'dense-analysis/ale'       " Plug 'w0rp/ale'
 
 " General Programming/Markup language helpers
-Plug 'w0rp/ale'
-Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-endwise'
 Plug 'Raimondi/delimitMate'
+" Plug 'tpope/vim-surround' " 👇 Trying out a different plugin
+Plug 'machakann/vim-sandwich'
 
 " Specific Programming/Markup language helpers
 Plug 'tpope/vim-rbenv'
 Plug 'tpope/rbenv-ctags'
 Plug 'vim-ruby/vim-ruby'
-Plug 'nelstrom/vim-textobj-rubyblock'
-Plug 'tpope/vim-bundler'
-Plug 'thoughtbot/vim-rspec'
-Plug 'tpope/vim-rails'
+Plug 'AndrewRadev/splitjoin.vim' " simplify transitions: multi/single line code
+Plug 'tpope/vim-bundler', { 'for': 'ruby'  }
+Plug 'tpope/vim-rails', { 'for': [] }
 Plug 'tpope/vim-rake'
-Plug 'tpope/vim-markdown'         
+Plug 'tpope/vim-markdown'
 Plug 'junegunn/vim-emoji'       " 😃 Emoji in Vim
 " Plug 'tpope/vim-haml'           " Not using right now!
 " Plug 'kchmck/vim-coffee-script' " Not using right now!
 " Plug 'slim-template/vim-slim'   " Not using right now!
 
 " UI enhancements
-Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'  " status/tabline for vim that's light as air
+Plug 'vim-airline/vim-airline-themes'  " A collection of themes for vim-airline
+Plug 'morhetz/gruvbox'          " Retro groove color scheme for Vim
+Plug 'ryanoasis/vim-devicons'   " Adds file type icons to Vim plugins
+
+" ... other Colors (found in junegunn's .vimrc)
+" Plug 'tomasr/molokai'
+" Plug 'chriskempson/vim-tomorrow-theme'
+" Plug 'yuttie/hydrangea-vim'
+" Plug 'tyrannicaltoucan/vim-deep-space'
+" Plug 'AlessandroYorba/Despacio'
+" Plug 'cocopon/iceberg.vim'
+" Plug 'w0ng/vim-hybrid'
+" Plug 'nightsense/snow'
+" Plug 'nightsense/stellarized'
+" Plug 'arcticicestudio/nord-vim'
 
 " ...other/previous/tried-em colorschemes
 " Plug 'chriskempson/base16-vim'
@@ -74,8 +85,6 @@ Plug 'vim-airline/vim-airline-themes'
 " Add plugins to &runtimepath
 call plug#end()
 
-" nelstrom/vim-textobj-rubyblock requires that the matchit.vim plugin is enabled
-runtime macros/matchit.vim
 
 " ===========================================================================
 "  General config
@@ -90,23 +99,13 @@ set ttimeoutlen=-1             " set to default; overrides vim-sensible plugin
 
 
 " ---------------------------------------------------------------------------
-" Whitespace
+"  Whitespace
 " ---------------------------------------------------------------------------
 set nowrap                     " don't wrap lines by default
 set tabstop=2 shiftwidth=2     " a tab is two spaces
 set softtabstop=2              " do I need this?
 set expandtab                  " use spaces, not <tab>s
 
-
-" ---------------------------------------------------------------------------
-"  Custom key mappings
-" ---------------------------------------------------------------------------
-let s:home_dir = expand("$HOME/")
-
-" Load key-mappings
-if filereadable(s:home_dir . ".config/nvim/keymappings.vim")
-  source ~/.config/nvim/keymappings.vim
-endif
 
 
 " ---------------------------------------------------------------------------
@@ -138,9 +137,21 @@ set textwidth=80
 set formatoptions+=n
 set listchars=tab:≫∙,trail:∘,extends:⇰,precedes:∙
 
+" set foldlevelstart=99
 
 " ---------------------------------------------------------------------------
-" Colorscheme Toggles/Variables
+"  netrw
+" ---------------------------------------------------------------------------
+" let g:netrw_banner = 1
+" let g:netrw_altfile = 1
+
+" The following is thanks to BlakeWilliams
+" let g:netrw_fastbrowse = 0
+"   - discovered here: https://github.com/tpope/vim-vinegar/issues/13#issuecomment-489440040
+
+
+" ---------------------------------------------------------------------------
+"  Colorscheme Toggles/Variables
 " ---------------------------------------------------------------------------
 "
 " GruvBox config
@@ -212,6 +223,7 @@ let g:gruvbox_contrast_dark = 'soft'     " default: medium Changes dark mode con
 if (has("termguicolors"))
  set termguicolors
 endif
+set guifont=FiraCode-Medium:h12
 
 " Colorscheme/Theme
 " ------------------
@@ -231,10 +243,12 @@ endif
 " Trying some custom comment-only keyword highlighting:
 " syn keyword rubyTodo	  FIXME NOTE TODO OPTIMIZE XXX todo contained
 autocmd Syntax * syntax keyword Todo ERRIN NOTES containedin=.*Comment.* contained
+autocmd Syntax * syntax keyword Todo TODO_TWILIO containedin=.*Comment.* contained
+autocmd Syntax * syntax keyword Todo TODO-GRAPH containedin=.*Comment.* contained
 
 
 " ---------------------------------------------------------------------------
-" Searching
+"  Searching
 " ---------------------------------------------------------------------------
 " set hlsearch                   " highlight matches [Nvim]
 set ignorecase                 " searches are case insensitive ...
@@ -245,7 +259,8 @@ set smartcase                  " ... unless they contain >= 1 capital letter
 " use rg over grep
 if executable('rg')
   set grepprg=rg\ --vimgrep
-  set grepformat^=%f:%l:%c:%m
+  " set grepformat^=%f:%l:%c:%m
+	set grepformat=%f:%l:%c:%m,%f:%l:%m  " found in junegunn's .vimrc
 endif
 
 
@@ -262,10 +277,10 @@ set diffopt=filler,vertical
 "  Files/Directories
 " ---------------------------------------------------------------------------
 " swap files:
-" set noswapfile                                          " don't use a swapfile
-" set dir=~/.local/share/nvim/swap         " default: $XDG_DATA_HOME/nvim/swap//
-                                        " swap files (.swp) in a common location
-                                         " - `//` means use the file's full path
+" set noswapfile                       " don't use a swapfile
+" set dir=~/.local/share/nvim/swap     " default: $XDG_DATA_HOME/nvim/swap//
+                                       " swap files (.swp) in a common location
+                                       " - `//` means use the file's full path
 
 " backup files:
 " - The following is cut-n-pasted from `:help backup-table`...
@@ -276,16 +291,18 @@ set diffopt=filler,vertical
 "      on	       on		      delete old backup, backup current file
 
 " set writebackup           " backup files (~) are made while writing (default),
-" set nobackup                              " then deleted afterwards (default),
+" set nobackup                         " then deleted afterwards (default),
 " set backupdir=.,$XDG_DATA_HOME/nvim/backup " default: .,$XDG_DATA_HOME/nvim/backup
-" set backupdir=~/.local/share/nvim/backup/,~/tmp,.         " in a common location
+" set backupdir=~/.local/share/nvim/backup/,~/tmp,.
 
 " undo files:
-" set undodir=~/.local/share/nvim/undo       " default: $XDG_DATA_HOME/nvim/undo
+" set undodir=~/.local/share/nvim/undo " default: $XDG_DATA_HOME/nvim/undo
 
 " ALL of the above are: [Nvim]
 
-set undofile                                 " turn on undo files, and put them
+set undofile                           " turn on undo files
+
+set tags^=./.git/tags
 
 
 " ---------------------------------------------------------------------------
@@ -303,15 +320,9 @@ set suffixes+=.old
 " ===========================================================================
 "  Config for plugins
 " ===========================================================================
+"
 " ---------------------------------------------------------------------------
-" Ag
-" ---------------------------------------------------------------------------
-" bind \ (back slash) to grep shortcut
-" command! -nargs=+ -complete=file -bar AG silent! grep! <args>|cwindow|redraw!
-
-
-" ---------------------------------------------------------------------------
-" vim-Airline
+"  vim-Airline
 " ---------------------------------------------------------------------------
 let g:airline_theme = 'gruvbox'
 " let g:airline_theme = 'tender'
@@ -343,35 +354,39 @@ let g:airline#extensions#hunks#non_zero_only = 1
 
 
 " ---------------------------------------------------------------------------
-" Ale (linter)
+"  Ale (linter)
 " ---------------------------------------------------------------------------
 " Show errors or warnings in statusline - Set this. Airline will handle the rest
 let g:airline#extensions#ale#enabled = 1
 let g:ale_open_list = 'on_save'
+
+let g:ale_linters = {'yaml': []}
+let g:ale_fixers = {'ruby': ['rubocop']}
 let g:ale_ruby_rubocop_executable = 'bundle'
 
-let g:ale_fixers = {
-\   'ruby': [
-\       'rubocop',
-\   ],
-\}
+let g:ale_lint_delay = 1000
+" let g:ale_sign_warning = '──'
+" let g:ale_sign_error = '══'
+
+nmap <Leader>ne <Plug>(ale_next_wrap)
+nmap <Leader>pe <Plug>(ale_previous_wrap)
 
 augroup Errin_qf_toc
   autocmd FileType qf setlocal textwidth=0
 augroup END
 
+
 " ---------------------------------------------------------------------------
-"  CoffeeScript
+"  vim-better-whitespace
 " ---------------------------------------------------------------------------
-let coffee_compile_vert = 1
-" augroup ErrinsCoffeeScriptAuGroup
-"   autocmd!
-"   autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent
-" augroup END
+let g:better_whitespace_enabled=1  " enable whitespace highlighting
+let g:strip_whitespace_on_save=1   " enable stripping whitespace on save
+let g:strip_whitespace_confirm=0   " disable confirmation on save
+let g:strip_only_modified_lines=1  " only strip those lines _I_ modified
 
 
 " ---------------------------------------------------------------------------
-" delimitMate
+"  delimitMate
 " ---------------------------------------------------------------------------
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
@@ -389,6 +404,14 @@ augroup vimrc
 augroup END
 
 
+" ===========================================================================
+" FZF stuff...
+" ===========================================================================
+if has('nvim') || has('gui_running')
+	let $FZF_DEFAULT_OPTS .= ' --info=inline --layout=reverse'
+endif
+
+
 " ---------------------------------------------------------------------------
 "  fzf.vim
 " ---------------------------------------------------------------------------
@@ -403,8 +426,11 @@ let g:fzf_command_prefix = 'Fzf'
 " let g:fzf_layout = { 'down': '~40%' }
 
 " In Neovim, you can set up fzf window using a Vim command
-let g:fzf_layout = { 'window': 'enew' }
 " let g:fzf_layout = { 'window': '-tabnew' }
+" let g:fzf_layout = { 'window': 'enew' }
+
+" latest changes allow popup window
+let g:fzf_layout = { 'window': { 'width': 0.6, 'height': 0.9 } }
 
 " Customize fzf colors to match your color scheme
 " let g:fzf_colors =
@@ -421,71 +447,54 @@ let g:fzf_layout = { 'window': 'enew' }
 "   \ 'spinner': ['fg', 'Label'],
 "   \ 'header':  ['fg', 'Comment'] }
 
-" Enable per-command history.
-" CTRL-N and CTRL-P will be automatically bound to next-history and
-" previous-history instead of down and up. If you don't like the change,
-" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
-" let g:fzf_history_dir = '~/.fzf-history'
+" Hide statusline of terminal buffer
+" autocmd! FileType fzf
+" autocmd  FileType fzf set laststatus=0 noshowmode noruler nonu
+" 	\| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
-" RipGrep options for FzfRG command:
-" --column          - Show column numbers (1 based; 1st match in line) in output.
-    " ...this implies --line-number (Show line numbers; 1-based)
-" --no-heading      -  Don't  group  matches  by each file.
-" --color WHEN      - Whether to use color in the output.
-    " ...when 'always', coloring is attempted based on environment
-" -i, --ignore-case - Case insensitive search.
-command! -bang -nargs=* FzfRg
-  \  call fzf#vim#grep(
-  \    'rg --column --no-heading --color=always -i '.shellescape(<q-args>), 1,
-  \    <bang>0 ? fzf#vim#with_preview('up:60%')
-  \            : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \    <bang>0)
+command! -bang -nargs=? -complete=dir FzfFiles
+	\ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+""!   FzfTags     *                                  call fzf#vim#tags(<q-args>, <bang>0)
+"command! -bang -nargs=? -complete=tag FzfTags
+"  \ call fzf#vim#tags(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+command! -bang -nargs=* -complete=buffer FzfBuffers
+  \ call fzf#vim#buffers(<q-args>, fzf#vim#with_preview(), <bang>0)
+
+function! s:plug_help_sink(line)
+  let dir = g:plugs[a:line].dir
+  for pat in ['doc/*.txt', 'README.md']
+    let match = get(split(globpath(dir, pat), "\n"), 0, '')
+    if len(match)
+      execute 'tabedit' match
+      return
+    endif
+  endfor
+  tabnew
+  execute 'Explore' dir
+endfunction
+
+command! FzfPlugHelp call fzf#run(fzf#wrap({
+  \ 'source': sort(keys(g:plugs)),
+  \ 'sink':   function('s:plug_help_sink')}))
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let options = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  let options = fzf#vim#with_preview(options)
+  call fzf#vim#grep(initial_command, 1, options, a:fullscreen)
+endfunction
+
+command! -nargs=* -bang FzfRg call RipgrepFzf(<q-args>, <bang>0)
 
 
 " ---------------------------------------------------------------------------
-"  vim-github-dashboard
+"  indentLine
 " ---------------------------------------------------------------------------
-let g:github_dashboard = {
-  \ 'username': 'errinlarsen',
-  \ 'password': $VIM_GITHUB_DASHBOARD_API_TOKEN
-  \ }
-
-
-" ---------------------------------------------------------------------------
-"  GitGutter
-" ---------------------------------------------------------------------------
-" GitGutter is on/off by default
-" let g:gitgutter_enabled = 0           " Default: 1 (on)
-
-" Stop GitGutter running in realtime
-" let g:gitgutter_realtime = 0          " Default: 1 (on)
-
-" Stop GitGutter running eagerly
-" let g:gitgutter_eager = 0             " Default: 1 (on)
-
-" Pass extra args to `git-diff'
-let g:gitgutter_diff_args = '-w'        " Ignore whitespace
-
-" Show signs by default
-" let g:gitgutter_signs = 0             " Default: 1 (on)
-
-" Always show the sign column
-set signcolumn=yes
-
-" Turn on line highlighting by default
-" let g:gitgutter_highlight_lines = 1   " Default: 0 (off)
-
-" Highlight line colors - uses DiffAdd, DiffChange, and DiffDelete by default
-" hi GitGutterAddLine          ctermfg=NONE ctermbg=02
-" hi GitGutterChangeLine       ctermfg=NONE ctermbg=04
-" hi GitGutterDeleteLine       ctermfg=NONE ctermbg=08
-" hi GitGutterChangeDeleteLine ctermfg=NONE ctermbg=05
-
-" Use emoji for gitgutter signs
-" let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
-" let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
-" let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
-" let g:gitgutter_sign_modified_removed = emoji#for('collision')
+autocmd! User indentLine doautocmd indentLine Syntax
 
 
 " ---------------------------------------------------------------------------
@@ -495,16 +504,32 @@ let g:markdown_fenced_languages = ['html', 'ruby', 'bash=sh']
 
 
 " ---------------------------------------------------------------------------
-"  RSpec.vim
+"  NERDTree
 " ---------------------------------------------------------------------------
-" Custom Command: Use vim-dispatch
-let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+augroup nerd_loader
+	autocmd!
+	autocmd VimEnter * silent! autocmd! FileExplorer
+	autocmd BufEnter,BufNew *
+				\  if isdirectory(expand('<amatch>'))
+				\|   call plug#load('nerdtree')
+				\|   execute 'autocmd! nerd_loader'
+				\| endif
+augroup END
+" let NERDTreeShowBookmarks = 0
+" let NERDChristmasTree = 1
+" let NERDTreeWinPos = "left"
+" let NERDTreeHijackNetrw = 1
+" let NERDTreeQuitOnOpen = 1
+" let NERDTreeWinSize = 50
+" let NERDTreeChDirMode = 2
+" let NERDTreeDirArrows = 1
+"
+" " Open NERDTree if Vim was started with no files listed on the cmd line
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Runner: I use iterm ...mostly
-let g:rspec_runner = "os_x_iterm"
 
-
-
+" ----------------------------------------------------------------------------
 "  Ruby/Rails
 " ---------------------------------------------------------------------------
 let g:ruby_indent_assignment_style = 'variable'
@@ -513,6 +538,18 @@ let g:ruby_indent_assignment_style = 'variable'
 augroup vimrc
   autocmd BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
 augroup END
+
+
+" ----------------------------------------------------------------------------
+"  vim-ruby
+" ----------------------------------------------------------------------------
+" --- found in junegunn's .vimrc
+" ft-ruby-syntax
+let ruby_operators = 1
+let ruby_space_errors = 1
+" let ruby_fold = 1
+" let ruby_no_expensive = 1
+let ruby_spellcheck_strings = 1
 
 
 " ---------------------------------------------------------------------------
@@ -525,51 +562,35 @@ augroup vimrc
 augroup END
 
 
-" ---------------------------------------------------------------------------
-"  Vinegar
-" ---------------------------------------------------------------------------
-let g:netrw_altfile = 1
-" let g:netrw_banner = 1
+" ----------------------------------------------------------------------------
+"  vim-signify
+" ----------------------------------------------------------------------------
+let g:signify_vcs_list = ['git']
+" let g:signify_skip_filetype = { 'journal': 1 }
+" let g:signify_sign_add          = '│'
+" let g:signify_sign_change       = '│'
+" let g:signify_sign_changedelete = '│'
+
+
+" ----------------------------------------------------------------------------
+"  vim-slash
+" ----------------------------------------------------------------------------
+if has('timers')
+	noremap <expr> <plug>(slash-after) slash#blink(3, 50)
+endif
 
 
 " ---------------------------------------------------------------------------
 "  Misc
 " ---------------------------------------------------------------------------
+let s:home_dir = expand("$HOME/")
 
-" Finally, load custom configs
+" load custom configs
 if filereadable(s:home_dir . '.config/nvim/init.vim.local')
-  source ~/.config/nvim/init.vim.local      " - currently, ExtraWhitespace stuff
+  source ~/.config/nvim/init.vim.local      " - currently, empty
 endif
 
-" When vimrc, either directly or via symlink, is edited, automatically reload it
-augroup vimrc
-  autocmd bufwritepost .config/nvim/init.vim,vimrc nested source %
-augroup END
-
-
-" ===========================================================================
-" Config options for plugins not being used
-" ===========================================================================
-" ---------------------------------------------------------------------------
-"  Gist
-" ---------------------------------------------------------------------------
-" let g:gist_post_private = 1                  " private gists by default
-" let g:gist_open_browser_after_post = 1       " open browser after posting
-" let g:gist_browser_command = 'open %URL% &'  " use `open` for Gist URLs
-" let g:gist_get_multiplefile = 1              " open all files if more than one
-
-
-" ---------------------------------------------------------------------------
-" NERDTree
-" ---------------------------------------------------------------------------
-" let NERDTreeShowBookmarks = 0
-" let NERDChristmasTree = 1
-" let NERDTreeWinPos = "left"
-" let NERDTreeHijackNetrw = 1
-" let NERDTreeQuitOnOpen = 1
-" let NERDTreeWinSize = 50
-" let NERDTreeChDirMode = 2
-" let NERDTreeDirArrows = 1
-"
-" " Open NERDTree if Vim was started with no files listed on the cmd line
-" autocmd vimenter * if !argc() | NERDTree | endif
+" Load key-mappings
+if filereadable(s:home_dir . ".config/nvim/keymappings.vim")
+  source ~/.config/nvim/keymappings.vim
+endif

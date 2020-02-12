@@ -11,6 +11,9 @@ imap      jj                <ESC>
 " When on the cmdline - '%%' expands to this buffer's path, relative to CWD
 cnoremap  %%                <C-R>=expand('%:h').'/'<cr>
 
+nmap ]a <Plug>(ale_next_wrap)
+nmap [a <Plug>(ale_previous_wrap)
+
 
 " ---------------------------------------------------------------------------
 "  Movement
@@ -95,8 +98,8 @@ map       <Esc>T            :tabedit %%
 " map       <Leader>e         :edit %%
 " map       <Leader>v         :view %%
 
-" " open file browser
-" noremap   <Leader>e         :NERDTreeToggle<cr>
+" open file browser
+noremap  -                 :NERDTreeToggle<cr>
 
 " " find current file in file browser
 " noremap   <C-p>             :NERDTreeFind<cr>
@@ -124,59 +127,50 @@ imap <c-x><c-b> <plug>(fzf-complete-line)
 
 " fzf - personalized mappings
 " ---------------------------------------------------------------------------
-" Files [PATH]    | Files (similar to  `:FZF` )
-noremap <Leader>ff          :FzfFiles<cr>
-noremap <Leader>FF          :FzfFiles
+" Files [PATH]     | Files (similar to  `:FZF` )
+noremap <Leader>ff :FzfFiles<cr>
+noremap <Leader>FF :FzfFiles
+" GFiles [OPTS]    | Git files (git ls-files)
+noremap <Leader>fg :FzfGFiles<cr>
+noremap <Leader>FG :FzfGFiles
+" Buffers          | Open buffers
+noremap <Leader>fb :FzfBuffers<cr>
+" RG [PATTERN]     | {rg}{5} search result
+noremap <Leader>fr :FzfRg<cr>
+noremap <Leader>FR :FzfRg
+" Lines [QUERY]    | Lines in loaded buffers
+noremap <Leader>fl :FzfLines<cr>
+noremap <Leader>FL :FzfLines
+" Tags [QUERY]     | Tags in the project ( `ctags -R` )
+noremap <Leader>ft :FzfTags<cr>
+noremap <Leader>FT :FzfTags
+" History          | `v:oldfiles`  and open buffers
+noremap <Leader>fe :FzfHistory<cr>
+" History:         | Command history
+noremap <Leader>f; :FzfHistory:<cr>
+" History/         | Search history
+noremap <Leader>f/ :FzfHistory/<cr>
+" Commits          | Git commits (requires {fugitive.vim}{7})
+noremap <Leader>fc :FzfCommits<cr>
+" BCommits         | Git commits for the current buffer
+noremap <Leader>fC :FzfBCommits<cr>
+" Maps             | Normal mode mappings
+noremap <Leader>fm :FzfMaps<cr>
+" Helptags         | Help tags [1]
+noremap <Leader>f? :FzfHelptags<cr>
 
-" GFiles [OPTS]   | Git files (git ls-files)
-noremap <Leader>fg          :FzfGFiles<cr>
-noremap <Leader>FG          :FzfGFiles
-
-" GFiles?         | Git files (git status)
-" Buffers         | Open buffers
-noremap <Leader>fb          :FzfBuffers<cr>
-noremap <Leader>FB          :FzfBuffers
-
-" Colors          | Color schemes
-" Ag [PATTERN]    | {ag}{5} search result (ALT-A to select all, ALT-D to deselect all)
-" RG [PATTERN]    | {rg}{5} search result
-noremap <Leader>fr          :FzfRg<cr>
-noremap <Leader>FR          :FzfRg
-
-" Lines [QUERY]   | Lines in loaded buffers
-noremap <Leader>fl          :FzfLines<cr>
-noremap <Leader>FL          :FzfLines
-
-" BLines [QUERY]  | Lines in the current buffer
-
-" Tags [QUERY]    | Tags in the project ( `ctags -R` )
-noremap <Leader>ft          :FzfTags<cr>
-noremap <Leader>FT          :FzfTags
-
-" BTags [QUERY]   | Tags in the current buffer
-" Marks           | Marks
-" Windows         | Windows
-" Locate PATTERN  |  `locate`  command output
-" History         |  `v:oldfiles`  and open buffers
-" History:        | Command history
-" History/        | Search history
-" Snippets        | Snippets ({UltiSnips}{6})
-
-" Commits         | Git commits (requires {fugitive.vim}{7})
-noremap <Leader>fc          :FzfCommits<cr>
-noremap <Leader>FC          :FzfCommits
-
-" BCommits        | Git commits for the current buffer
-" Commands        | Commands
-" Maps            | Normal mode mappings
-noremap <Leader>fm          :FzfMaps<cr>
-noremap <Leader>FM          :FzfMaps
-
-" Helptags        | Help tags [1]
-noremap <Leader>fh          :FzfHelptags<cr>
-noremap <Leader>FH          :FzfHelptags
-
-" Filetypes       | File types
+" un-mapped commands...
+" GFiles?          | Git files (git status)
+" Colors           | Color schemes
+" Ag [PATTERN]     | {ag}{5} search result (ALT-A to select all, ALT-D to deselect all)
+" BLines [QUERY]   | Lines in the current buffer
+" BTags [QUERY]    | Tags in the current buffer
+" Marks            | Marks
+" Windows          | Windows
+" Locate PATTERN   |  `locate`  command output
+" Snippets         | Snippets ({UltiSnips}{6})
+" Commands         | Commands
+" Filetypes        | File types
 
 
 " ---------------------------------------------------------------------------
@@ -209,6 +203,9 @@ map       <Leader>c         :Rcontroller
 " ---------------------------------------------------------------------------
 "  Syntax stuff
 " ---------------------------------------------------------------------------
+"  Enable indentLines
+noremap   yoi               :IndentLinesToggle<CR>
+
 " indent file and return cursor and center cursor
 map       <silent> <F6>     mmgg=G'mzz
 imap      <silent> <F6>     <Esc> mmgg=G'mzz
@@ -280,7 +277,7 @@ vmap < <gv
 nnoremap Q @q
 
 " Disable 'q:' - I never use it and I always get annoyed when I hit it
-map q: <nop>
+" map q: <nop>
 
 
 " ---------------------------------------------------------------------------
