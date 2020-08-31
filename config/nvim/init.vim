@@ -12,7 +12,6 @@ Plug '/usr/local/opt/fzf'       " 'cause I installed fzf with homebrew
 
 " Specific utilities
 Plug 'junegunn/fzf.vim'         " fzf ❤️  vim
-" Plug 'yuki-ycino/fzf-preview.vim'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'tpope/vim-unimpaired'     " ...many things; always in pairs ;)
 Plug 'tpope/vim-repeat'         " repeat (supported) Plugins' commands
@@ -30,7 +29,7 @@ Plug 'junegunn/gv.vim'          " A git commit browser
 
 " Browsing
 " Plug 'tpope/vim-vinegar'        " Enhancements for netrw: built-in Dir browser
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " tree explorer for vim
+Plug 'scrooloose/nerdtree' , { 'on': ['NERDTreeToggle', 'NERDTreeToggleVCS', 'NERDTreeFind'] } " - tree explorer for vim
 Plug 'Yggdroot/indentLine', { 'on': 'IndentLinesToggle' } " show indention lvls
 
 " Lint
@@ -60,8 +59,10 @@ Plug 'junegunn/vim-emoji'       " 😃 Emoji in Vim
 " UI enhancements
 Plug 'vim-airline/vim-airline'  " status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes'  " A collection of themes for vim-airline
+Plug 'chriskempson/base16-vim'  " Base16 for Vim
 Plug 'morhetz/gruvbox'          " Retro groove color scheme for Vim
 Plug 'ryanoasis/vim-devicons'   " Adds file type icons to Vim plugins
+
 
 " ... other Colors (found in junegunn's .vimrc)
 " Plug 'tomasr/molokai'
@@ -76,7 +77,6 @@ Plug 'ryanoasis/vim-devicons'   " Adds file type icons to Vim plugins
 " Plug 'arcticicestudio/nord-vim'
 
 " ...other/previous/tried-em colorschemes
-" Plug 'chriskempson/base16-vim'
 " Plug 'YorickPeterse/happy_hacking.vim'
 " Plug 'rakr/vim-two-firewatch'
 " Plug 'jacoborus/tender.vim'
@@ -156,21 +156,21 @@ set listchars=tab:≫∙,trail:∘,extends:⇰,precedes:∙
 "
 " GruvBox config
 " ---------------
-" let g:gruvbox_bold = 1                   " default: 1      Enables bold text
-" let g:gruvbox_italic = 1                 " default: 0      Enables italic text (gui default: 1)
-" let g:gruvbox_underline = 1              " default: 1      Enables underlined text
-" let g:gruvbox_undercurl = 1              " default: 1      Enables undercurled text
-" let g:gruvbox_italicize_comments = 1     " default: 1      Enables italic for comments
-" let g:gruvbox_italicize_strings = 1      " default: 0      Enables italic for strings
-" let g:gruvbox_invert_selection = 1       " default: 1      Inverts selected text
-" let g:gruvbox_invert_signs = 0           " default: 0      Inverts GitGutter/Syntastic signs
-" let g:gruvbox_invert_indent_guides = 0   " default: 0      Inverts indent guides
-" let g:gruvbox_invert_tabline = 0         " default: 0      Inverts tabline highlights
+" let g:gruvbox_bold = 0                   " default: 1      Enables bold text
+let g:gruvbox_italic = 1                 " default: 0      Enables italic text (gui default: 1)
+" let g:gruvbox_underline = 0              " default: 1      Enables underlined text
+" let g:gruvbox_undercurl = 0              " default: 1      Enables undercurled text
+" let g:gruvbox_italicize_comments = 0     " default: 1      Enables italic for comments
+let g:gruvbox_italicize_strings = 1      " default: 0      Enables italic for strings
+" let g:gruvbox_invert_selection = 0       " default: 1      Inverts selected text
+" let g:gruvbox_invert_signs = 1           " default: 0      Inverts GitGutter/Syntastic signs
+" let g:gruvbox_invert_indent_guides = 1   " default: 0      Inverts indent guides
+" let g:gruvbox_invert_tabline = 1         " default: 0      Inverts tabline highlights
 " let g:gruvbox_improved_strings = 1       " default: 0      Extrahighlighted strings
 " let g:gruvbox_improved_warnings = 1      " default: 0      Extrahighlighted warnings
 " let g:gruvbox_termcolors = 256           " default: 256    Refer https://github.com/morhetz/gruvbox/issues/4 for details
-let g:gruvbox_contrast_dark = 'soft'     " default: medium Changes dark mode contrast. Possible values are soft, medium and hard
-" let g:gruvbox_contrast_light = 'medium'  " default: medium Changes light mode contrast. Possible values are soft, medium and hard
+" let g:gruvbox_contrast_dark = 'hard'     " default: medium Changes dark mode contrast. Possible values are soft, medium and hard
+" let g:gruvbox_contrast_light = 'soft'  " default: medium Changes light mode contrast. Possible values are soft, medium and hard
 
 " For color-setting variables, possible values are any from the gruvbox palette.
 " ------------------------------------------------------------------------------
@@ -227,7 +227,8 @@ set guifont=FiraCode-Medium:h12
 
 " Colorscheme/Theme
 " ------------------
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme base16-gruvbox-dark-medium
 " colorscheme happy_hacking
 " colorscheme srcery
 " colorscheme tender
@@ -324,7 +325,8 @@ set suffixes+=.old
 " ---------------------------------------------------------------------------
 "  vim-Airline
 " ---------------------------------------------------------------------------
-let g:airline_theme = 'gruvbox'
+let g:airline_theme = 'base16_gruvbox_dark_hard'
+" let g:airline_theme = 'gruvbox'
 " let g:airline_theme = 'tender'
 " let g:airline_theme = 'twofirewatch'
 
@@ -339,6 +341,7 @@ let g:airline#extensions#default#layout = [
 "   \ 'y': 88,
 "   \ 'z': 45,
 "   \ }
+"
 let g:airline#extensions#default#section_truncate_width = {
     \ 'b': 96,
     \ 'x': 60,
@@ -360,16 +363,13 @@ let g:airline#extensions#hunks#non_zero_only = 1
 let g:airline#extensions#ale#enabled = 1
 let g:ale_open_list = 'on_save'
 
-let g:ale_linters = {'yaml': []}
-let g:ale_fixers = {'ruby': ['rubocop']}
+" let g:ale_linters = {'ruby': ['ruby', 'rubocop']} " 'yaml': [],
+" let g:ale_fixers = {'ruby': ['rubocop']}
 let g:ale_ruby_rubocop_executable = 'bundle'
 
 let g:ale_lint_delay = 1000
 " let g:ale_sign_warning = '──'
 " let g:ale_sign_error = '══'
-
-nmap <Leader>ne <Plug>(ale_next_wrap)
-nmap <Leader>pe <Plug>(ale_previous_wrap)
 
 augroup Errin_qf_toc
   autocmd FileType qf setlocal textwidth=0

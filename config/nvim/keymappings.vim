@@ -11,8 +11,22 @@ imap      jj                <ESC>
 " When on the cmdline - '%%' expands to this buffer's path, relative to CWD
 cnoremap  %%                <C-R>=expand('%:h').'/'<cr>
 
+
+" ---------------------------------------------------------------------------
+"  ALE
+" ---------------------------------------------------------------------------
 nmap ]a <Plug>(ale_next_wrap)
 nmap [a <Plug>(ale_previous_wrap)
+
+" nmap <Leader>ne <Plug>(ale_next_wrap)
+" nmap <Leader>pe <Plug>(ale_previous_wrap)
+
+nmap <Leader>at <Plug>(ale_toggle_buffer)
+nmap <Leader>ag <Plug>(ale_go_to_definition)
+nmap <Leader>as <Plug>(ale_go_to_definition_in_split)
+nmap <Leader>av <Plug>(ale_go_to_definition_in_vsplit)
+nmap <Leader>aG <Plug>(ale_go_to_type_definition)
+nmap <Leader>af <Plug>(ale_find_references)
 
 
 " ---------------------------------------------------------------------------
@@ -100,9 +114,8 @@ map       <Esc>T            :tabedit %%
 
 " open file browser
 noremap  -                 :NERDTreeToggle<cr>
-
 " " find current file in file browser
-" noremap   <C-p>             :NERDTreeFind<cr>
+noremap  _                 :NERDTreeFind<cr>
 
 " FZF...
 " <C-p> or <C-t> to search files
@@ -177,10 +190,10 @@ noremap <Leader>f? :FzfHelptags<cr>
 " Ruby...
 " ---------------------------------------------------------------------------
 " RSpec.vim mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>n :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>n :call RunNearestSpec()<CR>
+" map <Leader>l :call RunLastSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
 
 
 " ---------------------------------------------------------------------------
@@ -213,6 +226,8 @@ imap      <silent> <F6>     <Esc> mmgg=G'mzz
 " Auto format
 map       ===               mmgg=G`m^zz
 
+" Print out the Syntax 'type' under the cursor
+nnoremap  zS                :echo join(reverse(map(synstack(line('.'), col('.')), 'synIDattr(v:val,"name")')),' ')<cr>
 
 " ---------------------------------------------------------------------------
 " vim-easy-align:

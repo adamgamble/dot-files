@@ -1,3 +1,16 @@
+# Because: pretty -- if it's there
+[[ -x $(which archey) ]] && archey -c -o
+
+# Got t3h L3rn!n...!
+[ -f ~/.vocab ] && chmod +x ~/.vocab && ~/.vocab
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # ------------------------------------------------------------------------------
 # OH-MY-ZSH Configuration
 # ------------------------------------------------------------------------------
@@ -10,7 +23,8 @@ ZSH_CUSTOM=$HOME/dot-files/oh-my-zsh-custom
 # Set name of the theme to load. Look in ~/.oh-my-zsh/themes/
 #   # Other themes I kinda liked:
 #   # agnoster, eastwood, gallois, suvash, amuse, ys, jonathan, pure
-ZSH_THEME="jonathan-customized"
+# ZSH_THEME="jonathan-customized"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Which Oh-My-Zsh plugins to load?
 plugins=(
@@ -70,6 +84,9 @@ export PATH=.git/safe/../../bin:$PATH
 # local user-level bin directory
 export PATH="$HOME/bin:$PATH"
 
+# for Brew installed binaries in /sbin
+export PATH="/usr/local/sbin:$PATH"
+
 # ------------------------------------------------------------------------------
 # Personal aliases
 # ------------------------------------------------------------------------------
@@ -96,12 +113,6 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# Because: pretty -- if it's there
-[[ -x $(which archey) ]] && archey -c -o
-
-# Got t3h L3rn!n...!
-[ -f ~/.vocab ] && chmod +x ~/.vocab && ~/.vocab
 
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -175,3 +186,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # )
 
 # source $ZSH/oh-my-zsh.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

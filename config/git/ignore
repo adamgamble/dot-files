@@ -59,3 +59,4 @@ tags
 # for GradesFirst
 config/lock_session.yml
 sms-metrics/docker-compose.yml
+public/assets/manifest-*.json
