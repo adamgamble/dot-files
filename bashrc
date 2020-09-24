@@ -27,3 +27,5 @@ alias bil="bi --local"
 alias bu="b update"
 alias be="b exec"
 alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
+
+echo "Everytime you see this, you'll think of all the fun times we had at Insight Cards. Those were the days!"
